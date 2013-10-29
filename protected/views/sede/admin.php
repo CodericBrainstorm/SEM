@@ -5,10 +5,10 @@ $this->breadcrumbs = array(
 	Yii::t('app', 'Administrar'),
 );
 
-$this->menu = array(
+/*$this->menu = array(
 		array('label'=>Yii::t('app', 'Listar') . ' ' . $model->label(2), 'url'=>array('index')),
 		array('label'=>Yii::t('app', 'Crear') . ' ' . $model->label(), 'url'=>array('create')),
-	);
+	);*/
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -30,9 +30,9 @@ $('.search-form form').submit(function(){
 
 <?php echo GxHtml::link(Yii::t('app', 'Búsqueda Avanzada'), '#', array('class' => 'search-button')); ?>
 <div class="search-form">
-<?php /*$this->renderPartial('_search', array(
+<?php $this->renderPartial('_search', array(
 	'model' => $model,
-)); */?>
+)); ?>
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(

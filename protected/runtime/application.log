@@ -3739,3 +3739,116 @@ REQUEST_URI=/Seguimientoegresado/index.php?r=sede/create
 in C:\AppServ\www\Seguimientoegresado\protected\views\sede\_form.php (7)
 in C:\AppServ\www\Seguimientoegresado\protected\views\sede\create.php (19)
 in C:\AppServ\www\Seguimientoegresado\protected\controllers\SedeController.php (27)
+2013/10/29 16:21:07 [warning] [application] Failed to set unsafe attribute "estado" of "Establecimiento".
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (72)
+in C:\AppServ\www\Seguimientoegresado\index.php (13)
+2013/10/29 16:29:19 [warning] [application] Failed to set unsafe attribute "ID_old" of "Egresado".
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EgresadoController.php (70)
+in C:\AppServ\www\Seguimientoegresado\index.php (13)
+2013/10/29 16:53:43 [warning] [application] Failed to set unsafe attribute "sector" of "Establecimiento".
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (72)
+in C:\AppServ\www\Seguimientoegresado\index.php (13)
+2013/10/29 16:54:29 [warning] [application] Failed to set unsafe attribute "nom_depto" of "Establecimiento".
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (35)
+in C:\AppServ\www\Seguimientoegresado\index.php (13)
+2013/10/29 16:54:29 [warning] [application] Failed to set unsafe attribute "nom_municipio" of "Establecimiento".
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (35)
+in C:\AppServ\www\Seguimientoegresado\index.php (13)
+2013/10/29 16:54:29 [warning] [application] Failed to set unsafe attribute "secretaria" of "Establecimiento".
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (35)
+in C:\AppServ\www\Seguimientoegresado\index.php (13)
+2013/10/29 16:54:29 [warning] [application] Failed to set unsafe attribute "tipo" of "Establecimiento".
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (35)
+in C:\AppServ\www\Seguimientoegresado\index.php (13)
+2013/10/29 16:54:29 [warning] [application] Failed to set unsafe attribute "zona" of "Establecimiento".
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (35)
+in C:\AppServ\www\Seguimientoegresado\index.php (13)
+2013/10/29 16:54:29 [warning] [application] Failed to set unsafe attribute "sector" of "Establecimiento".
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (35)
+in C:\AppServ\www\Seguimientoegresado\index.php (13)
+2013/10/29 16:54:29 [warning] [application] Failed to set unsafe attribute "jornadas" of "Establecimiento".
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (35)
+in C:\AppServ\www\Seguimientoegresado\index.php (13)
+2013/10/29 16:54:29 [warning] [application] Failed to set unsafe attribute "niveles" of "Establecimiento".
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (35)
+in C:\AppServ\www\Seguimientoegresado\index.php (13)
+2013/10/29 16:54:29 [warning] [application] Failed to set unsafe attribute "estado" of "Establecimiento".
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (35)
+in C:\AppServ\www\Seguimientoegresado\index.php (13)
+2013/10/29 16:54:29 [warning] [application] Failed to set unsafe attribute "num_sedes" of "Establecimiento".
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (35)
+in C:\AppServ\www\Seguimientoegresado\index.php (13)
+2013/10/29 16:54:29 [error] [exception.CException] exception 'CException' with message 'Property "Establecimiento.gradosestablecimiento" is not defined.' in C:\AppServ\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('gradosestableci...')
+#1 C:\AppServ\www\yii\framework\validators\CDefaultValueValidator.php(44): CActiveRecord->__get('gradosestableci...')
+#2 C:\AppServ\www\yii\framework\validators\CValidator.php(197): CDefaultValueValidator->validateAttribute(Object(Establecimiento), 'gradosestableci...')
+#3 C:\AppServ\www\yii\framework\base\CModel.php(158): CValidator->validate(Object(Establecimiento), NULL)
+#4 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(790): CModel->validate(NULL)
+#5 C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php(37): CActiveRecord->save()
+#6 [internal function]: EstablecimientoController->actionUpdate('3')
+#7 C:\AppServ\www\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(EstablecimientoController), Array)
+#8 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(EstablecimientoController), Object(ReflectionMethod), Array)
+#9 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\AppServ\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 C:\AppServ\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): CController->run('update')
+#13 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('establecimiento...')
+#14 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/update&id=3
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php?r=establecimiento/update&id=3
+---
+2013/10/29 16:55:23 [warning] [application] Failed to set unsafe attribute "nom_depto" of "Establecimiento".
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (35)
+in C:\AppServ\www\Seguimientoegresado\index.php (13)
+2013/10/29 16:55:23 [warning] [application] Failed to set unsafe attribute "nom_municipio" of "Establecimiento".
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (35)
+in C:\AppServ\www\Seguimientoegresado\index.php (13)
+2013/10/29 16:55:23 [warning] [application] Failed to set unsafe attribute "secretaria" of "Establecimiento".
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (35)
+in C:\AppServ\www\Seguimientoegresado\index.php (13)
+2013/10/29 16:55:23 [warning] [application] Failed to set unsafe attribute "tipo" of "Establecimiento".
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (35)
+in C:\AppServ\www\Seguimientoegresado\index.php (13)
+2013/10/29 16:55:23 [warning] [application] Failed to set unsafe attribute "zona" of "Establecimiento".
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (35)
+in C:\AppServ\www\Seguimientoegresado\index.php (13)
+2013/10/29 16:55:23 [warning] [application] Failed to set unsafe attribute "sector" of "Establecimiento".
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (35)
+in C:\AppServ\www\Seguimientoegresado\index.php (13)
+2013/10/29 16:55:23 [warning] [application] Failed to set unsafe attribute "jornadas" of "Establecimiento".
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (35)
+in C:\AppServ\www\Seguimientoegresado\index.php (13)
+2013/10/29 16:55:23 [warning] [application] Failed to set unsafe attribute "niveles" of "Establecimiento".
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (35)
+in C:\AppServ\www\Seguimientoegresado\index.php (13)
+2013/10/29 16:55:23 [warning] [application] Failed to set unsafe attribute "estado" of "Establecimiento".
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (35)
+in C:\AppServ\www\Seguimientoegresado\index.php (13)
+2013/10/29 16:55:23 [warning] [application] Failed to set unsafe attribute "num_sedes" of "Establecimiento".
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (35)
+in C:\AppServ\www\Seguimientoegresado\index.php (13)
+2013/10/29 16:55:23 [error] [exception.CException] exception 'CException' with message 'Property "Establecimiento.gradosestablecimiento" is not defined.' in C:\AppServ\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('gradosestableci...')
+#1 C:\AppServ\www\yii\framework\validators\CDefaultValueValidator.php(44): CActiveRecord->__get('gradosestableci...')
+#2 C:\AppServ\www\yii\framework\validators\CValidator.php(197): CDefaultValueValidator->validateAttribute(Object(Establecimiento), 'gradosestableci...')
+#3 C:\AppServ\www\yii\framework\base\CModel.php(158): CValidator->validate(Object(Establecimiento), NULL)
+#4 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(790): CModel->validate(NULL)
+#5 C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php(37): CActiveRecord->save()
+#6 [internal function]: EstablecimientoController->actionUpdate('3')
+#7 C:\AppServ\www\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(EstablecimientoController), Array)
+#8 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(EstablecimientoController), Object(ReflectionMethod), Array)
+#9 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\AppServ\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 C:\AppServ\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): CController->run('update')
+#13 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('establecimiento...')
+#14 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/update&id=3
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php?r=establecimiento/update&id=3
+---
