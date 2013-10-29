@@ -47,17 +47,17 @@
 
 	<div class="row">
 		<?php echo $form->label($model, 'tipoID'); ?>
-		<?php echo $form->dropDownList($model, 'tipoID', GxHtml::listDataEx(InstTipo::model()->findAllAttributes(null, true)), array('prompt' => Yii::t('app', 'All'))); ?>
+		<?php echo $form->dropDownList($model, 'tipoID', GxHtml::listDataEx(Tipo::model()->findAllAttributes(null, true)), array('prompt' => Yii::t('app', 'All'))); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model, 'sectorID'); ?>
-		<?php echo $form->dropDownList($model, 'sectorID', GxHtml::listDataEx(InstSector::model()->findAllAttributes(null, true)), array('prompt' => Yii::t('app', 'All'))); ?>
+		<?php echo $form->dropDownList($model, 'sectorID', GxHtml::listDataEx(Sector::model()->findAllAttributes(null, true)), array('prompt' => Yii::t('app', 'All'))); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model, 'zonaID'); ?>
-		<?php echo $form->dropDownList($model, 'zonaID', GxHtml::listDataEx(InstZona::model()->findAllAttributes(null, true)), array('prompt' => Yii::t('app', 'All'))); ?>
+		<?php echo $form->dropDownList($model, 'zonaID', GxHtml::listDataEx(Zona::model()->findAllAttributes(null, true)), array('prompt' => Yii::t('app', 'All'))); ?>
 	</div>
 
 	<div class="row">
@@ -71,8 +71,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model, 'gradosestablecimiento'); ?>
-		<?php echo $form->textField($model, 'gradosestablecimiento', array('maxlength' => 80)); ?>
+		<?php echo $form->label($model, 'grados'); ?>
+		<?php echo $form->textField($model, 'grados', array('maxlength' => 80)); ?>
 	</div>
 
 	<div class="row">
@@ -97,7 +97,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model, 'estadoID'); ?>
-		<?php echo $form->dropDownList($model, 'estadoID', GxHtml::listDataEx(InstEstado::model()->findAllAttributes(null, true)), array('prompt' => Yii::t('app', 'All'))); ?>
+		<?php echo $form->dropDownList($model, 'estadoID', GxHtml::listDataEx(Estado::model()->findAllAttributes(null, true)), array('prompt' => Yii::t('app', 'All'))); ?>
 	</div>
 
 	<div class="row">

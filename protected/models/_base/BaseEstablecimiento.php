@@ -73,8 +73,8 @@ abstract class BaseEstablecimiento extends GxActiveRecord {
 			array('codigo', 'length', 'max'=>20),
 			array('nombre, correoelectronico', 'length', 'max'=>100),
 			array('direccion', 'length', 'max'=>150),
-			array('telefono', 'length', 'max'=>12),
-			array('gradosestablecimiento', 'length', 'max'=>80),
+			array('telefono', 'length', 'max'=>42),
+			array('grados', 'length', 'max'=>80),
 			array('calendario', 'length', 'max'=>1),
 			array('modeloseducativos, capacidadesexcepcionales, discapacidades, idiomas', 'safe'),
 			array('secretariaID, coddepto, codmunicipio, codigo, nombre, direccion, telefono, tipoID, sectorID, jornadasestablecimientoID, nivelesestablecimientoID, gradosestablecimiento, modeloseducativos, capacidadesexcepcionales, discapacidades, idiomas, estadoID, calendario, correoelectronico', 'default', 'setOnEmpty' => true, 'value' => null),
@@ -96,7 +96,7 @@ abstract class BaseEstablecimiento extends GxActiveRecord {
 			'instGradoEstablecimientos' => array(self::HAS_MANY, 'InstGradoEstablecimiento', 'establecimientoID'),
 			'instHistoricorectores' => array(self::HAS_MANY, 'InstHistoricorectores', 'establecimientoID'),
 			'instIdiomaEstablecimientos' => array(self::HAS_MANY, 'InstIdiomaEstablecimiento', 'establecimientoID'),
-			'instJornadaEstablecimientos' => array(self::HAS_MANY, 'instJornadaEstablecimiento', 'establecimientoID'),
+			//'instJornadaEstablecimientos' => array(self::HAS_MANY, 'instJornadaEstablecimiento', 'establecimientoID'),
 			'instModeloseducativosEstablecimientos' => array(self::HAS_MANY, 'InstModeloseducativosEstablecimiento', 'establecimientoID'),
 			'instNivelEstablecimientos' => array(self::HAS_MANY, 'InstNivelEstablecimiento', 'establecimientoID'),
 			'sedSedes' => array(self::HAS_MANY, 'SedSede', 'establecimientoID'),
@@ -112,9 +112,11 @@ abstract class BaseEstablecimiento extends GxActiveRecord {
 	public function attributeLabels() {
 		return array(
 			'id' => Yii::t('app', 'ID'),
-			'secretariaID' => null,
+			'secretariaID' =>  Yii::t('app', 'Secretaría'),
+                        'secretaria' => null,
 			'coddepto' => null,
-			'codmunicipio' => null,
+			'codmunicipio' =>  Yii::t('app', 'Municipio'),
+                        'nom_municipio' =>  Yii::t('app', 'Municipio'),
 			'codigo' => Yii::t('app', 'Código'),
 			'nombre' => Yii::t('app', 'Nombre'),
 			'direccion' => Yii::t('app', 'Dirección'),
@@ -123,14 +125,15 @@ abstract class BaseEstablecimiento extends GxActiveRecord {
 			'sectorID' => null,
 			'zonaID' => null,
 			'jornadasestablecimientoID' => Yii::t('app', 'Jornadasestablecimiento'),
+                        'jornadas' => Yii::t('app', 'Jornadas'),
 			'nivelesestablecimientoID' => Yii::t('app', 'Nivelesestablecimiento'),
-			'gradosestablecimiento' => Yii::t('app', 'Gradosestablecimiento'),
-			'modeloseducativos' => Yii::t('app', 'Modeloseducativos'),
-			'capacidadesexcepcionales' => Yii::t('app', 'Capacidadesexcepcionales'),
+			'grados' => Yii::t('app', 'Grados'),
+			'modeloseducativos' => Yii::t('app', 'Modelos educativos'),
+			'capacidadesexcepcionales' => Yii::t('app', 'Capacidades excepcionales'),
 			'discapacidades' => Yii::t('app', 'Discapacidades'),
 			'idiomas' => Yii::t('app', 'Idiomas'),
 			'estadoID' => null,
-			'calendario' => Yii::t('app', 'Calendario'),
+			'calendario' => Yii::t('app', 'Calendario (A o B)'),
 			'correoelectronico' => Yii::t('app', 'Correoelectronico'),
 			'instCapacidadexcepcionalEstablecimientos' => null,
 			'instDiscapacidadEstablecimientos' => null,
@@ -156,8 +159,11 @@ abstract class BaseEstablecimiento extends GxActiveRecord {
 
 		$criteria->compare('id', $this->id);
 		$criteria->compare('secretariaID', $this->secretariaID);
+                $criteria->compare('secretaria', $this->secretaria);
 		$criteria->compare('coddepto', $this->coddepto);
+                $criteria->compare('nom_depto', $this->nom_depto);
 		$criteria->compare('codmunicipio', $this->codmunicipio);
+                $criteria->compare('nom_municipio', $this->nom_municipio);
 		$criteria->compare('codigo', $this->codigo, true);
 		$criteria->compare('nombre', $this->nombre, true);
 		$criteria->compare('direccion', $this->direccion, true);
@@ -166,13 +172,16 @@ abstract class BaseEstablecimiento extends GxActiveRecord {
 		$criteria->compare('sectorID', $this->sectorID);
 		$criteria->compare('zonaID', $this->zonaID);
 		$criteria->compare('jornadasestablecimientoID', $this->jornadasestablecimientoID);
+                $criteria->compare('jornadas', $this->jornadas);
 		$criteria->compare('nivelesestablecimientoID', $this->nivelesestablecimientoID);
-		$criteria->compare('gradosestablecimiento', $this->gradosestablecimiento, true);
+                $criteria->compare('niveles', $this->niveles);
+		$criteria->compare('grados', $this->grados);
 		$criteria->compare('modeloseducativos', $this->modeloseducativos, true);
 		$criteria->compare('capacidadesexcepcionales', $this->capacidadesexcepcionales, true);
 		$criteria->compare('discapacidades', $this->discapacidades, true);
 		$criteria->compare('idiomas', $this->idiomas, true);
 		$criteria->compare('estadoID', $this->estadoID);
+                $criteria->compare('estado', $this->estado);
 		$criteria->compare('calendario', $this->calendario, true);
 		$criteria->compare('correoelectronico', $this->correoelectronico, true);
 

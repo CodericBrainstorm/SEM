@@ -2807,3 +2807,935 @@ REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/create
 in C:\AppServ\www\Seguimientoegresado\protected\extensions\giix-components\GxActiveRecord.php (26)
 in C:\AppServ\www\Seguimientoegresado\protected\extensions\giix-components\GxActiveRecord.php (119)
 in C:\AppServ\www\Seguimientoegresado\protected\extensions\giix-components\GxActiveRecord.php (165)
+2013/10/23 13:28:51 [error] [php] YiiBase::include(InstTipo.php) [<a href='yiibase.include'>yiibase.include</a>]: failed to open stream: No such file or directory (C:\AppServ\www\yii\framework\YiiBase.php:423)
+Stack trace:
+#0 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\_search.php(50): spl_autoload_call()
+#1 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#2 C:\AppServ\www\yii\framework\web\CBaseController.php(96): EstablecimientoController->renderInternal()
+#3 C:\AppServ\www\yii\framework\web\CController.php(870): EstablecimientoController->renderFile()
+#4 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\admin.php(37): EstablecimientoController->renderPartial()
+#5 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#6 C:\AppServ\www\yii\framework\web\CBaseController.php(96): EstablecimientoController->renderInternal()
+#7 C:\AppServ\www\yii\framework\web\CController.php(870): EstablecimientoController->renderFile()
+#8 C:\AppServ\www\yii\framework\web\CController.php(783): EstablecimientoController->renderPartial()
+#9 C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php(77): EstablecimientoController->render()
+#10 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(50): EstablecimientoController->actionAdmin()
+#11 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#12 C:\AppServ\www\yii\framework\web\CController.php(287): EstablecimientoController->runAction()
+#13 C:\AppServ\www\yii\framework\web\CController.php(266): EstablecimientoController->runActionWithFilters()
+#14 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): EstablecimientoController->run()
+#15 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#16 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\AppServ\www\Seguimientoegresado\index.php(13): CWebApplication->run()
+REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/admin
+in C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\_search.php (50)
+in C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\admin.php (37)
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (77)
+2013/10/23 17:18:28 [error] [php] YiiBase::include(InstTipo.php) [<a href='yiibase.include'>yiibase.include</a>]: failed to open stream: No such file or directory (C:\AppServ\www\yii\framework\YiiBase.php:423)
+Stack trace:
+#0 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\_search.php(50): spl_autoload_call()
+#1 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#2 C:\AppServ\www\yii\framework\web\CBaseController.php(96): EstablecimientoController->renderInternal()
+#3 C:\AppServ\www\yii\framework\web\CController.php(870): EstablecimientoController->renderFile()
+#4 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\admin.php(37): EstablecimientoController->renderPartial()
+#5 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#6 C:\AppServ\www\yii\framework\web\CBaseController.php(96): EstablecimientoController->renderInternal()
+#7 C:\AppServ\www\yii\framework\web\CController.php(870): EstablecimientoController->renderFile()
+#8 C:\AppServ\www\yii\framework\web\CController.php(783): EstablecimientoController->renderPartial()
+#9 C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php(77): EstablecimientoController->render()
+#10 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(50): EstablecimientoController->actionAdmin()
+#11 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#12 C:\AppServ\www\yii\framework\web\CController.php(287): EstablecimientoController->runAction()
+#13 C:\AppServ\www\yii\framework\web\CController.php(266): EstablecimientoController->runActionWithFilters()
+#14 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): EstablecimientoController->run()
+#15 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#16 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\AppServ\www\Seguimientoegresado\index.php(13): CWebApplication->run()
+REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/admin
+in C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\_search.php (50)
+in C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\admin.php (37)
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (77)
+2013/10/23 17:20:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "GII".' in C:\AppServ\www\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('GII')
+#1 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=GII
+---
+2013/10/23 17:21:58 [error] [php] YiiBase::include(InstTipo.php) [<a href='yiibase.include'>yiibase.include</a>]: failed to open stream: No such file or directory (C:\AppServ\www\yii\framework\YiiBase.php:423)
+Stack trace:
+#0 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\_search.php(50): spl_autoload_call()
+#1 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#2 C:\AppServ\www\yii\framework\web\CBaseController.php(96): EstablecimientoController->renderInternal()
+#3 C:\AppServ\www\yii\framework\web\CController.php(870): EstablecimientoController->renderFile()
+#4 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\admin.php(37): EstablecimientoController->renderPartial()
+#5 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#6 C:\AppServ\www\yii\framework\web\CBaseController.php(96): EstablecimientoController->renderInternal()
+#7 C:\AppServ\www\yii\framework\web\CController.php(870): EstablecimientoController->renderFile()
+#8 C:\AppServ\www\yii\framework\web\CController.php(783): EstablecimientoController->renderPartial()
+#9 C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php(77): EstablecimientoController->render()
+#10 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(50): EstablecimientoController->actionAdmin()
+#11 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#12 C:\AppServ\www\yii\framework\web\CController.php(287): EstablecimientoController->runAction()
+#13 C:\AppServ\www\yii\framework\web\CController.php(266): EstablecimientoController->runActionWithFilters()
+#14 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): EstablecimientoController->run()
+#15 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#16 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\AppServ\www\Seguimientoegresado\index.php(13): CWebApplication->run()
+REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/admin
+in C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\_search.php (50)
+in C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\admin.php (37)
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (77)
+2013/10/23 17:23:50 [error] [php] YiiBase::include(InstSector.php) [<a href='yiibase.include'>yiibase.include</a>]: failed to open stream: No such file or directory (C:\AppServ\www\yii\framework\YiiBase.php:423)
+Stack trace:
+#0 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\_search.php(55): spl_autoload_call()
+#1 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#2 C:\AppServ\www\yii\framework\web\CBaseController.php(96): EstablecimientoController->renderInternal()
+#3 C:\AppServ\www\yii\framework\web\CController.php(870): EstablecimientoController->renderFile()
+#4 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\admin.php(37): EstablecimientoController->renderPartial()
+#5 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#6 C:\AppServ\www\yii\framework\web\CBaseController.php(96): EstablecimientoController->renderInternal()
+#7 C:\AppServ\www\yii\framework\web\CController.php(870): EstablecimientoController->renderFile()
+#8 C:\AppServ\www\yii\framework\web\CController.php(783): EstablecimientoController->renderPartial()
+#9 C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php(77): EstablecimientoController->render()
+#10 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(50): EstablecimientoController->actionAdmin()
+#11 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#12 C:\AppServ\www\yii\framework\web\CController.php(287): EstablecimientoController->runAction()
+#13 C:\AppServ\www\yii\framework\web\CController.php(266): EstablecimientoController->runActionWithFilters()
+#14 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): EstablecimientoController->run()
+#15 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#16 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\AppServ\www\Seguimientoegresado\index.php(13): CWebApplication->run()
+REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/admin
+in C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\_search.php (55)
+in C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\admin.php (37)
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (77)
+2013/10/23 17:24:25 [error] [exception.CException] exception 'CException' with message 'Property "Establecimiento.gradosestablecimiento" is not defined.' in C:\AppServ\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('gradosestableci...')
+#1 C:\AppServ\www\yii\framework\web\helpers\CHtml.php(2145): CActiveRecord->__get('gradosestableci...')
+#2 C:\AppServ\www\yii\framework\web\helpers\CHtml.php(1875): CHtml::resolveValue(Object(Establecimiento), 'gradosestableci...')
+#3 C:\AppServ\www\yii\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(Establecimiento), 'gradosestableci...', Array)
+#4 C:\AppServ\www\yii\framework\web\widgets\CActiveForm.php(655): CHtml::activeTextField(Object(Establecimiento), 'gradosestableci...', Array)
+#5 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\_search.php(75): CActiveForm->textField(Object(Establecimiento), 'gradosestableci...', Array)
+#6 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require('C:\AppServ\www\...')
+#7 C:\AppServ\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\AppServ\www\...', Array, true)
+#8 C:\AppServ\www\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\AppServ\www\...', Array, true)
+#9 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\admin.php(37): CController->renderPartial('_search', Array)
+#10 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require('C:\AppServ\www\...')
+#11 C:\AppServ\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\AppServ\www\...', Array, true)
+#12 C:\AppServ\www\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\AppServ\www\...', Array, true)
+#13 C:\AppServ\www\yii\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#14 C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php(77): CController->render('admin', Array)
+#15 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(50): EstablecimientoController->actionAdmin()
+#16 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#17 C:\AppServ\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#18 C:\AppServ\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#20 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('establecimiento...')
+#21 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/admin
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php?r=establecimiento/index
+---
+2013/10/23 17:25:46 [error] [php] YiiBase::include(InstEstado.php) [<a href='yiibase.include'>yiibase.include</a>]: failed to open stream: No such file or directory (C:\AppServ\www\yii\framework\YiiBase.php:423)
+Stack trace:
+#0 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\_search.php(100): spl_autoload_call()
+#1 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#2 C:\AppServ\www\yii\framework\web\CBaseController.php(96): EstablecimientoController->renderInternal()
+#3 C:\AppServ\www\yii\framework\web\CController.php(870): EstablecimientoController->renderFile()
+#4 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\admin.php(37): EstablecimientoController->renderPartial()
+#5 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#6 C:\AppServ\www\yii\framework\web\CBaseController.php(96): EstablecimientoController->renderInternal()
+#7 C:\AppServ\www\yii\framework\web\CController.php(870): EstablecimientoController->renderFile()
+#8 C:\AppServ\www\yii\framework\web\CController.php(783): EstablecimientoController->renderPartial()
+#9 C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php(77): EstablecimientoController->render()
+#10 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(50): EstablecimientoController->actionAdmin()
+#11 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#12 C:\AppServ\www\yii\framework\web\CController.php(287): EstablecimientoController->runAction()
+#13 C:\AppServ\www\yii\framework\web\CController.php(266): EstablecimientoController->runActionWithFilters()
+#14 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): EstablecimientoController->run()
+#15 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#16 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\AppServ\www\Seguimientoegresado\index.php(13): CWebApplication->run()
+REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/admin
+in C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\_search.php (100)
+in C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\admin.php (37)
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php (77)
+2013/10/23 17:26:31 [error] [exception.CException] exception 'CException' with message 'Property "Establecimiento.gradosestablecimiento" is not defined.' in C:\AppServ\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('gradosestableci...')
+#1 C:\AppServ\www\Seguimientoegresado\protected\models\_base\BaseEstablecimiento.php(170): CActiveRecord->__get('gradosestableci...')
+#2 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\admin.php(42): BaseEstablecimiento->search()
+#3 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require('C:\AppServ\www\...')
+#4 C:\AppServ\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\AppServ\www\...', Array, true)
+#5 C:\AppServ\www\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\AppServ\www\...', Array, true)
+#6 C:\AppServ\www\yii\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#7 C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php(77): CController->render('admin', Array)
+#8 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(50): EstablecimientoController->actionAdmin()
+#9 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\AppServ\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 C:\AppServ\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#13 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('establecimiento...')
+#14 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/admin
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php?r=establecimiento/index
+---
+2013/10/23 17:27:37 [error] [exception.CException] exception 'CException' with message 'Property "Establecimiento.gradosestablecimiento" is not defined.' in C:\AppServ\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('gradosestableci...')
+#1 C:\AppServ\www\Seguimientoegresado\protected\models\_base\BaseEstablecimiento.php(170): CActiveRecord->__get('gradosestableci...')
+#2 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\admin.php(42): BaseEstablecimiento->search()
+#3 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require('C:\AppServ\www\...')
+#4 C:\AppServ\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\AppServ\www\...', Array, true)
+#5 C:\AppServ\www\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\AppServ\www\...', Array, true)
+#6 C:\AppServ\www\yii\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#7 C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php(77): CController->render('admin', Array)
+#8 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(50): EstablecimientoController->actionAdmin()
+#9 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\AppServ\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 C:\AppServ\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#13 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('establecimiento...')
+#14 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/admin
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php?r=establecimiento/index
+---
+2013/10/23 17:28:52 [error] [php] YiiBase::include(instJornadaEstablecimiento.php) [<a href='yiibase.include'>yiibase.include</a>]: failed to open stream: No such file or directory (C:\AppServ\www\yii\framework\YiiBase.php:423)
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(382): spl_autoload_call()
+#1 C:\AppServ\www\yii\framework\db\ar\CActiveFinder.php(219): model()
+#2 C:\AppServ\www\yii\framework\db\ar\CActiveFinder.php(49): CActiveFinder->buildJoinTree()
+#3 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(272): CActiveFinder->__construct()
+#4 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(142): Establecimiento->getRelated()
+#5 C:\AppServ\www\yii\framework\web\helpers\CHtml.php(2145): Establecimiento->__get()
+#6 C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php(271): resolveValue()
+#7 C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php(238): BootActiveForm->inputsList()
+#8 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\_form.php(93): BootActiveForm->checkBoxList()
+#9 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#10 C:\AppServ\www\yii\framework\web\CBaseController.php(96): EstablecimientoController->renderInternal()
+#11 C:\AppServ\www\yii\framework\web\CController.php(870): EstablecimientoController->renderFile()
+#12 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\update.php(21): EstablecimientoController->renderPartial()
+#13 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#14 C:\AppServ\www\yii\framework\web\CBaseController.php(96): EstablecimientoController->renderInternal()
+#15 C:\AppServ\www\yii\framework\web\CController.php(870): EstablecimientoController->renderFile()
+#16 C:\AppServ\www\yii\framework\web\CController.php(783): EstablecimientoController->renderPartial()
+#17 C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php(45): EstablecimientoController->render()
+#18 unknown(0): EstablecimientoController->actionUpdate()
+#19 C:\AppServ\www\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#20 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#21 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#22 C:\AppServ\www\yii\framework\web\CController.php(287): EstablecimientoController->runAction()
+#23 C:\AppServ\www\yii\framework\web\CController.php(266): EstablecimientoController->runActionWithFilters()
+#24 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): EstablecimientoController->run()
+#25 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#26 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#27 C:\AppServ\www\Seguimientoegresado\index.php(13): CWebApplication->run()
+REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/update&id=1
+in C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php (271)
+in C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php (238)
+in C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\_form.php (93)
+2013/10/24 10:46:03 [error] [php] YiiBase::include(instJornadaEstablecimiento.php) [<a href='yiibase.include'>yiibase.include</a>]: failed to open stream: No such file or directory (C:\AppServ\www\yii\framework\YiiBase.php:423)
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(382): spl_autoload_call()
+#1 C:\AppServ\www\yii\framework\db\ar\CActiveFinder.php(219): model()
+#2 C:\AppServ\www\yii\framework\db\ar\CActiveFinder.php(49): CActiveFinder->buildJoinTree()
+#3 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(272): CActiveFinder->__construct()
+#4 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(142): Establecimiento->getRelated()
+#5 C:\AppServ\www\yii\framework\web\helpers\CHtml.php(2145): Establecimiento->__get()
+#6 C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php(271): resolveValue()
+#7 C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php(238): BootActiveForm->inputsList()
+#8 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\_form.php(93): BootActiveForm->checkBoxList()
+#9 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#10 C:\AppServ\www\yii\framework\web\CBaseController.php(96): EstablecimientoController->renderInternal()
+#11 C:\AppServ\www\yii\framework\web\CController.php(870): EstablecimientoController->renderFile()
+#12 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\update.php(21): EstablecimientoController->renderPartial()
+#13 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#14 C:\AppServ\www\yii\framework\web\CBaseController.php(96): EstablecimientoController->renderInternal()
+#15 C:\AppServ\www\yii\framework\web\CController.php(870): EstablecimientoController->renderFile()
+#16 C:\AppServ\www\yii\framework\web\CController.php(783): EstablecimientoController->renderPartial()
+#17 C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php(45): EstablecimientoController->render()
+#18 unknown(0): EstablecimientoController->actionUpdate()
+#19 C:\AppServ\www\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#20 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#21 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#22 C:\AppServ\www\yii\framework\web\CController.php(287): EstablecimientoController->runAction()
+#23 C:\AppServ\www\yii\framework\web\CController.php(266): EstablecimientoController->runActionWithFilters()
+#24 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): EstablecimientoController->run()
+#25 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#26 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#27 C:\AppServ\www\Seguimientoegresado\index.php(13): CWebApplication->run()
+REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/update&id=1
+in C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php (271)
+in C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php (238)
+in C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\_form.php (93)
+2013/10/24 10:53:30 [error] [php] YiiBase::include(instJornadaEstablecimiento.php) [<a href='yiibase.include'>yiibase.include</a>]: failed to open stream: No such file or directory (C:\AppServ\www\yii\framework\YiiBase.php:423)
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(382): spl_autoload_call()
+#1 C:\AppServ\www\yii\framework\db\ar\CActiveFinder.php(219): model()
+#2 C:\AppServ\www\yii\framework\db\ar\CActiveFinder.php(49): CActiveFinder->buildJoinTree()
+#3 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(272): CActiveFinder->__construct()
+#4 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(142): Establecimiento->getRelated()
+#5 C:\AppServ\www\yii\framework\web\helpers\CHtml.php(2145): Establecimiento->__get()
+#6 C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php(271): resolveValue()
+#7 C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php(238): BootActiveForm->inputsList()
+#8 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\_form.php(93): BootActiveForm->checkBoxList()
+#9 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#10 C:\AppServ\www\yii\framework\web\CBaseController.php(96): EstablecimientoController->renderInternal()
+#11 C:\AppServ\www\yii\framework\web\CController.php(870): EstablecimientoController->renderFile()
+#12 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\update.php(21): EstablecimientoController->renderPartial()
+#13 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#14 C:\AppServ\www\yii\framework\web\CBaseController.php(96): EstablecimientoController->renderInternal()
+#15 C:\AppServ\www\yii\framework\web\CController.php(870): EstablecimientoController->renderFile()
+#16 C:\AppServ\www\yii\framework\web\CController.php(783): EstablecimientoController->renderPartial()
+#17 C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php(45): EstablecimientoController->render()
+#18 unknown(0): EstablecimientoController->actionUpdate()
+#19 C:\AppServ\www\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#20 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#21 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#22 C:\AppServ\www\yii\framework\web\CController.php(287): EstablecimientoController->runAction()
+#23 C:\AppServ\www\yii\framework\web\CController.php(266): EstablecimientoController->runActionWithFilters()
+#24 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): EstablecimientoController->run()
+#25 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#26 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#27 C:\AppServ\www\Seguimientoegresado\index.php(13): CWebApplication->run()
+REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/update&id=1
+in C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php (271)
+in C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php (238)
+in C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\_form.php (93)
+2013/10/24 10:54:31 [error] [php] YiiBase::include(instJornadaEstablecimiento.php) [<a href='yiibase.include'>yiibase.include</a>]: failed to open stream: No such file or directory (C:\AppServ\www\yii\framework\YiiBase.php:423)
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(382): spl_autoload_call()
+#1 C:\AppServ\www\yii\framework\db\ar\CActiveFinder.php(219): model()
+#2 C:\AppServ\www\yii\framework\db\ar\CActiveFinder.php(49): CActiveFinder->buildJoinTree()
+#3 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(272): CActiveFinder->__construct()
+#4 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(142): Establecimiento->getRelated()
+#5 C:\AppServ\www\yii\framework\web\helpers\CHtml.php(2145): Establecimiento->__get()
+#6 C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php(271): resolveValue()
+#7 C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php(238): BootActiveForm->inputsList()
+#8 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\_form.php(93): BootActiveForm->checkBoxList()
+#9 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#10 C:\AppServ\www\yii\framework\web\CBaseController.php(96): EstablecimientoController->renderInternal()
+#11 C:\AppServ\www\yii\framework\web\CController.php(870): EstablecimientoController->renderFile()
+#12 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\update.php(21): EstablecimientoController->renderPartial()
+#13 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#14 C:\AppServ\www\yii\framework\web\CBaseController.php(96): EstablecimientoController->renderInternal()
+#15 C:\AppServ\www\yii\framework\web\CController.php(870): EstablecimientoController->renderFile()
+#16 C:\AppServ\www\yii\framework\web\CController.php(783): EstablecimientoController->renderPartial()
+#17 C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php(45): EstablecimientoController->render()
+#18 unknown(0): EstablecimientoController->actionUpdate()
+#19 C:\AppServ\www\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#20 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#21 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#22 C:\AppServ\www\yii\framework\web\CController.php(287): EstablecimientoController->runAction()
+#23 C:\AppServ\www\yii\framework\web\CController.php(266): EstablecimientoController->runActionWithFilters()
+#24 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): EstablecimientoController->run()
+#25 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#26 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#27 C:\AppServ\www\Seguimientoegresado\index.php(13): CWebApplication->run()
+REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/update&id=1
+in C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php (271)
+in C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php (238)
+in C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\_form.php (93)
+2013/10/24 10:57:22 [error] [exception.CException] exception 'CException' with message 'Property "Establecimiento.instJornadaEstablecimientos" is not defined.' in C:\AppServ\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('instJornadaEsta...')
+#1 C:\AppServ\www\yii\framework\web\helpers\CHtml.php(2145): CActiveRecord->__get('instJornadaEsta...')
+#2 C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php(271): CHtml::resolveValue(Object(Establecimiento), 'instJornadaEsta...')
+#3 C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php(238): BootActiveForm->inputsList(true, Object(Establecimiento), 'instJornadaEsta...', Array, Array)
+#4 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\_form.php(93): BootActiveForm->checkBoxList(Object(Establecimiento), 'instJornadaEsta...', Array, Array)
+#5 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require('C:\AppServ\www\...')
+#6 C:\AppServ\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\AppServ\www\...', Array, true)
+#7 C:\AppServ\www\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\AppServ\www\...', Array, true)
+#8 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\update.php(21): CController->renderPartial('_form', Array)
+#9 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require('C:\AppServ\www\...')
+#10 C:\AppServ\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\AppServ\www\...', Array, true)
+#11 C:\AppServ\www\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\AppServ\www\...', Array, true)
+#12 C:\AppServ\www\yii\framework\web\CController.php(783): CController->renderPartial('update', Array, true)
+#13 C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php(45): CController->render('update', Array)
+#14 [internal function]: EstablecimientoController->actionUpdate('1')
+#15 C:\AppServ\www\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(EstablecimientoController), Array)
+#16 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(EstablecimientoController), Object(ReflectionMethod), Array)
+#17 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\AppServ\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#19 C:\AppServ\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): CController->run('update')
+#21 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('establecimiento...')
+#22 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#23 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/update&id=1
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php?r=establecimiento/admin
+---
+2013/10/24 11:03:16 [error] [php] YiiBase::include(InstNivelEstablecimiento.php) [<a href='yiibase.include'>yiibase.include</a>]: failed to open stream: No such file or directory (C:\AppServ\www\yii\framework\YiiBase.php:423)
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(382): spl_autoload_call()
+#1 C:\AppServ\www\yii\framework\db\ar\CActiveFinder.php(219): model()
+#2 C:\AppServ\www\yii\framework\db\ar\CActiveFinder.php(49): CActiveFinder->buildJoinTree()
+#3 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(272): CActiveFinder->__construct()
+#4 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(142): Establecimiento->getRelated()
+#5 C:\AppServ\www\yii\framework\web\helpers\CHtml.php(2145): Establecimiento->__get()
+#6 C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php(271): resolveValue()
+#7 C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php(238): BootActiveForm->inputsList()
+#8 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\_form.php(92): BootActiveForm->checkBoxList()
+#9 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#10 C:\AppServ\www\yii\framework\web\CBaseController.php(96): EstablecimientoController->renderInternal()
+#11 C:\AppServ\www\yii\framework\web\CController.php(870): EstablecimientoController->renderFile()
+#12 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\update.php(21): EstablecimientoController->renderPartial()
+#13 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#14 C:\AppServ\www\yii\framework\web\CBaseController.php(96): EstablecimientoController->renderInternal()
+#15 C:\AppServ\www\yii\framework\web\CController.php(870): EstablecimientoController->renderFile()
+#16 C:\AppServ\www\yii\framework\web\CController.php(783): EstablecimientoController->renderPartial()
+#17 C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php(45): EstablecimientoController->render()
+#18 unknown(0): EstablecimientoController->actionUpdate()
+#19 C:\AppServ\www\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#20 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#21 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#22 C:\AppServ\www\yii\framework\web\CController.php(287): EstablecimientoController->runAction()
+#23 C:\AppServ\www\yii\framework\web\CController.php(266): EstablecimientoController->runActionWithFilters()
+#24 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): EstablecimientoController->run()
+#25 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#26 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#27 C:\AppServ\www\Seguimientoegresado\index.php(13): CWebApplication->run()
+REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/update&id=1
+in C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php (271)
+in C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php (238)
+in C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\_form.php (92)
+2013/10/24 11:10:03 [error] [php] YiiBase::include(InstCapacidadexcepcionalEstablecimiento.php) [<a href='yiibase.include'>yiibase.include</a>]: failed to open stream: No such file or directory (C:\AppServ\www\yii\framework\YiiBase.php:423)
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(382): spl_autoload_call()
+#1 C:\AppServ\www\yii\framework\db\ar\CActiveFinder.php(219): model()
+#2 C:\AppServ\www\yii\framework\db\ar\CActiveFinder.php(49): CActiveFinder->buildJoinTree()
+#3 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(272): CActiveFinder->__construct()
+#4 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(142): Establecimiento->getRelated()
+#5 C:\AppServ\www\yii\framework\web\helpers\CHtml.php(2145): Establecimiento->__get()
+#6 C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php(271): resolveValue()
+#7 C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php(238): BootActiveForm->inputsList()
+#8 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\_form.php(101): BootActiveForm->checkBoxList()
+#9 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#10 C:\AppServ\www\yii\framework\web\CBaseController.php(96): EstablecimientoController->renderInternal()
+#11 C:\AppServ\www\yii\framework\web\CController.php(870): EstablecimientoController->renderFile()
+#12 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\update.php(21): EstablecimientoController->renderPartial()
+#13 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#14 C:\AppServ\www\yii\framework\web\CBaseController.php(96): EstablecimientoController->renderInternal()
+#15 C:\AppServ\www\yii\framework\web\CController.php(870): EstablecimientoController->renderFile()
+#16 C:\AppServ\www\yii\framework\web\CController.php(783): EstablecimientoController->renderPartial()
+#17 C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php(45): EstablecimientoController->render()
+#18 unknown(0): EstablecimientoController->actionUpdate()
+#19 C:\AppServ\www\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#20 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#21 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#22 C:\AppServ\www\yii\framework\web\CController.php(287): EstablecimientoController->runAction()
+#23 C:\AppServ\www\yii\framework\web\CController.php(266): EstablecimientoController->runActionWithFilters()
+#24 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): EstablecimientoController->run()
+#25 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#26 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#27 C:\AppServ\www\Seguimientoegresado\index.php(13): CWebApplication->run()
+REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/update&id=1
+in C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php (271)
+in C:\AppServ\www\Seguimientoegresado\protected\extensions\bootstrap\widgets\BootActiveForm.php (238)
+in C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\_form.php (101)
+2013/10/24 12:49:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sede/municipios".' in C:\AppServ\www\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('sede/municipios')
+#1 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=sede/municipios&id=5
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php?r=establecimiento/update&id=2
+---
+2013/10/24 12:51:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sede/municipios".' in C:\AppServ\www\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('sede/municipios')
+#1 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=sede/municipios&id=5
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php?r=establecimiento/update&id=2
+---
+2013/10/24 12:52:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sede/municipios".' in C:\AppServ\www\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('sede/municipios')
+#1 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=sede/municipios&id=12
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php?r=establecimiento/update&id=2
+---
+2013/10/24 12:53:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sede/municipios".' in C:\AppServ\www\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('sede/municipios')
+#1 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=sede/municipios&id=5
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php?r=establecimiento/update&id=2
+---
+2013/10/24 12:58:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sede/municipios".' in C:\AppServ\www\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('sede/municipios')
+#1 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=sede/municipios&id=5
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php?r=establecimiento/update&id=2
+---
+2013/10/24 12:59:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sede/municipios".' in C:\AppServ\www\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('sede/municipios')
+#1 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=sede/municipios&id=9
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php?r=establecimiento/update&id=2
+---
+2013/10/24 13:06:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sede/municipios".' in C:\AppServ\www\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('sede/municipios')
+#1 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=sede/municipios&id=5
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php?r=establecimiento/update&id=2
+---
+2013/10/24 13:12:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sede/municipios".' in C:\AppServ\www\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('sede/municipios')
+#1 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=sede/municipios&id=5
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php?r=establecimiento/update&id=2
+---
+2013/10/24 13:12:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sede/municipios".' in C:\AppServ\www\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('sede/municipios')
+#1 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=sede/municipios&id=5
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php?r=establecimiento/update&id=2
+---
+2013/10/24 13:31:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sede/municipios".' in C:\AppServ\www\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('sede/municipios')
+#1 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=sede/municipios&id=5
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php?r=establecimiento/update&id=2
+---
+2013/10/24 13:36:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sede/municipios".' in C:\AppServ\www\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('sede/municipios')
+#1 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=sede/municipios&id=5
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php?r=establecimiento/update&id=2
+---
+2013/10/24 15:30:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "inscripcion/busqueda".' in C:\AppServ\www\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('inscripcion/bus...')
+#1 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=inscripcion/busqueda
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php
+---
+2013/10/28 12:52:26 [error] [php] YiiBase::include(InstEstablecimiento.php) [<a href='yiibase.include'>yiibase.include</a>]: failed to open stream: No such file or directory (C:\AppServ\www\yii\framework\YiiBase.php:423)
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(382): spl_autoload_call()
+#1 C:\AppServ\www\Seguimientoegresado\protected\extensions\giix-components\GxActiveRecord.php(26): model()
+#2 C:\AppServ\www\Seguimientoegresado\protected\extensions\giix-components\GxActiveRecord.php(119): model()
+#3 C:\AppServ\www\Seguimientoegresado\protected\extensions\giix-components\GxActiveRecord.php(165): Sede->getRelationLabel()
+#4 C:\AppServ\www\yii\framework\web\helpers\CHtml.php(1161): Sede->getAttributeLabel()
+#5 C:\AppServ\www\yii\framework\web\widgets\CActiveForm.php(545): activeLabel()
+#6 C:\AppServ\www\Seguimientoegresado\protected\views\sede\_search.php(89): GxActiveForm->label()
+#7 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#8 C:\AppServ\www\yii\framework\web\CBaseController.php(96): SedeController->renderInternal()
+#9 C:\AppServ\www\yii\framework\web\CController.php(870): SedeController->renderFile()
+#10 C:\AppServ\www\Seguimientoegresado\protected\views\sede\admin.php(37): SedeController->renderPartial()
+#11 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#12 C:\AppServ\www\yii\framework\web\CBaseController.php(96): SedeController->renderInternal()
+#13 C:\AppServ\www\yii\framework\web\CController.php(870): SedeController->renderFile()
+#14 C:\AppServ\www\yii\framework\web\CController.php(783): SedeController->renderPartial()
+#15 C:\AppServ\www\Seguimientoegresado\protected\controllers\SedeController.php(73): SedeController->render()
+#16 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(50): SedeController->actionAdmin()
+#17 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#18 C:\AppServ\www\yii\framework\web\CController.php(287): SedeController->runAction()
+#19 C:\AppServ\www\yii\framework\web\CController.php(266): SedeController->runActionWithFilters()
+#20 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): SedeController->run()
+#21 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#22 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#23 C:\AppServ\www\Seguimientoegresado\index.php(13): CWebApplication->run()
+REQUEST_URI=/Seguimientoegresado/index.php?r=sede/admin
+in C:\AppServ\www\Seguimientoegresado\protected\extensions\giix-components\GxActiveRecord.php (26)
+in C:\AppServ\www\Seguimientoegresado\protected\extensions\giix-components\GxActiveRecord.php (119)
+in C:\AppServ\www\Seguimientoegresado\protected\extensions\giix-components\GxActiveRecord.php (165)
+2013/10/28 12:54:26 [error] [php] YiiBase::include(InstEstablecimiento.php) [<a href='yiibase.include'>yiibase.include</a>]: failed to open stream: No such file or directory (C:\AppServ\www\yii\framework\YiiBase.php:423)
+Stack trace:
+#0 C:\AppServ\www\Seguimientoegresado\protected\views\sede\_search.php(90): spl_autoload_call()
+#1 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#2 C:\AppServ\www\yii\framework\web\CBaseController.php(96): SedeController->renderInternal()
+#3 C:\AppServ\www\yii\framework\web\CController.php(870): SedeController->renderFile()
+#4 C:\AppServ\www\Seguimientoegresado\protected\views\sede\admin.php(37): SedeController->renderPartial()
+#5 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#6 C:\AppServ\www\yii\framework\web\CBaseController.php(96): SedeController->renderInternal()
+#7 C:\AppServ\www\yii\framework\web\CController.php(870): SedeController->renderFile()
+#8 C:\AppServ\www\yii\framework\web\CController.php(783): SedeController->renderPartial()
+#9 C:\AppServ\www\Seguimientoegresado\protected\controllers\SedeController.php(73): SedeController->render()
+#10 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(50): SedeController->actionAdmin()
+#11 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#12 C:\AppServ\www\yii\framework\web\CController.php(287): SedeController->runAction()
+#13 C:\AppServ\www\yii\framework\web\CController.php(266): SedeController->runActionWithFilters()
+#14 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): SedeController->run()
+#15 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#16 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\AppServ\www\Seguimientoegresado\index.php(13): CWebApplication->run()
+REQUEST_URI=/Seguimientoegresado/index.php?r=sede/admin
+in C:\AppServ\www\Seguimientoegresado\protected\views\sede\_search.php (90)
+in C:\AppServ\www\Seguimientoegresado\protected\views\sede\admin.php (37)
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\SedeController.php (73)
+2013/10/28 13:02:16 [error] [php] YiiBase::include(InstEstablecimiento.php) [<a href='yiibase.include'>yiibase.include</a>]: failed to open stream: No such file or directory (C:\AppServ\www\yii\framework\YiiBase.php:423)
+Stack trace:
+#0 C:\AppServ\www\Seguimientoegresado\protected\views\sede\admin.php(63): spl_autoload_call()
+#1 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#2 C:\AppServ\www\yii\framework\web\CBaseController.php(96): SedeController->renderInternal()
+#3 C:\AppServ\www\yii\framework\web\CController.php(870): SedeController->renderFile()
+#4 C:\AppServ\www\yii\framework\web\CController.php(783): SedeController->renderPartial()
+#5 C:\AppServ\www\Seguimientoegresado\protected\controllers\SedeController.php(74): SedeController->render()
+#6 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(50): SedeController->actionAdmin()
+#7 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#8 C:\AppServ\www\yii\framework\web\CController.php(287): SedeController->runAction()
+#9 C:\AppServ\www\yii\framework\web\CController.php(266): SedeController->runActionWithFilters()
+#10 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): SedeController->run()
+#11 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#12 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\AppServ\www\Seguimientoegresado\index.php(13): CWebApplication->run()
+REQUEST_URI=/Seguimientoegresado/index.php?r=sede/admin
+in C:\AppServ\www\Seguimientoegresado\protected\views\sede\admin.php (63)
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\SedeController.php (74)
+in C:\AppServ\www\Seguimientoegresado\index.php (13)
+2013/10/28 13:21:42 [error] [exception.CException] exception 'CException' with message 'Property "Establecimiento.ID" is not defined.' in C:\AppServ\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('ID')
+#1 C:\AppServ\www\yii\framework\base\CComponent.php(607) : eval()'d code(1): CActiveRecord->__get('ID')
+#2 C:\AppServ\www\yii\framework\base\CComponent.php(607): eval()
+#3 C:\AppServ\www\yii\framework\zii\widgets\grid\CLinkColumn.php(83): CComponent->evaluateExpression('"index.php?r=as...', Array)
+#4 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridColumn.php(138): CLinkColumn->renderDataCellContent(0, Object(Establecimiento))
+#5 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridView.php(529): CGridColumn->renderDataCell(0)
+#6 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridView.php(502): CGridView->renderTableRow(0)
+#7 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridView.php(412): CGridView->renderTableBody()
+#8 C:\AppServ\www\yii\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#9 [internal function]: CBaseListView->renderSection(Array)
+#10 C:\AppServ\www\yii\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#11 C:\AppServ\www\yii\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#12 C:\AppServ\www\yii\framework\web\CBaseController.php(174): CBaseListView->run()
+#13 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\admin.php(97): CBaseController->widget('zii.widgets.gri...', Array)
+#14 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require('C:\AppServ\www\...')
+#15 C:\AppServ\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\AppServ\www\...', Array, true)
+#16 C:\AppServ\www\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\AppServ\www\...', Array, true)
+#17 C:\AppServ\www\yii\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#18 C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php(76): CController->render('admin', Array)
+#19 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(50): EstablecimientoController->actionAdmin()
+#20 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#21 C:\AppServ\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#22 C:\AppServ\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#24 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('establecimiento...')
+#25 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/admin
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php?r=sede/admin
+---
+2013/10/28 13:22:29 [error] [exception.CException] exception 'CException' with message 'Property "Establecimiento.ID" is not defined.' in C:\AppServ\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('ID')
+#1 C:\AppServ\www\yii\framework\base\CComponent.php(607) : eval()'d code(1): CActiveRecord->__get('ID')
+#2 C:\AppServ\www\yii\framework\base\CComponent.php(607): eval()
+#3 C:\AppServ\www\yii\framework\zii\widgets\grid\CLinkColumn.php(83): CComponent->evaluateExpression('"index.php?r=as...', Array)
+#4 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridColumn.php(138): CLinkColumn->renderDataCellContent(0, Object(Establecimiento))
+#5 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridView.php(529): CGridColumn->renderDataCell(0)
+#6 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridView.php(502): CGridView->renderTableRow(0)
+#7 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridView.php(412): CGridView->renderTableBody()
+#8 C:\AppServ\www\yii\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#9 [internal function]: CBaseListView->renderSection(Array)
+#10 C:\AppServ\www\yii\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#11 C:\AppServ\www\yii\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#12 C:\AppServ\www\yii\framework\web\CBaseController.php(174): CBaseListView->run()
+#13 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\admin.php(97): CBaseController->widget('zii.widgets.gri...', Array)
+#14 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require('C:\AppServ\www\...')
+#15 C:\AppServ\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\AppServ\www\...', Array, true)
+#16 C:\AppServ\www\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\AppServ\www\...', Array, true)
+#17 C:\AppServ\www\yii\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#18 C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php(76): CController->render('admin', Array)
+#19 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(50): EstablecimientoController->actionAdmin()
+#20 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#21 C:\AppServ\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#22 C:\AppServ\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#24 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('establecimiento...')
+#25 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/admin
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php
+---
+2013/10/28 13:26:13 [error] [exception.CException] exception 'CException' with message 'Property "Establecimiento.ID" is not defined.' in C:\AppServ\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('ID')
+#1 C:\AppServ\www\yii\framework\base\CComponent.php(607) : eval()'d code(1): CActiveRecord->__get('ID')
+#2 C:\AppServ\www\yii\framework\base\CComponent.php(607): eval()
+#3 C:\AppServ\www\yii\framework\zii\widgets\grid\CLinkColumn.php(83): CComponent->evaluateExpression('"index.php?r=as...', Array)
+#4 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridColumn.php(138): CLinkColumn->renderDataCellContent(0, Object(Establecimiento))
+#5 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridView.php(529): CGridColumn->renderDataCell(0)
+#6 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridView.php(502): CGridView->renderTableRow(0)
+#7 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridView.php(412): CGridView->renderTableBody()
+#8 C:\AppServ\www\yii\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#9 [internal function]: CBaseListView->renderSection(Array)
+#10 C:\AppServ\www\yii\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#11 C:\AppServ\www\yii\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#12 C:\AppServ\www\yii\framework\web\CBaseController.php(174): CBaseListView->run()
+#13 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\admin.php(97): CBaseController->widget('zii.widgets.gri...', Array)
+#14 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require('C:\AppServ\www\...')
+#15 C:\AppServ\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\AppServ\www\...', Array, true)
+#16 C:\AppServ\www\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\AppServ\www\...', Array, true)
+#17 C:\AppServ\www\yii\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#18 C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php(76): CController->render('admin', Array)
+#19 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(50): EstablecimientoController->actionAdmin()
+#20 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#21 C:\AppServ\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#22 C:\AppServ\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#24 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('establecimiento...')
+#25 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/admin
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php
+---
+2013/10/28 13:27:11 [error] [exception.CException] exception 'CException' with message 'Property "Establecimiento.ID" is not defined.' in C:\AppServ\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('ID')
+#1 C:\AppServ\www\yii\framework\base\CComponent.php(607) : eval()'d code(1): CActiveRecord->__get('ID')
+#2 C:\AppServ\www\yii\framework\base\CComponent.php(607): eval()
+#3 C:\AppServ\www\yii\framework\zii\widgets\grid\CLinkColumn.php(83): CComponent->evaluateExpression('"index.php?r=as...', Array)
+#4 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridColumn.php(138): CLinkColumn->renderDataCellContent(0, Object(Establecimiento))
+#5 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridView.php(529): CGridColumn->renderDataCell(0)
+#6 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridView.php(502): CGridView->renderTableRow(0)
+#7 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridView.php(412): CGridView->renderTableBody()
+#8 C:\AppServ\www\yii\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#9 [internal function]: CBaseListView->renderSection(Array)
+#10 C:\AppServ\www\yii\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#11 C:\AppServ\www\yii\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#12 C:\AppServ\www\yii\framework\web\CBaseController.php(174): CBaseListView->run()
+#13 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\admin.php(97): CBaseController->widget('zii.widgets.gri...', Array)
+#14 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require('C:\AppServ\www\...')
+#15 C:\AppServ\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\AppServ\www\...', Array, true)
+#16 C:\AppServ\www\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\AppServ\www\...', Array, true)
+#17 C:\AppServ\www\yii\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#18 C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php(76): CController->render('admin', Array)
+#19 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(50): EstablecimientoController->actionAdmin()
+#20 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#21 C:\AppServ\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#22 C:\AppServ\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#24 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('establecimiento...')
+#25 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/admin
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php
+---
+2013/10/28 13:36:28 [error] [exception.CException] exception 'CException' with message 'Property "Establecimiento.ID" is not defined.' in C:\AppServ\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('ID')
+#1 C:\AppServ\www\yii\framework\base\CComponent.php(607) : eval()'d code(1): CActiveRecord->__get('ID')
+#2 C:\AppServ\www\yii\framework\base\CComponent.php(607): eval()
+#3 C:\AppServ\www\yii\framework\zii\widgets\grid\CLinkColumn.php(83): CComponent->evaluateExpression('"index.php?r=as...', Array)
+#4 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridColumn.php(138): CLinkColumn->renderDataCellContent(0, Object(Establecimiento))
+#5 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridView.php(529): CGridColumn->renderDataCell(0)
+#6 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridView.php(502): CGridView->renderTableRow(0)
+#7 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridView.php(412): CGridView->renderTableBody()
+#8 C:\AppServ\www\yii\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#9 [internal function]: CBaseListView->renderSection(Array)
+#10 C:\AppServ\www\yii\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#11 C:\AppServ\www\yii\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#12 C:\AppServ\www\yii\framework\web\CBaseController.php(174): CBaseListView->run()
+#13 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\admin.php(97): CBaseController->widget('zii.widgets.gri...', Array)
+#14 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require('C:\AppServ\www\...')
+#15 C:\AppServ\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\AppServ\www\...', Array, true)
+#16 C:\AppServ\www\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\AppServ\www\...', Array, true)
+#17 C:\AppServ\www\yii\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#18 C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php(76): CController->render('admin', Array)
+#19 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(50): EstablecimientoController->actionAdmin()
+#20 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#21 C:\AppServ\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#22 C:\AppServ\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#24 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('establecimiento...')
+#25 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/admin
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php
+---
+2013/10/28 13:38:52 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\AppServ\www\yii\framework\web\CController.php:337
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\AppServ\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#2 C:\AppServ\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#4 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('sede/admin')
+#5 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=sede/admin
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php
+---
+2013/10/28 13:38:58 [error] [exception.CException] exception 'CException' with message 'Property "Establecimiento.ID" is not defined.' in C:\AppServ\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('ID')
+#1 C:\AppServ\www\yii\framework\base\CComponent.php(607) : eval()'d code(1): CActiveRecord->__get('ID')
+#2 C:\AppServ\www\yii\framework\base\CComponent.php(607): eval()
+#3 C:\AppServ\www\yii\framework\zii\widgets\grid\CLinkColumn.php(83): CComponent->evaluateExpression('"index.php?r=as...', Array)
+#4 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridColumn.php(138): CLinkColumn->renderDataCellContent(0, Object(Establecimiento))
+#5 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridView.php(529): CGridColumn->renderDataCell(0)
+#6 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridView.php(502): CGridView->renderTableRow(0)
+#7 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridView.php(412): CGridView->renderTableBody()
+#8 C:\AppServ\www\yii\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#9 [internal function]: CBaseListView->renderSection(Array)
+#10 C:\AppServ\www\yii\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#11 C:\AppServ\www\yii\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#12 C:\AppServ\www\yii\framework\web\CBaseController.php(174): CBaseListView->run()
+#13 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\admin.php(97): CBaseController->widget('zii.widgets.gri...', Array)
+#14 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require('C:\AppServ\www\...')
+#15 C:\AppServ\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\AppServ\www\...', Array, true)
+#16 C:\AppServ\www\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\AppServ\www\...', Array, true)
+#17 C:\AppServ\www\yii\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#18 C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php(76): CController->render('admin', Array)
+#19 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(50): EstablecimientoController->actionAdmin()
+#20 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#21 C:\AppServ\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#22 C:\AppServ\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#24 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('establecimiento...')
+#25 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/admin
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php?r=sede/admin
+---
+2013/10/28 13:39:29 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\AppServ\www\yii\framework\web\CController.php:337
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\AppServ\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#2 C:\AppServ\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#4 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('sede/admin')
+#5 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=sede/admin
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php
+---
+2013/10/28 13:39:33 [error] [exception.CException] exception 'CException' with message 'Property "Establecimiento.ID" is not defined.' in C:\AppServ\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\AppServ\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('ID')
+#1 C:\AppServ\www\yii\framework\base\CComponent.php(607) : eval()'d code(1): CActiveRecord->__get('ID')
+#2 C:\AppServ\www\yii\framework\base\CComponent.php(607): eval()
+#3 C:\AppServ\www\yii\framework\zii\widgets\grid\CLinkColumn.php(83): CComponent->evaluateExpression('"index.php?r=as...', Array)
+#4 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridColumn.php(138): CLinkColumn->renderDataCellContent(0, Object(Establecimiento))
+#5 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridView.php(529): CGridColumn->renderDataCell(0)
+#6 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridView.php(502): CGridView->renderTableRow(0)
+#7 C:\AppServ\www\yii\framework\zii\widgets\grid\CGridView.php(412): CGridView->renderTableBody()
+#8 C:\AppServ\www\yii\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#9 [internal function]: CBaseListView->renderSection(Array)
+#10 C:\AppServ\www\yii\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#11 C:\AppServ\www\yii\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#12 C:\AppServ\www\yii\framework\web\CBaseController.php(174): CBaseListView->run()
+#13 C:\AppServ\www\Seguimientoegresado\protected\views\establecimiento\admin.php(97): CBaseController->widget('zii.widgets.gri...', Array)
+#14 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require('C:\AppServ\www\...')
+#15 C:\AppServ\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\AppServ\www\...', Array, true)
+#16 C:\AppServ\www\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\AppServ\www\...', Array, true)
+#17 C:\AppServ\www\yii\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#18 C:\AppServ\www\Seguimientoegresado\protected\controllers\EstablecimientoController.php(76): CController->render('admin', Array)
+#19 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(50): EstablecimientoController->actionAdmin()
+#20 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#21 C:\AppServ\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#22 C:\AppServ\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#24 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('establecimiento...')
+#25 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=establecimiento/admin
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php?r=sede/admin
+---
+2013/10/28 13:42:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "asistente/admin".' in C:\AppServ\www\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('asistente/admin')
+#1 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=asistente/admin&idsede=3
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php?r=establecimiento/admin
+---
+2013/10/28 13:43:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "asistente/admin".' in C:\AppServ\www\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('asistente/admin')
+#1 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=asistente/admin&idsede=3
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php?r=establecimiento/admin
+---
+2013/10/28 13:47:18 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\AppServ\www\yii\framework\web\CController.php:337
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\AppServ\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#2 C:\AppServ\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#4 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('sede/admin')
+#5 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 C:\AppServ\www\Seguimientoegresado\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/Seguimientoegresado/index.php?r=sede%2Fadmin&Sede%5Bid%5D=&Sede%5Bsecretaria%5D=&Sede%5Bdepto%5D=antioquia&Sede%5Bnommunicipio%5D=&Sede%5Bcodestablecimiento%5D=&Sede%5Bcodsede%5D=&Sede%5Bnombresede%5D=&Sede%5Bzona%5D=&Sede%5Bdireccion%5D=&Sede%5Btelefono%5D=&Sede%5Bestadosede%5D=&Sede%5Bnivelessede%5D=&Sede%5Bgradossede%5D=&Sede_page=1&ajax=sede-grid
+HTTP_REFERER=http://localhost/Seguimientoegresado/index.php?r=sede/admin
+---
+2013/10/29 14:23:54 [error] [php] YiiBase::include(BActiveForm.php) [<a href='yiibase.include'>yiibase.include</a>]: failed to open stream: No such file or directory (C:\AppServ\www\yii\framework\YiiBase.php:423)
+Stack trace:
+#0 C:\AppServ\www\yii\framework\web\CWidgetFactory.php(147): import()
+#1 C:\AppServ\www\yii\framework\web\CBaseController.php(147): CWidgetFactory->createWidget()
+#2 C:\AppServ\www\yii\framework\web\CBaseController.php(190): SedeController->createWidget()
+#3 C:\AppServ\www\Seguimientoegresado\protected\views\sede\_form.php(7): SedeController->beginWidget()
+#4 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#5 C:\AppServ\www\yii\framework\web\CBaseController.php(96): SedeController->renderInternal()
+#6 C:\AppServ\www\yii\framework\web\CController.php(870): SedeController->renderFile()
+#7 C:\AppServ\www\Seguimientoegresado\protected\views\sede\create.php(19): SedeController->renderPartial()
+#8 C:\AppServ\www\yii\framework\web\CBaseController.php(127): require()
+#9 C:\AppServ\www\yii\framework\web\CBaseController.php(96): SedeController->renderInternal()
+#10 C:\AppServ\www\yii\framework\web\CController.php(870): SedeController->renderFile()
+#11 C:\AppServ\www\yii\framework\web\CController.php(783): SedeController->renderPartial()
+#12 C:\AppServ\www\Seguimientoegresado\protected\controllers\SedeController.php(27): SedeController->render()
+#13 C:\AppServ\www\yii\framework\web\actions\CInlineAction.php(50): SedeController->actionCreate()
+#14 C:\AppServ\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#15 C:\AppServ\www\yii\framework\web\CController.php(287): SedeController->runAction()
+#16 C:\AppServ\www\yii\framework\web\CController.php(266): SedeController->runActionWithFilters()
+#17 C:\AppServ\www\yii\framework\web\CWebApplication.php(276): SedeController->run()
+#18 C:\AppServ\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#19 C:\AppServ\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 C:\AppServ\www\Seguimientoegresado\index.php(13): CWebApplication->run()
+REQUEST_URI=/Seguimientoegresado/index.php?r=sede/create
+in C:\AppServ\www\Seguimientoegresado\protected\views\sede\_form.php (7)
+in C:\AppServ\www\Seguimientoegresado\protected\views\sede\create.php (19)
+in C:\AppServ\www\Seguimientoegresado\protected\controllers\SedeController.php (27)

@@ -30,16 +30,15 @@ class EstablecimientoController extends GxController {
 
 	public function actionUpdate($id) {
 		$model = $this->loadModel($id, 'Establecimiento');
-
-
+                Controller::scriptBasico(2);
 		if (isset($_POST['Establecimiento'])) {
 			$model->setAttributes($_POST['Establecimiento']);
-
+                        
 			if ($model->save()) {
 				$this->redirect(array('view', 'id' => $model->id));
 			}
 		}
-
+                
 		$this->render('update', array(
 				'model' => $model,
 				));
