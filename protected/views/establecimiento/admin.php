@@ -81,6 +81,15 @@ Si lo desea, puede ingresar un operador de comparación (&lt;, &lt;=, &gt;, &gt;
 		'calendario',
 		'correoelectronico',
 		*/
+            array(
+                'class'=>'CLinkColumn',
+                'label'=>'Sedes',
+                'urlExpression'=>'"index.php?r=sede/admin&idsede=".$data->id',
+                'header'=>'Historico academico',
+                   
+                 'imageUrl'=>Yii::app()->request->baseUrl.'/images/hist_acad.jpg',
+                 'htmlOptions'=>array('style'=>'text-align:center;width:5px;'),  
+              ) ,
 		array(
 			'class' => 'CButtonColumn',
 		),

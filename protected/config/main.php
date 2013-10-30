@@ -20,6 +20,7 @@ return array(
                 'ext.bootstrap-theme.widgets.*',
 		'ext.bootstrap-theme.helpers.*',
 		'ext.bootstrap-theme.behaviors.*',
+                'application.extensions.bootstrap.*',
             
 	),
 
@@ -64,6 +65,7 @@ return array(
 		// uncomment the following to use a MySQL database
 		 'bootstrap'=>array(
                     'class'=>'ext.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
+                     
                 ),
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=seguimientoegresadobd',
