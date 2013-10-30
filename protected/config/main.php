@@ -68,10 +68,10 @@ return array(
                      
                 ),
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=seguimientoegresadobd',
+			'connectionString' => 'mysql:host=localhost;dbname=rumbos',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => 'root',
+			'username' => 'rumbos',
+			'password' => 'rumbos',
 			'charset' => 'utf8',
 		),
 		
