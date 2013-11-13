@@ -136,7 +136,7 @@ class EgresadoController extends GxController {
         
         public function actionBusqueda(){
             
-            $model = new Egresado('busqueda');
+            $model = new Egresado;
             
             Controller::scriptBasico();
             
