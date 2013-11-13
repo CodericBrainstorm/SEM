@@ -10,7 +10,7 @@ class EstablecimientoController extends GxController {
 	}
 
 	public function actionCreate() {
-                Controller::scriptBasico();
+                /*Controller::scriptBasico();*/
 		$model = new Establecimiento;
 
 

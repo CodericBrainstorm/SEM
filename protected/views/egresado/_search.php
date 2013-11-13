@@ -5,20 +5,13 @@
 	'method' => 'get',
 )); ?>
 
-<!--	<div class="row">
-		<?php //echo $form->label($model, 'ID'); ?>
-		<?php //echo $form->textField($model, 'ID'); ?>
-	</div>-->
+
 
 	<div class="row">
 		<?php echo $form->label($model, 'CODIGO_SED'); ?>
 		<?php echo $form->textField($model, 'CODIGO_SED', array('maxlength' => 10)); ?>
 	</div>
 
-<!--	<div class="row">
-		<?php //echo $form->label($model, 'ID_old'); ?>
-		<?php //echo $form->textField($model, 'ID_old', array('maxlength' => 16)); ?>
-	</div>-->
 
 	<div class="row">
 		<?php echo $form->label($model, 'MUN_CODIGO'); ?>
@@ -30,10 +23,10 @@
 		<?php //echo $form->textField($model, 'CODIGO_DANE_ESTABLEDUCATIVO', array('maxlength' => 12)); ?>
 	</div>-->
 
-	<div class="row">
-		<?php echo $form->label($model, 'CODIGO_DANE_SEDE'); ?>
-		<?php echo $form->textField($model, 'CODIGO_DANE_SEDE', array('maxlength' => 12)); ?>
-	</div>
+<!--	<div class="row">
+		<?php //echo $form->label($model, 'CODIGO_DANE_SEDE'); ?>
+		<?php //echo $form->textField($model, 'CODIGO_DANE_SEDE', array('maxlength' => 12)); ?>
+	</div>-->
 
 	<div class="row">
 		<?php echo $form->label($model, 'CONS_SEDE'); ?>
@@ -150,10 +143,7 @@
 		<?php echo $form->textField($model, 'SISBEN', array('maxlength' => 4)); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model, 'POB_VICT_CONF'); ?>
-		<?php echo $form->textField($model, 'POB_VICT_CONF', array('maxlength' => 4)); ?>
-	</div>
+	
 
 	<div class="row">
 		<?php echo $form->label($model, 'DPTO_EXP'); ?>
@@ -220,155 +210,20 @@
 		<?php //echo $form->textField($model, 'SUBSIDIADO', array('maxlength' => 3)); ?>
 	</div>
 
-<!--	<div class="row">
-		<?php //echo $form->label($model, 'REPITENTE'); ?>
-		<?php //echo $form->textField($model, 'REPITENTE', array('maxlength' => 3)); ?>
-	</div>
+       <div class="row">
 
-	<div class="row">
-		<?php //echo $form->label($model, 'NUEVO'); ?>
-		<?php //echo $form->textField($model, 'NUEVO', array('maxlength' => 3)); ?>
-	</div>
-
-	<div class="row">
-		<?php //echo $form->label($model, 'SIT_ACAD_ANO_ANT'); ?>
-		<?php //echo $form->textField($model, 'SIT_ACAD_ANO_ANT', array('maxlength' => 3)); ?>
-	</div>
-
-	<div class="row">
-		<?php //echo $form->label($model, 'CON_ALUM_ANO_ANT'); ?>
-		<?php //echo $form->textField($model, 'CON_ALUM_ANO_ANT', array('maxlength' => 3)); ?>
-	</div>-->
-
-<!--	<div class="row">
-		<?php //echo $form->label($model, 'ID_ALUMNO'); ?>
-		<?php //echo $form->textField($model, 'ID_ALUMNO', array('maxlength' => 30)); ?>
-	</div>
-
-	<div class="row">
-		<?php //echo $form->label($model, 'COR_ID'); ?>
-		<?php //echo $form->textField($model, 'COR_ID', array('maxlength' => 100)); ?>
-	</div>
-
-	<div class="row">
-		<?php //echo $form->label($model, 'CAB_FAMILIA'); ?>
-		<?php //echo $form->textField($model, 'CAB_FAMILIA', array('maxlength' => 3)); ?>
-	</div>-->
-
-<!--	<div class="row">
-		<?php //echo $form->label($model, 'BEN_MAD_FLIA'); ?>
-		<?php //echo $form->textField($model, 'BEN_MAD_FLIA', array('maxlength' => 3)); ?>
-	</div>
-
-	<div class="row">
-		<?php //echo $form->label($model, 'BEN_VET_FP'); ?>
-		<?php //echo $form->textField($model, 'BEN_VET_FP', array('maxlength' => 3)); ?>
-	</div>-->
-
-<!--	<div class="row">
-		<?php //echo $form->label($model, 'BEN_HER_NAC'); ?>
-		<?php //echo $form->textField($model, 'BEN_HER_NAC', array('maxlength' => 3)); ?>
-	</div>
-
-	<div class="row">
-		<?php //echo $form->label($model, 'EST_ID'); ?>
-		<?php //echo $form->textField($model, 'EST_ID', array('maxlength' => 10)); ?>
-	</div>-->
-
-<!--	<div class="row">
-		<?php //echo $form->label($model, 'NOMBRE1_FON'); ?>
-		<?php //echo $form->textField($model, 'NOMBRE1_FON', array('maxlength' => 100)); ?>
-	</div>
-
-	<div class="row">
-		<?php //echo $form->label($model, 'NOMBRE2_FON'); ?>
-		<?php //echo $form->textField($model, 'NOMBRE2_FON', array('maxlength' => 100)); ?>
-	</div>
-
-	<div class="row">
-		<?php //echo $form->label($model, 'APELLIDO1_FON'); ?>
-		<?php //echo $form->textField($model, 'APELLIDO1_FON', array('maxlength' => 100)); ?>
-	</div>
-
-	<div class="row">
-		<?php //echo $form->label($model, 'APELLIDO2_FON'); ?>
-		<?php //echo $form->textField($model, 'APELLIDO2_FON', array('maxlength' => 100)); ?>
-	</div>
-
-	<div class="row">
-		<?php //echo $form->label($model, 'PER_ID'); ?>
-		<?php //echo $form->textField($model, 'PER_ID', array('maxlength' => 10)); ?>
-	</div>-->
-
-	<div class="row">
-		<?php echo $form->label($model, 'ESTADO'); ?>
-		<?php echo $form->textField($model, 'ESTADO', array('maxlength' => 10)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model, 'INTERNADO'); ?>
-		<?php echo $form->textField($model, 'INTERNADO', array('maxlength' => 2)); ?>
-	</div>
-
-<!--	<div class="row">
-		<?php //echo $form->label($model, 'VAL_DES_PERIODO2'); ?>
-		<?php //echo $form->textField($model, 'VAL_DES_PERIODO2', array('maxlength' => 6)); ?>
-	</div>
-
-	<div class="row">
-		<?php //echo $form->label($model, 'NUM_CONVENIO'); ?>
-		<?php //echo $form->textField($model, 'NUM_CONVENIO', array('maxlength' => 10)); ?>
-	</div>
-
-	<div class="row">
-		<?php //echo $form->label($model, 'BUENO'); ?>
-		<?php //echo $form->textField($model, 'BUENO', array('maxlength' => 6)); ?>
-	</div>
-
-	<div class="row">
-		<?php //echo $form->label($model, 'CAR_ID'); ?>
-		<?php //echo $form->textField($model, 'CAR_ID', array('maxlength' => 10)); ?>
-	</div>-->
-
-	<div class="row">
-		<?php echo $form->label($model, 'FEC_CREACION'); ?>
-		<?php echo $form->textField($model, 'FEC_CREACION', array('maxlength' => 10)); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model, 'NOMBRE_ESTABLECIMIENTO'); ?>
 		<?php echo $form->textField($model, 'NOMBRE_ESTABLECIMIENTO', array('maxlength' => 255)); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model, 'CTE_ID_SECTOR'); ?>
-		<?php echo $form->textField($model, 'CTE_ID_SECTOR', array('maxlength' => 10)); ?>
-	</div>
+	
 
 	<div class="row">
 		<?php echo $form->label($model, 'NOMBRE_SEDE'); ?>
 		<?php echo $form->textField($model, 'NOMBRE_SEDE', array('maxlength' => 255)); ?>
 	</div>
 
-<!--	<div class="row">
-		<?php //echo $form->label($model, 'CTE_ID_ZONA'); ?>
-		<?php //echo $form->textField($model, 'CTE_ID_ZONA', array('maxlength' => 10)); ?>
-	</div>
 
-	<div class="row">
-		<?php //echo $form->label($model, 'DISCAP1'); ?>
-		<?php //echo $form->textField($model, 'DISCAP1', array('maxlength' => 4)); ?>
-	</div>
-
-	<div class="row">
-		<?php //echo $form->label($model, 'grado1'); ?>
-		<?php //echo $form->textField($model, 'grado1', array('maxlength' => 3)); ?>
-	</div>
-
-	<div class="row">
-		<?php //echo $form->label($model, 'COD_MUN1'); ?>
-		<?php //echo $form->textField($model, 'COD_MUN1', array('maxlength' => 10)); ?>
-	</div>-->
 
 	<div class="row buttons">
 		<?php echo GxHtml::submitButton(Yii::t('app', 'Search')); ?>

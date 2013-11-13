@@ -69,7 +69,7 @@ $('.search-form form').submit(function(){
                array(
                 'class'=>'CLinkColumn',
                 'label'=>'Sedes',
-                'urlExpression'=>'"index.php?r=egresado/admin&codsede=".$data->codsede',
+                'urlExpression'=>'"index.php?r=egresado/adminxSede&codsede=".$data->codsede',
                 'header'=>'Administrar Egresado',
                    
                  'imageUrl'=>Yii::app()->request->baseUrl.'/images/alumno.jpg',

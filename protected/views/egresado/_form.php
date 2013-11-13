@@ -55,8 +55,16 @@
 		<?php echo $form->error($model,'CODIGO_DANE_ESTABLEDUCATIVO'); ?>
             </td>
 	    <td>
-		<?php echo $form->textFieldRow($model, 'CODIGO_DANE_SEDE', array('maxlength' => 12)); ?>
-		<?php echo $form->error($model,'CODIGO_DANE_SEDE'); ?>
+		<?php if(isset($model->CODIGO_DANE_SEDE))
+                {
+                    echo $form->textFieldRow($model, 'CODIGO_DANE_SEDE', array('maxlength' => 12, 'readOnly'=>true)); ?>
+		     <?php echo $form->error($model,'CODIGO_DANE_SEDE'); 
+                } else 
+                
+                {
+                     echo $form->textFieldRow($model, 'CODIGO_DANE_SEDE', array('maxlength' => 12)); ?>
+		     <?php echo $form->error($model,'CODIGO_DANE_SEDE'); 
+                } ?>
              </td>
 	</tr>
         
@@ -190,23 +198,35 @@
         </tr>
         <tr>
           
+	  
+	  
 	  <td>
-		<?php echo $form->textFieldRow($model, 'CAB_FAMILIA', array('maxlength' => 3)); ?>
-		<?php echo $form->error($model,'CAB_FAMILIA'); ?>
-          </td>
-	  <td>
-		<?php echo $form->textFieldRow($model, 'INTERNADO', array('maxlength' => 2)); ?>
-		<?php echo $form->error($model,'INTERNADO'); ?>
-          </td>
-	  <td>
-		<?php echo $form->textFieldRow($model, 'NOMBRE_ESTABLECIMIENTO', array('maxlength' => 255)); ?>
+		<?php echo $form->textFieldRow($model, 'NOMBRE_ESTABLECIMIENTO', array('maxlength' => 60)); ?>
 		<?php echo $form->error($model,'NOMBRE_ESTABLECIMIENTO'); ?>
           </td>
 	  <td>
-		<?php echo $form->textFieldRow($model, 'NOMBRE_SEDE', array('maxlength' => 255)); ?>
+		<?php echo $form->textFieldRow($model, 'NOMBRE_SEDE', array('maxlength' => 60)); ?>
 		<?php echo $form->error($model,'NOMBRE_SEDE'); ?>
           </td>
+          <td>
+		<?php echo $form->textFieldRow($model, 'CELULAR', array('maxlength' => 14)); ?>
+		<?php echo $form->error($model,'CELULAR'); ?>
+          </td>
+	  <td>
+		<?php echo $form->textFieldRow($model, 'FACEBOOK', array('maxlength' => 50)); ?>
+		<?php echo $form->error($model,'FACEBOOK'); ?>
+          </td>
+          <td>
+		<?php echo $form->textFieldRow($model, 'TWITTER', array('maxlength' => 50)); ?>
+		<?php echo $form->error($model,'FACEBOOK'); ?>
+          </td>
          </tr>
+         <TR>
+             <td>
+		<?php echo $form->textFieldRow($model, 'LINKEDIN', array('maxlength' => 50)); ?>
+		<?php echo $form->error($model,'LINKEDIN'); ?>
+          </td>
+         </TR>
 </table>
 		
 		

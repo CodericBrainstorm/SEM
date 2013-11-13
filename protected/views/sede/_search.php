@@ -70,15 +70,15 @@
 		<?php echo $form->textField($model, 'estadosede', array('maxlength' => 20)); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model, 'nivelessede'); ?>
-		<?php echo $form->textArea($model, 'nivelessede'); ?>
+<!--	<div class="row">
+		<?php //echo $form->label($model, 'nivelessede'); ?>
+		<?php //echo $form->textArea($model, 'nivelessede'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model, 'modelossede'); ?>
-		<?php echo $form->textArea($model, 'modelossede'); ?>
-	</div>
+		<?php //echo $form->label($model, 'modelossede'); ?>
+		<?php //echo $form->textArea($model, 'modelossede'); ?>
+	</div>-->
 
 <!--	<div class="row">
 		<?php //echo $form->label($model, 'gradossede'); ?>
