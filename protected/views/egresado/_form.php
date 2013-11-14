@@ -33,6 +33,8 @@
 	'id' => 'egresado-form',
 	'enableAjaxValidation' => false,
 ));
+if(isset($_GET['idsede']))
+   $model->CODIGO_DANE_SEDE = $_GET['idsede'];
 ?>
 <?php $this->widget('bootstrap.widgets.BootAlert'); ?>
 <?php echo $form->errorSummary($model); ?>
@@ -61,9 +63,11 @@
 		     <?php echo $form->error($model,'CODIGO_DANE_SEDE'); 
                 } else 
                 
-                {
-                     echo $form->textFieldRow($model, 'CODIGO_DANE_SEDE', array('maxlength' => 12)); ?>
-		     <?php echo $form->error($model,'CODIGO_DANE_SEDE'); 
+                { 
+                    
+                      echo $form->textFieldRow($model, 'CODIGO_DANE_SEDE', array('maxlength' => 12)); ?>
+		       <?php echo $form->error($model,'CODIGO_DANE_SEDE'); 
+                   
                 } ?>
              </td>
 	</tr>

@@ -16,5 +16,6 @@ $this->breadcrumbs = array(
 <?php
 $this->renderPartial('_form', array(
 		'model' => $model,
+                'idsede' => $idsede,
 		'buttons' => 'create'));
 ?>

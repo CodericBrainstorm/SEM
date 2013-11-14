@@ -45,8 +45,9 @@ $(function(){
 )); ?>
 </div><!-- search-form -->
 
-<?php
+<?php   
 if (isset($_GET['yt0'])){
+   
     $this->widget('bootstrap.widgets.BootGridView', array(
             'type'=>'striped bordered condensed',
             'id' => 'inscripcion-grid',
@@ -89,4 +90,4 @@ if (isset($_GET['yt0'])){
     ));
 }
 ?>
-<a class="btn btn-success btn-normal" href="index.php?r=egresado/create">Crear egresado</a>
+<a class="btn btn-success btn-normal" href="index.php?r=egresado/create&idsede=<?php echo  $_GET['idsede']; ?>">Crear egresado</a>

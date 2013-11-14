@@ -22,6 +22,7 @@ $('.search-form form').submit(function(){
 	return false;
 });
 ");
+ 
 ?>
 
 <h1><?php echo Yii::t('app', 'Administrar') . ' ' . GxHtml::encode($model->label(2)); ?></h1>
@@ -32,7 +33,7 @@ Si lo desea, puede ingresar un operador de comparación (&lt;, &lt;=, &gt;, &gt;
 
 <?php echo GxHtml::link(Yii::t('app', 'Búsqueda Avanzada'), '#', array('class' => 'search-button')); ?>
 <div class="search-form">
-<?php $this->renderPartial('_search', array(
+<?php  $this->renderPartial('_search', array(
 	'model' => $model,
 ));  ?>
 </div><!-- search-form -->
@@ -42,6 +43,7 @@ Si lo desea, puede ingresar un operador de comparación (&lt;, &lt;=, &gt;, &gt;
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id' => 'egresado-grid',
 	'dataProvider' => $model->search(),
+        
 	'filter' => $model,
 	'columns' => array(
 		'ID',

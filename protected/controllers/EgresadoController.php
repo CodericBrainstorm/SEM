@@ -9,7 +9,7 @@ class EgresadoController extends GxController {
 		));
 	}
 
-	public function actionCreate() {
+	public function actionCreate($idsede='') {
 		$model = new Egresado;
 
 
@@ -24,7 +24,7 @@ class EgresadoController extends GxController {
 			}
 		}
 
-		$this->render('create', array( 'model' => $model));
+		$this->render('create', array( 'model' => $model, 'idsede' => $idsede));
 	}
 
 	public function actionUpdate($id) {
@@ -83,13 +83,26 @@ class EgresadoController extends GxController {
                 Controller::scriptBasico();
 		$model = new Egresado('search');
 		$model->unsetAttributes();
+                //extraer el id de egresados de historico egresados
+                
+//                $dataReader = Yii::app()->db->createCommand
+//                        ("SELECT * FROM historicoegresado JOIN egresado 
+//                            on(historicoegresado.egresadoID = egresado.ID) where sedeID='$codsede'"
+//                        )->setFetchMode(PDO::FETCH_OBJ)->queryAll();
+//                foreach($dataReader as $row) { 
+//                    print_r ($row->egresadoID);                   
+//                    $model->ID = $row->egresadoID;
+//                }
                 $model->CODIGO_DANE_SEDE=$codsede;
+               
 		if (isset($_GET['Egresado']))
 			$model->setAttributes($_GET['Egresado']);
-
+                
 		$this->render('admin', array(
 			'model' => $model,
+                        
 		));
+               
 	}
         public function actionAdmin() {
                 Controller::scriptBasico();
@@ -147,6 +160,7 @@ class EgresadoController extends GxController {
                   
             $this->render('busqueda', array(
 			'model' => $model,
+                        
 		));
         }
 
