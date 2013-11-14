@@ -91,7 +91,7 @@ if(isset($_GET['idsede']))
 		<?php echo $form->error($model,'NRO_OCUMENTO'); ?>
             </td>
 	    <td>
-		<?php echo $form->textFieldRow($model, 'EXPEDICION_DOC_DPTO', array('maxlength' => 2)); ?>
+		<?php echo $form->textFieldRow($model, 'EXPEDICION_DOC_DPTO', array('maxlength' => 20)); ?>
 		<?php echo $form->error($model,'EXPEDICION_DOC_DPTO'); ?>
              </td>
 	</tr>
@@ -99,7 +99,7 @@ if(isset($_GET['idsede']))
         <tr>
           
 	   <td>
-		<?php echo $form->textFieldRow($model, 'EXPEDICION_DOC_MUN', array('maxlength' => 6)); ?>
+		<?php echo $form->textFieldRow($model, 'EXPEDICION_DOC_MUN', array('maxlength' => 20)); ?>
 		<?php echo $form->error($model,'EXPEDICION_DOC_MUN'); ?>
            </td>
 	  <td>
@@ -138,19 +138,19 @@ if(isset($_GET['idsede']))
 		
           </td>
 	  <td>
-		<?php echo $form->textFieldRow($model, 'DEPARTAMENTO_NACIMIENTO', array('maxlength' => 6)); ?>
+		<?php echo $form->textFieldRow($model, 'DEPARTAMENTO_NACIMIENTO', array('maxlength' => 20)); ?>
 		<?php echo $form->error($model,'DEPARTAMENTO_NACIMIENTO'); ?>
           </td>
           <td>
-		<?php echo $form->textFieldRow($model, 'MUNICIPIO_NACIMIENTO', array('maxlength' => 6)); ?>
+		<?php echo $form->textFieldRow($model, 'MUNICIPIO_NACIMIENTO', array('maxlength' => 20)); ?>
 		<?php echo $form->error($model,'MUNICIPIO_NACIMIENTO'); ?>
           </td>
 	  <td>
-	     <?php echo $form->textFieldRow($model, 'GENERO', array('maxlength' => 1)); ?>
+	     <?php echo $form->textFieldRow($model, 'GENERO', array('maxlength' => 10)); ?>
 	     <?php echo $form->error($model,'GENERO'); ?>
           </td>
 	  <td>
-		<?php echo $form->textFieldRow($model, 'ZONA_RESIDENCIA_ESTUDIANTE', array('maxlength' => 4)); ?>
+		<?php echo $form->textFieldRow($model, 'ZONA_RESIDENCIA_ESTUDIANTE', array('maxlength' => 20)); ?>
 		<?php echo $form->error($model,'ZONA_RESIDENCIA_ESTUDIANTE'); ?>
           </td>
       </tr>
@@ -165,38 +165,38 @@ if(isset($_GET['idsede']))
 		<?php echo $form->error($model,'TEL'); ?>
           </td>
 	  <td>
-		<?php echo $form->textFieldRow($model, 'RESIDENCIA_DEPARTAMENTO', array('maxlength' => 6)); ?>
+		<?php echo $form->textFieldRow($model, 'RESIDENCIA_DEPARTAMENTO', array('maxlength' => 20)); ?>
 		<?php echo $form->error($model,'RESIDENCIA_DEPARTAMENTO'); ?>
          </td>
 	 <td>
-		<?php echo $form->textFieldRow($model, 'RESIDENCIA_MUNICIPIO', array('maxlength' => 6)); ?>
+		<?php echo $form->textFieldRow($model, 'RESIDENCIA_MUNICIPIO', array('maxlength' => 20)); ?>
 		<?php echo $form->error($model,'RESIDENCIA_MUNICIPIO'); ?>
          </td>
 	 <td>
-	     <?php echo $form->textFieldRow($model, 'ESTRATO', array('maxlength' => 4)); ?>
+	     <?php echo $form->textFieldRow($model, 'ESTRATO', array('maxlength' => 20)); ?>
 	     <?php echo $form->error($model,'ESTRATO'); ?>
          </td>
       </tr>
       <tr>
           
 	  <td>
-		<?php echo $form->textFieldRow($model, 'SISBEN', array('maxlength' => 4)); ?>
+		<?php echo $form->textFieldRow($model, 'SISBEN', array('maxlength' =>20)); ?>
 		<?php echo $form->error($model,'SISBEN'); ?>
           </td>
           <td>
-		<?php echo $form->textFieldRow($model, 'TIPO_DISCAPACIDAD', array('maxlength' => 4)); ?>
+		<?php echo $form->textFieldRow($model, 'TIPO_DISCAPACIDAD', array('maxlength' => 20)); ?>
 		<?php echo $form->error($model,'TIPO_DISCAPACIDAD'); ?>
           </td>
 	  <td>
-		<?php echo $form->textFieldRow($model, 'CAPACIDADES_EXCEPCIONALES', array('maxlength' => 4)); ?>
+		<?php echo $form->textFieldRow($model, 'CAPACIDADES_EXCEPCIONALES', array('maxlength' => 20)); ?>
 		<?php echo $form->error($model,'CAPACIDADES_EXCEPCIONALES'); ?>
           </td>
 	  <td>
-		<?php echo $form->textFieldRow($model, 'ETNIA', array('maxlength' => 3)); ?>
+		<?php echo $form->textFieldRow($model, 'ETNIA', array('maxlength' => 20)); ?>
 		<?php echo $form->error($model,'ETNIA'); ?>
           </td>
 	  <td>
-		<?php echo $form->textFieldRow($model, 'SUBSIDIADO', array('maxlength' => 3)); ?>
+		<?php echo $form->textFieldRow($model, 'SUBSIDIADO', array('maxlength' => 20)); ?>
 		<?php echo $form->error($model,'SUBSIDIADO'); ?>
           </td>
         </tr>
