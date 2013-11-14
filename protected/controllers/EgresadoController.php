@@ -17,8 +17,14 @@ class EgresadoController extends GxController {
 			$model->setAttributes($_POST['Egresado']);
 
 			if ($model->save()) {
+                               $idmax = Yii::app()->db->createCommand("SELECT MAX(ID) FROM egresado")->setFetchMode(PDO::FETCH_OBJ)->queryScalar();
+                               $modelHistorico = new Historicoegresado;
+                               $modelHistorico->egresadoID = $idmax;
+                               $modelHistorico->sedeID = $idsede;
+                               $modelHistorico->save();
 				if (Yii::app()->getRequest()->getIsAjaxRequest())
 					Yii::app()->end();
+                                
 				else
 					$this->redirect(array('view', 'id' => $model->ID));
 			}
@@ -85,14 +91,7 @@ class EgresadoController extends GxController {
 		$model->unsetAttributes();
                 //extraer el id de egresados de historico egresados
                 
-//                $dataReader = Yii::app()->db->createCommand
-//                        ("SELECT * FROM historicoegresado JOIN egresado 
-//                            on(historicoegresado.egresadoID = egresado.ID) where sedeID='$codsede'"
-//                        )->setFetchMode(PDO::FETCH_OBJ)->queryAll();
-//                foreach($dataReader as $row) { 
-//                    print_r ($row->egresadoID);                   
-//                    $model->ID = $row->egresadoID;
-//                }
+//               
                 $model->CODIGO_DANE_SEDE=$codsede;
                
 		if (isset($_GET['Egresado']))
@@ -128,16 +127,6 @@ class EgresadoController extends GxController {
 				else
 					$this->redirect(array('view', 'id' => $model->ID));
                                
-//                                $criteria=new CDbCriteria;
-//                                $criteria->select='max(egresadoID) AS maxColumn';
-//                                $row = $model->model()->find($criteria);
-//                                $somevariable = $row['maxColumn'];
-//                                echo '$somevariable:  '. $somevariable; exit;
-//                                $modHistoricoEgres = new Historicoegresado();
-//                                $modHistoricoEgres->sedeID = $idsede;
-//                                
-//                                $modHistoricoEgres->egresadoID = 1000;
-//                                $orden->insert();
 			}
                        echo 'IDSEDE:  '. $idsede; 
                       
