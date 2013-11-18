@@ -42,7 +42,9 @@ $(function(){
 <div class="search-form">
 <?php $this->renderPartial('search_egresado', array(
 	'model' => $model,
-)); ?>
+)); 
+echo  'IDSEDE:   '.$_GET['idsede'];  exit;
+?>
 </div><!-- search-form -->
 
 <?php   
