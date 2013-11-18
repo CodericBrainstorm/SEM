@@ -95,4 +95,4 @@ if (isset($_GET['yt0'])){
     ));
 }
 ?>
-<a class="btn btn-success btn-normal" href="index.php?r=egresado/create&idsede=<?php echo  $idSedeS; ?>">Crear egresado</a>
+<a class="btn btn-success btn-normal" href="index.php?r=egresado/create&idsede=<?php echo  $idsedeS; ?>">Crear egresado</a>
