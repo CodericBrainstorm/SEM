@@ -55,6 +55,7 @@ Si lo desea, puede ingresar un operador de comparación (&lt;, &lt;=, &gt;, &gt;
 //				),
 		'grado',
 		'anio',
+//              
 		
 		array(
 			'class' => 'CButtonColumn',

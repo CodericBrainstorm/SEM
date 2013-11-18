@@ -67,7 +67,7 @@ abstract class BaseHistoricoegresado extends GxActiveRecord {
 			'egresadoID' => null,
 			'sedeID' => null,
 			'grado' => Yii::t('app', 'Grado'),
-			'anio' => Yii::t('app', 'Anio'),
+			'anio' => Yii::t('app', 'Año'),
 			
 			'areaconocimientos' => null,
 			'egresado' => null,

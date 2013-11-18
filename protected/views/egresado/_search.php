@@ -33,10 +33,7 @@
 		<?php echo $form->textField($model, 'CONS_SEDE', array('maxlength' => 18)); ?>
 	</div>
 
-<!--	<div class="row">
-		<?php //echo $form->label($model, 'establecimiento_id'); ?>
-		<?php //echo $form->textField($model, 'establecimiento_id'); ?>
-	</div>-->
+
 
 	<div class="row">
 		<?php echo $form->label($model, 'TIPO_DOCUMENTO'); ?>

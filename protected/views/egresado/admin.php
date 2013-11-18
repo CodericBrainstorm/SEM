@@ -67,7 +67,7 @@ Si lo desea, puede ingresar un operador de comparación (&lt;, &lt;=, &gt;, &gt;
               array(
                 'class'=>'CLinkColumn',
                 'label'=>'Historico x Estud.',
-                'urlExpression'=>'"index.php?r=historicoegresado/admin&idegresado=".$data->ID',
+                'urlExpression'=>'"index.php?r=historicoegresado/admin&idegresado=".$data->ID."&idsede=".$data->CODIGO_DANE_SEDE',
                 'header'=>'Historico x Estud.',
                    
                  'imageUrl'=>Yii::app()->request->baseUrl.'/images/hist_acad.jpg',

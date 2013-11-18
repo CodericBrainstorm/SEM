@@ -1,53 +1,68 @@
+
+<style type="text/css">
+    .titulo-carac{
+        background-color: #bebec5;
+        color: black;
+        padding-left: 3px;
+        padding:0px 8px 0px 14px;
+        margin-bottom:18px;
+        text-shadow:0 1px 0 rgba(255,255,255,0.5);
+        border:1px solid dimgray;
+        -webkit-border-radius:4px;
+        -moz-border-radius:4px;
+        border-radius:4px;
+        font-size: 20px;
+    }
+    .table_inscripcion td {
+        vertical-align: text-top;
+    }
+    .formaciones-td {
+        float: left;  align: text-bottom;
+       
+    }
+    .checkbox.inline {  margin-left: 0;}
+    
+</style>
+
 <div class="form">
 
 
-<?php $form = $this->beginWidget('BActiveForm', array(
+<?php $form = $this->beginWidget('bootstrap.widgets.BootActiveForm', array(
 	'id' => 'historicoegresado-form',
 	'enableAjaxValidation' => false,
 ));
 ?>
-<?php $this->widget('BAlert',array(
-'content'=>'<p>Campos con <span class="required">*</span> son requiredos.</p> ',
-)); ?>
-<?php echo $form->errorSummary($model); ?>
+<?php $this->widget('bootstrap.widgets.BootAlert'); ?>
+    <table class="table_inscripcion">
+        <tr>
+            <td>
+                <?php echo $form->labelEx($model,'A&ntilde;o'); ?>
+                <div class="controls">
+		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
+			'model' => $model,
+			'attribute' => 'anio',
+			'value' => $model->anio,
+			'options' => array(
+				'showButtonPanel' => true,
+				'changeYear' => true,
+				'dateFormat' => 'yy',
+				),
+			)); ?>
+                
+            </td>
+            <td>
+               <?php echo $form->textFieldRow($model, 'grado', array('maxlength' => 255)); ?>
+            </td>
+        </tr>
+    </table>
 
-		<div class="<?php echo $form->fieldClass($model, 'egresadoID'); ?>">
-		<?php echo $form->labelEx($model,'egresadoID'); ?>
-                <div class="controls">
-		<?php echo $form->dropDownList($model, 'egresadoID', GxHtml::listDataEx(EstudEgresado::model()->findAllAttributes(null, true))); ?>
-		<?php echo $form->error($model,'egresadoID'); ?>
-                </div>
-		</div><!-- row -->
-		<div class="<?php echo $form->fieldClass($model, 'sedeID'); ?>">
-		<?php echo $form->labelEx($model,'sedeID'); ?>
-                <div class="controls">
-		<?php echo $form->dropDownList($model, 'sedeID', GxHtml::listDataEx(SedSede::model()->findAllAttributes(null, true))); ?>
-		<?php echo $form->error($model,'sedeID'); ?>
-                </div>
-		</div><!-- row -->
-		<div class="<?php echo $form->fieldClass($model, 'grado'); ?>">
-		<?php echo $form->labelEx($model,'grado'); ?>
-                <div class="controls">
-		<?php echo $form->textField($model, 'grado', array('maxlength' => 15)); ?>
-		<?php echo $form->error($model,'grado'); ?>
-                </div>
-		</div><!-- row -->
-		<div class="<?php echo $form->fieldClass($model, 'anio'); ?>">
-		<?php echo $form->labelEx($model,'anio'); ?>
-                <div class="controls">
-		<?php echo $form->textField($model, 'anio'); ?>
-		<?php echo $form->error($model,'anio'); ?>
-                </div>
-		</div><!-- row -->
-		
-		</div><!-- row -->
-
-		<label><?php echo GxHtml::encode($model->getRelationLabel('areaconocimientos')); ?></label>
-		<?php echo $form->checkBoxList($model, 'areaconocimientos', GxHtml::encodeEx(GxHtml::listDataEx(Areaconocimiento::model()->findAllAttributes(null, true)), false, true)); ?>
+    
+    
+    
 <div class="form-actions">
 <?php
-echo BHtml::submitButton(Yii::t('app', 'Guardar'));
-$this->endWidget();
+     $this->widget('bootstrap.widgets.BootButton', array('buttonType' => 'submit', 'type' => 'success', 'icon' => 'ok white', 'label' => 'Guardar Histórico', 'size' => 'large'));
+     $this->endWidget();
 ?>
 </div>
 </div><!-- form -->

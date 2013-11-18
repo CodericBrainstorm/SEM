@@ -23,9 +23,7 @@
 	<?php echo GxHtml::encode($data->CONS_SEDE); ?>
 	<br />
 	<?php /*
-	<?php echo GxHtml::encode($data->getAttributeLabel('establecimiento_id')); ?>:
-	<?php echo GxHtml::encode($data->establecimiento_id); ?>
-	<br />
+	
 	<?php echo GxHtml::encode($data->getAttributeLabel('TIPO_DOCUMENTO')); ?>:
 	<?php echo GxHtml::encode($data->TIPO_DOCUMENTO); ?>
 	<br />

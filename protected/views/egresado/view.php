@@ -26,7 +26,7 @@ $this->breadcrumbs = array(
 'CODIGO_DANE_ESTABLEDUCATIVO',
 'CODIGO_DANE_SEDE',
 'CONS_SEDE',
-'establecimiento_id',
+
 'TIPO_DOCUMENTO',
 'NRO_OCUMENTO',
 'EXPEDICION_DOC_DPTO',

@@ -79,8 +79,7 @@ if(isset($_GET['idsede']))
 		<?php echo $form->error($model,'CONS_SEDE'); ?>
             </td>
 	    <td>
-		<?php echo $form->textFieldRow($model, 'establecimiento_id'); ?>
-		<?php echo $form->error($model,'establecimiento_id'); ?>
+		
             </td>
             <td>
 		<?php echo $form->textFieldRow($model, 'TIPO_DOCUMENTO', array('maxlength' => 6)); ?>

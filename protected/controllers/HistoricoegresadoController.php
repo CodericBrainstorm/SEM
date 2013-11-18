@@ -28,6 +28,7 @@ class HistoricoegresadoController extends GxController {
 	}
 
 	public function actionUpdate($id) {
+               Controller::scriptBasico();
 		$model = $this->loadModel($id, 'Historicoegresado');
 
 
@@ -61,7 +62,7 @@ class HistoricoegresadoController extends GxController {
 		));
 	}
 
-	public function actionAdmin($idegresado) {
+	public function actionAdmin($idegresado="",$idsede="") {
                 Controller::scriptBasico();
 		$model = new Historicoegresado('search');
 		$model->unsetAttributes();
