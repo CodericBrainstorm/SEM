@@ -43,7 +43,10 @@ $(function(){
 <?php $this->renderPartial('search_egresado', array(
 	'model' => $model,
 )); 
-echo  'IDSEDE:   '.$_GET['idsede'];  exit;
+
+
+$idsedeS=Yii::app()->getSession()->get('idsedeSesion');
+
 ?>
 </div><!-- search-form -->
 
@@ -81,7 +84,7 @@ if (isset($_GET['yt0'])){
                             (
                                 'label'=>'Caracterización',
                                 'imageUrl'=>Yii::app()->request->baseUrl.'/images/actualizar.jpg',
-                                'url'=>'Yii::app()->controller->createUrl("egresado/actualizaXdocumento",array("nd"=>$data->NRO_OCUMENTO))',
+                                'url'=>'Yii::app()->controller->createUrl("egresado/actualizaXdocumento",array("id"=>$data->ID))',
                                 //'url'=>'Yii::app()->controller->createUrl("inscripcion/busqueda",array("error"=>"error"))',
                                 
                             ),

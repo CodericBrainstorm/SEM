@@ -44,7 +44,7 @@
             <div style="clear: both;"></div>
         </div>
 	<div class="row buttons" style="text-align: center;">
-		<?php echo GxHtml::submitButton(Yii::t('app', 'Buscar'), array('class'=>'btn btn-primary btn-large search-btn')); ?>
+		<?php echo GxHtml::submitButton(Yii::t('app', 'Buscar')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

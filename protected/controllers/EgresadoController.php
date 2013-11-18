@@ -34,6 +34,7 @@ class EgresadoController extends GxController {
 	}
 
 	public function actionUpdate($id) {
+              
 		$model = $this->loadModel($id, 'Egresado');
 
 
@@ -50,19 +51,19 @@ class EgresadoController extends GxController {
 				));
 	}
         //ACTUALIZACION  POR NUMERO DE DOCUMENTO
-        public function actionActualizaXdocumento($nd) {
+        public function actionActualizaXdocumento($id) {
               
-		//$model = $this->loadModel($NUM_OCUMENTO, 'Egresado');
-                $model->NRO_OCUMENTO = $nd;
-                echo $model->NRO_OCUMENTO;
+                $model = $this->loadModel($id, 'Egresado');
+                //$model->NRO_OCUMENTO = $nd;
+                //echo $model->NRO_OCUMENTO;
 		if (isset($_POST['Egresado'])) {
 			$model->setAttributes($_POST['Egresado']);
-
+                        $model->CODIGO_DANE_SEDE = Yii::app()->getSession()->get('idsedeSesion');
 			if ($model->save()) {
 				$this->redirect(array('view', 'id' => $model->ID));
 			}
 		}
-
+                
 		$this->render('update', array(
 				'model' => $model,
 				));
@@ -117,6 +118,7 @@ class EgresadoController extends GxController {
 	}
         
         public function actionCreateXsede($idsede) {
+               
 		$model = new Egresado;
                 $model->CODIGO_DANE_SEDE = $idsede;
                 if (isset($_POST['Egresado'])) {
@@ -136,7 +138,7 @@ class EgresadoController extends GxController {
 		$this->render('create', array( 'model' => $model));
 	}
         
-        public function actionBusqueda(){
+        public function actionBusqueda($idsede=''){
             
             $model = new Egresado;
             
@@ -149,6 +151,7 @@ class EgresadoController extends GxController {
                   
             $this->render('busqueda', array(
 			'model' => $model,
+                        'idsede' => $idsede,
                         
 		));
         }

@@ -35,7 +35,9 @@ Si lo desea, puede ingresar un operador de comparación (&lt;, &lt;=, &gt;, &gt;
 <div class="search-form">
 <?php  $this->renderPartial('_search', array(
 	'model' => $model,
-));  ?>
+)); 
+Yii::app()->getSession()->add('idsedeSesion', $model->CODIGO_DANE_SEDE);
+?>
 </div><!-- search-form -->
  <div style="float: center;" >
         <a href="index.php?r=egresado/busqueda&idsede=<?php echo $model->CODIGO_DANE_SEDE; ?>&iframe=true&width=100%&height=35%"  style ="margin-left:35px;" title="CREAR EGRESADO" class="btn btn-primary pretty" >CREAR EGRESADO</a>
