@@ -5,10 +5,10 @@ $this->breadcrumbs = array(
 	Yii::t('app', 'Administrar'),
 );
 
-//$this->menu = array(
-//		array('label'=>Yii::t('app', 'Listar') . ' ' . $model->label(2), 'url'=>array('index')),
-//		array('label'=>Yii::t('app', 'Crear') . ' ' . $model->label(), 'url'=>array('create')),
-//	);
+$this->menu = array(
+		array('label'=>Yii::t('app', 'Listar') . ' ' . $model->label(2), 'url'=>array('index')),
+		array('label'=>Yii::t('app', 'Crear') . ' ' . $model->label(), 'url'=>array('create')),
+	);
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -16,7 +16,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$.fn.yiiGridView.update('historicoegresado-grid', {
+	$.fn.yiiGridView.update('historicoacademicosuperior-grid', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -38,34 +38,24 @@ Si lo desea, puede ingresar un operador de comparación (&lt;, &lt;=, &gt;, &gt;
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id' => 'historicoegresado-grid',
+	'id' => 'historicoacademicosuperior-grid',
 	'dataProvider' => $model->search(),
 	'filter' => $model,
 	'columns' => array(
 		'id',
-//		array(
-//				'name'=>'egresadoID',
-//				'value'=>'GxHtml::valueEx($data->egresado)',
-//				'filter'=>GxHtml::listDataEx(EstudEgresado::model()->findAllAttributes(null, true)),
-//				),
-//		array(
-//				'name'=>'sedeID',
-//				'value'=>'GxHtml::valueEx($data->sede)',
-//				'filter'=>GxHtml::listDataEx(SedSede::model()->findAllAttributes(null, true)),
-//				),
-		'grado',
-		'anio',
-//              
+		'tipotitulo',
+		'fechainicio',
+		'fechafin',
+		'titulo',
+		'estado',
+		/*
 		array(
-                'class'=>'CLinkColumn',
-                'label'=>'Area del conocimiento',
-                'urlExpression'=>'"index.php?r=areaconocimiento/admin&idegresado=".$data->id',
-                
-                'header'=>'Area del conocimiento',
-                   
-                 'imageUrl'=>Yii::app()->request->baseUrl.'/images/areaconocimiento.png',
-                  
-              ) ,
+				'name'=>'egresadoID',
+				'value'=>'GxHtml::valueEx($data->egresado)',
+				'filter'=>GxHtml::listDataEx(InstEduSup::model()->findAllAttributes(null, true)),
+				),
+		'InstEduID',
+		*/
 		array(
 			'class' => 'CButtonColumn',
 		),
