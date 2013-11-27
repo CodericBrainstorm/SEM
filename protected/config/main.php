@@ -8,7 +8,7 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Seguimiento Egresados de Colegios',
-        
+        'language'=>'es',
 	// preloading 'log' component
 	'preload'=>array('log','bootstrap'),
 
