@@ -3,7 +3,7 @@
 
 $this->pageTitle=Yii::app()->name;
 $usuario = User::model()->findByPk(Yii::app()->user->id);
-echo 'ROL:  '.$usuario->rol;
+//echo 'ROL:  '.$usuario->rol;
 ?>
 
 <h1>Bienvenidos a <i>RUMBOS</i></h1>
