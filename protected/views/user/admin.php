@@ -16,7 +16,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$.fn.yiiGridView.update('usuario-grid', {
+	$.fn.yiiGridView.update('user-grid', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -38,19 +38,19 @@ Si lo desea, puede ingresar un operador de comparación (&lt;, &lt;=, &gt;, &gt;
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id' => 'usuario-grid',
+	'id' => 'user-grid',
 	'dataProvider' => $model->search(),
 	'filter' => $model,
 	'columns' => array(
 		'id',
 		'username',
 		'password',
+		'name',
 		array(
-					'name' => 'activo',
-					'value' => '($data->activo === 0) ? Yii::t(\'app\', \'No\') : Yii::t(\'app\', \'Yes\')',
+					'name' => 'enabled',
+					'value' => '($data->enabled === 0) ? Yii::t(\'app\', \'No\') : Yii::t(\'app\', \'Yes\')',
 					'filter' => array('0' => Yii::t('app', 'No'), '1' => Yii::t('app', 'Yes')),
 					),
-		'nombrecompleto',
 		array(
 			'class' => 'CButtonColumn',
 		),

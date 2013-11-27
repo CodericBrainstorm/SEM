@@ -61,7 +61,8 @@ class HistoricoacademicosuperiorController extends GxController {
 		));
 	}
 
-	public function actionAdmin() {
+	public function actionAdmin($idegresado) {
+                Controller::scriptBasico();
 		$model = new Historicoacademicosuperior('search');
 		$model->unsetAttributes();
 

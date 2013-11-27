@@ -95,18 +95,19 @@ abstract class BaseEgresado extends GxActiveRecord {
 
 	public function rules() {
 		return array(
-			array('Grupo_id', 'numerical', 'integerOnly'=>true),
+                        array('FACEBOOK, TWITTER, LINKEDIN', 'email'),
+			array('Grupo_id, CELULAR', 'numerical', 'integerOnly'=>true),
 			array('CODIGO_SED, PER_ID, CAR_ID,   COD_MUN1', 'length', 'max'=>10),
 			array('ID', 'length', 'max'=>16),
 			array('MUN_CODIGO, TIPO_DOCUMENTO, EXPEDICION_DOC_MUN, DEPARTAMENTO_NACIMIENTO, MUNICIPIO_NACIMIENTO, RESIDENCIA_DEPARTAMENTO, RESIDENCIA_MUNICIPIO, DPTO_EXP, MUN_EXP,  BUENO', 'length', 'max'=>20),
-			array('CODIGO_DANE_ESTABLEDUCATIVO, CODIGO_DANE_SEDE, CELULAR', 'length', 'max'=>12),
+			array('CODIGO_DANE_ESTABLEDUCATIVO, CODIGO_DANE_SEDE', 'length', 'max'=>12),
 			array('CONS_SEDE', 'length', 'max'=>18),
 			array('NRO_OCUMENTO', 'length', 'max'=>20),
                         array('FACEBOOK, TWITTER,LINKEDIN','length', 'max'=>40),
 			array('EXPEDICION_DOC_DPTO', 'length', 'max'=>20),
 			array('APELLIDO1, APELLIDO2, NOMBRE1, NOMBRE2, DIRECCION_RESIDENCIA, TEL', 'length', 'max'=>200),
 			array('GENERO', 'length', 'max'=>10),
-			array('ZONA_RESIDENCIA_ESTUDIANTE, ESTRATO, SISBEN, POB_VICT_CONF, PROVIENE_OTRO_MUN, TIPO_DISCAPACIDAD, CAPACIDADES_EXCEPCIONALES,  ESPECIALIDAD,  DISCAP1', 'length', 'max'=>20),
+			array('ZONA_RESIDENCIA_ESTUDIANTE, ESTRATO, SISBEN, POB_VICT_CONF, PROVIENE_OTRO_MUN, TIPO_DISCAPACIDAD, CAPACIDADES_EXCEPCIONALES,  ESPECIALIDAD,  DISCAP1', 'length', 'max'=>150),
 			array('ETNIA, SUBSIDIADO, REPITENTE, NUEVO, SIT_ACAD_ANO_ANT, CON_ALUM_ANO_ANT', 'length', 'max'=>20),
 			array('INS_FAMILIAR,  NOMBRE1_FON, NOMBRE2_FON, APELLIDO1_FON, APELLIDO2_FON', 'length', 'max'=>100),
 			array('ID_ALUMNO', 'length', 'max'=>30),
@@ -119,6 +120,7 @@ abstract class BaseEgresado extends GxActiveRecord {
 
 	public function relations() {
 		return array(
+                    'tIPODISCAPACIDAD' => array(self::BELONGS_TO, 'Tipodiscapacidad', 'TIPO_DISCAPACIDAD'),
 		);
 	}
 
@@ -129,23 +131,23 @@ abstract class BaseEgresado extends GxActiveRecord {
 
 	public function attributeLabels() {
 		return array(
-			'CODIGO_SED' => Yii::t('app', 'Codigo Sed'),
+			'CODIGO_SED' => Yii::t('app', 'Cod. Sede'),
 			'ID' => Yii::t('app', 'ID'),
-			'MUN_CODIGO' => Yii::t('app', 'Mun Codigo'),
-			'CODIGO_DANE_ESTABLEDUCATIVO' => Yii::t('app', 'Codigo Dane Estableducativo'),
-			'CODIGO_DANE_SEDE' => Yii::t('app', 'Codigo Dane Sede'),
+			'MUN_CODIGO' => Yii::t('app', 'Cod. municipio'),
+			'CODIGO_DANE_ESTABLEDUCATIVO' => Yii::t('app', 'Cod. Dane E.E.'),
+			'CODIGO_DANE_SEDE' => Yii::t('app', 'Cod. Dane Sede'),
 			'CONS_SEDE' => Yii::t('app', 'Cons Sede'),
 			
 			'TIPO_DOCUMENTO' => Yii::t('app', 'Tipo Documento'),
-			'NRO_OCUMENTO' => Yii::t('app', 'Nro Ocumento'),
-			'EXPEDICION_DOC_DPTO' => Yii::t('app', 'Expedicion Doc Dpto'),
-			'EXPEDICION_DOC_MUN' => Yii::t('app', 'Expedicion Doc Mun'),
-			'APELLIDO1' => Yii::t('app', 'Apellido1'),
-			'APELLIDO2' => Yii::t('app', 'Apellido2'),
-			'NOMBRE1' => Yii::t('app', 'Nombre1'),
-			'NOMBRE2' => Yii::t('app', 'Nombre2'),
-			'FechaNacDate' => Yii::t('app', 'Fecha Nac Date'),
-			'DEPARTAMENTO_NACIMIENTO' => Yii::t('app', 'Departamento Nacimiento'),
+			'NRO_OCUMENTO' => Yii::t('app', 'Nro documento'),
+			'EXPEDICION_DOC_DPTO' => Yii::t('app', 'Expedicion Doc. Dpto'),
+			'EXPEDICION_DOC_MUN' => Yii::t('app', 'Expedicion Doc Municipio'),
+			'APELLIDO1' => Yii::t('app', 'Apellido 1'),
+			'APELLIDO2' => Yii::t('app', 'Apellido 2'),
+			'NOMBRE1' => Yii::t('app', 'Nombre 1'),
+			'NOMBRE2' => Yii::t('app', 'Nombre 2'),
+			'FechaNacDate' => Yii::t('app', 'Fecha Nacimiento'),
+			'DEPARTAMENTO_NACIMIENTO' => Yii::t('app', 'Depto. Nacimiento'),
 			'MUNICIPIO_NACIMIENTO' => Yii::t('app', 'Municipio Nacimiento'),
 			'GENERO' => Yii::t('app', 'Genero'),
 			'ZONA_RESIDENCIA_ESTUDIANTE' => Yii::t('app', 'Zona Residencia Estudiante'),
@@ -191,7 +193,7 @@ abstract class BaseEgresado extends GxActiveRecord {
 
 	public function search() {
 		$criteria = new CDbCriteria;
-
+                
 		$criteria->compare('CODIGO_SED', $this->CODIGO_SED, true);
 		$criteria->compare('ID', $this->ID, true);
 		$criteria->compare('MUN_CODIGO', $this->MUN_CODIGO, true);
@@ -269,4 +271,14 @@ abstract class BaseEgresado extends GxActiveRecord {
 			'criteria' => $criteria
 		));
         }
+        
+//        public function busquedaxhistorico($idsede){
+//            $criteria = new CDbCriteria;
+//            $criteria->join = "JOIN historicoegresado  ON(egresado.ID=historicoegresado.egresadoID)";
+//            $criteria->condition = "historicoegresado.sedeID='$idsede'";
+//            echo 'DENTRO DE FUNCION';
+//            return new CActiveDataProvider($this, array(
+//			'criteria' => $criteria,
+//		));
+//        }
 }

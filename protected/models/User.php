@@ -1,8 +1,8 @@
 <?php
 
-Yii::import('application.models._base.BaseUsuario');
+Yii::import('application.models._base.BaseUser');
 
-class Usuario extends BaseUsuario
+class User extends BaseUser
 {
 	public static function model($className=__CLASS__) {
 		return parent::model($className);

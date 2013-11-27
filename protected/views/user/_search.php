@@ -16,13 +16,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model, 'activo'); ?>
-		<?php echo $form->dropDownList($model, 'activo', array('0' => Yii::t('app', 'No'), '1' => Yii::t('app', 'Yes')), array('prompt' => Yii::t('app', 'All'))); ?>
+		<?php echo $form->label($model, 'name'); ?>
+		<?php echo $form->textField($model, 'name', array('maxlength' => 60)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model, 'nombrecompleto'); ?>
-		<?php echo $form->textField($model, 'nombrecompleto', array('maxlength' => 100)); ?>
+		<?php echo $form->label($model, 'enabled'); ?>
+		<?php echo $form->dropDownList($model, 'enabled', array('0' => Yii::t('app', 'No'), '1' => Yii::t('app', 'Yes')), array('prompt' => Yii::t('app', 'All'))); ?>
 	</div>
 
 	<div class="row buttons">

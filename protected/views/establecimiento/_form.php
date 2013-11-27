@@ -30,7 +30,7 @@
 	'enableAjaxValidation' => false,
 ));  
 
-echo $model->coddepto; 
+
 ?>
 <?php $this->widget('bootstrap.widgets.BootAlert'); ?>
 
@@ -81,6 +81,9 @@ echo $model->coddepto;
                 </td>
                 <td>
                    <?php echo $form->textFieldRow($model, 'tipo', array('maxlength' => 255)); ?>
+                </td>
+                <td>
+                   <?php echo $form->textFieldRow($model, 'nombre_rector', array('maxlength' => 255)); ?>
                 </td>
                 
                

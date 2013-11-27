@@ -63,13 +63,14 @@ abstract class BaseHistoricoacademicosuperior extends GxActiveRecord {
 	public function attributeLabels() {
 		return array(
 			'id' => Yii::t('app', 'ID'),
-			'tipotitulo' => Yii::t('app', 'Tipotitulo'),
-			'fechainicio' => Yii::t('app', 'Fechainicio'),
-			'fechafin' => Yii::t('app', 'Fechafin'),
+			'tipotitulo' => Yii::t('app', 'Tipo titulo'),
+			'fechainicio' => Yii::t('app', 'Fecha inicio'),
+			'fechafin' => Yii::t('app', 'Fecha fin'),
 			'titulo' => Yii::t('app', 'Titulo'),
 			'estado' => Yii::t('app', 'Estado'),
 			'egresadoID' => null,
 			'InstEduID' => Yii::t('app', 'Inst Edu'),
+                         'nombreinstituto' => Yii::t('app', 'Nombre institución'),
 			'egresado' => null,
 		);
 	}
@@ -85,6 +86,7 @@ abstract class BaseHistoricoacademicosuperior extends GxActiveRecord {
 		$criteria->compare('estado', $this->estado);
 		$criteria->compare('egresadoID', $this->egresadoID);
 		$criteria->compare('InstEduID', $this->InstEduID);
+                $criteria->compare('nombreinstituto',  $this->nombreinstituto);
 
 		return new CActiveDataProvider($this, array(
 			'criteria' => $criteria,

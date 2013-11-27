@@ -84,7 +84,7 @@ Si lo desea, puede ingresar un operador de comparación (&lt;, &lt;=, &gt;, &gt;
             array(
                 'class'=>'CLinkColumn',
                 'label'=>'Sedes',
-                'urlExpression'=>'"index.php?r=sede/admin&idsede=".$data->id',
+                'urlExpression'=>'"index.php?r=historicoegresado/historico&codigoestablecimiento=".$data->codigo',
                 'header'=>'Historico academico',
                    
                  'imageUrl'=>Yii::app()->request->baseUrl.'/images/hist_acad.jpg',
@@ -96,7 +96,7 @@ Si lo desea, puede ingresar un operador de comparación (&lt;, &lt;=, &gt;, &gt;
             array(
                 'class'=>'CLinkColumn',
                 'label'=>'Sedes',
-                'urlExpression'=>'"index.php?r=sede/admin&idsede=".$data->id',
+                'urlExpression'=>'"index.php?r=sede/admin&codigoestablecimiento=".$data->codigo',
                 'header'=>'Administrar Sedes',
                    
                  'imageUrl'=>Yii::app()->request->baseUrl.'/images/sede2.png',

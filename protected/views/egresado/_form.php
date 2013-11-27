@@ -132,6 +132,7 @@ if(isset($_GET['idsede']))
 				'showButtonPanel' => true,
 				'changeYear' => true,
 				'dateFormat' => 'yy-mm-dd',
+                                'yearRange' =>'1970:2010',
 				),
 			)); ?>
 		
@@ -172,7 +173,8 @@ if(isset($_GET['idsede']))
 		<?php echo $form->error($model,'RESIDENCIA_MUNICIPIO'); ?>
          </td>
 	 <td>
-	     <?php echo $form->textFieldRow($model, 'ESTRATO', array('maxlength' => 20)); ?>
+	     <?php echo $form->dropDownListRow($model, 'ESTRATO',array('prompt' => 'Seleccione...','uno'=>'uno',
+                'dos'=>'dos','tres'=>'tres','cuatro'=>'cuatro','cinco'=>'cinco','seis'=>'seis' )); ?>
 	     <?php echo $form->error($model,'ESTRATO'); ?>
          </td>
       </tr>
@@ -183,11 +185,13 @@ if(isset($_GET['idsede']))
 		<?php echo $form->error($model,'SISBEN'); ?>
           </td>
           <td>
-		<?php echo $form->textFieldRow($model, 'TIPO_DISCAPACIDAD', array('maxlength' => 20)); ?>
-		<?php echo $form->error($model,'TIPO_DISCAPACIDAD'); ?>
+                 
+		 <?php echo $form->dropDownListRow($model, 'TIPO_DISCAPACIDAD', GxHtml::listDataEx(Tipodiscapacidad::model()->findAll())); ?>
+              
           </td>
 	  <td>
-		<?php echo $form->textFieldRow($model, 'CAPACIDADES_EXCEPCIONALES', array('maxlength' => 20)); ?>
+              <b> Capacidades excepcionales </b>
+		<?php echo $form->textArea($model, 'CAPACIDADES_EXCEPCIONALES', array("style"=>"width:200px;height:28px")); ?>
 		<?php echo $form->error($model,'CAPACIDADES_EXCEPCIONALES'); ?>
           </td>
 	  <td>
@@ -195,7 +199,7 @@ if(isset($_GET['idsede']))
 		<?php echo $form->error($model,'ETNIA'); ?>
           </td>
 	  <td>
-		<?php echo $form->textFieldRow($model, 'SUBSIDIADO', array('maxlength' => 20)); ?>
+		<?php echo $form->dropDownListRow($model, 'SUBSIDIADO', array('NO'=>'NO','SI'=>'SI')); ?>
 		<?php echo $form->error($model,'SUBSIDIADO'); ?>
           </td>
         </tr>

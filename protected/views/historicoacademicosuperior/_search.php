@@ -5,10 +5,7 @@
 	'method' => 'get',
 )); ?>
 
-	<div class="row">
-		<?php echo $form->label($model, 'id'); ?>
-		<?php echo $form->textField($model, 'id'); ?>
-	</div>
+	
 
 	<div class="row">
 		<?php echo $form->label($model, 'tipotitulo'); ?>
@@ -35,14 +32,11 @@
 		<?php echo $form->textField($model, 'estado'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model, 'egresadoID'); ?>
-		<?php echo $form->dropDownList($model, 'egresadoID', GxHtml::listDataEx(InstEduSup::model()->findAllAttributes(null, true)), array('prompt' => Yii::t('app', 'All'))); ?>
-	</div>
+	
 
 	<div class="row">
-		<?php echo $form->label($model, 'InstEduID'); ?>
-		<?php echo $form->textField($model, 'InstEduID'); ?>
+		<?php echo $form->label($model, 'nombreinstituto'); ?>
+		<?php echo $form->textField($model, 'nombreinstituto'); ?>
 	</div>
 
 	<div class="row buttons">

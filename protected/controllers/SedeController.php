@@ -61,11 +61,11 @@ class SedeController extends GxController {
 		));
 	}
 
-	public function actionAdmin($idsede) {
+	public function actionAdmin($codigoestablecimiento) {
                  Controller::scriptBasico();
 		$model = new Sede('search');
 		$model->unsetAttributes();
-                $model->establecimientoID=$idsede;
+                $model->codestablecimiento=$codigoestablecimiento;
 		if (isset($_GET['Sede']))
 			$model->setAttributes($_GET['Sede']);
 

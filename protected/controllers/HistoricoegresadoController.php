@@ -74,5 +74,21 @@ class HistoricoegresadoController extends GxController {
 			'model' => $model,
 		));
 	}
+        
+        public function actionHistorico($codigoestablecimiento) {
+                Controller::scriptBasico();
+		$model = new Historicoegresado('search');
+		$model->unsetAttributes();
+                $model->egresadoID=$idegresado;
+		if (isset($_GET['Historicoegresado']))
+			$model->setAttributes($_GET['Historicoegresado']);
+
+		$this->render('historico', array(
+			'model' => $model,
+                        'codigoestablecimiento' => $codigoestablecimiento
+		));
+                
+                
+	}
 
 }

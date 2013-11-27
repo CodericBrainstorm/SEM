@@ -88,13 +88,11 @@ class EgresadoController extends GxController {
 
 	public function actionAdminxSede($codsede) {
                 Controller::scriptBasico();
-		$model = new Egresado('search');
-		$model->unsetAttributes();
-                //extraer el id de egresados de historico egresados
-                
-//               
-                $model->CODIGO_DANE_SEDE=$codsede;
-               
+                $model = new Egresado;
+                $model->unsetAttributes();
+//                 $dataReader= Yii::app()->db->createCommand("SELECT eg.* FROM egresado eg JOIN historicoegresado he ON(eg.ID=he.egresadoID) WHERE sedeID='$codsede'")
+//                        ->setFetchMode(PDO::FETCH_OBJ)->queryAll();     
+               $model->CODIGO_DANE_SEDE = $codsede;
 		if (isset($_GET['Egresado']))
 			$model->setAttributes($_GET['Egresado']);
                 

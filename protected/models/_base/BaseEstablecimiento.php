@@ -151,6 +151,7 @@ abstract class BaseEstablecimiento extends GxActiveRecord {
 			'instModeloseducativosEstablecimientos' => null,
 			'instNivelEstablecimientos' => null,
 			'sedSedes' => null,
+                        'nombre_rector' => Yii::t('app', 'Rector'),
 		);
 	}
 
@@ -184,6 +185,7 @@ abstract class BaseEstablecimiento extends GxActiveRecord {
                 $criteria->compare('estado', $this->estado);
 		$criteria->compare('calendario', $this->calendario, true);
 		$criteria->compare('correoelectronico', $this->correoelectronico, true);
+                $criteria->compare('nombre_rector', $this->nombre_rector, true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria' => $criteria,

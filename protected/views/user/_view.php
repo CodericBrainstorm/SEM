@@ -10,11 +10,11 @@
 	<?php echo GxHtml::encode($data->getAttributeLabel('password')); ?>:
 	<?php echo GxHtml::encode($data->password); ?>
 	<br />
-	<?php echo GxHtml::encode($data->getAttributeLabel('activo')); ?>:
-	<?php echo GxHtml::encode($data->activo); ?>
+	<?php echo GxHtml::encode($data->getAttributeLabel('name')); ?>:
+	<?php echo GxHtml::encode($data->name); ?>
 	<br />
-	<?php echo GxHtml::encode($data->getAttributeLabel('nombrecompleto')); ?>:
-	<?php echo GxHtml::encode($data->nombrecompleto); ?>
+	<?php echo GxHtml::encode($data->getAttributeLabel('enabled')); ?>:
+	<?php echo GxHtml::encode($data->enabled); ?>
 	<br />
 
 </div>

@@ -22,8 +22,8 @@ $this->menu=array(
 'id',
 'username',
 'password',
-'activo:boolean',
-'nombrecompleto',
+'name',
+'enabled:boolean',
 	),
 )); ?>
 

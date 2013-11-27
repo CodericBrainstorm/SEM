@@ -1,14 +1,9 @@
 <?php
 
 $this->breadcrumbs = array(
-	$model->label(2) => array('index'),
+	'Egresados' => array('index'),
 	Yii::t('app', 'Administrar'),
 );
-
-/*$this->menu = array(
-		array('label'=>Yii::t('app', 'Listar') . ' ' . $model->label(2), 'url'=>array('index')),
-		array('label'=>Yii::t('app', 'Crear') . ' ' . $model->label(), 'url'=>array('create')),
-	);*/
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -25,7 +20,7 @@ $('.search-form form').submit(function(){
  
 ?>
 
-<h1><?php echo Yii::t('app', 'Administrar') . ' ' . GxHtml::encode($model->label(2)); ?></h1>
+<h1><?php echo Yii::t('app', 'Administrar') . ' ' . 'Egresados' ?></h1>
 
 <p>
 Si lo desea, puede ingresar un operador de comparación (&lt;, &lt;=, &gt;, &gt;=, &lt;&gt; or =) al principio de cada uno de los valores de la búsqueda para especificar la forma en la comparación que debe hacer.
@@ -33,9 +28,11 @@ Si lo desea, puede ingresar un operador de comparación (&lt;, &lt;=, &gt;, &gt;
 
 <?php echo GxHtml::link(Yii::t('app', 'Búsqueda Avanzada'), '#', array('class' => 'search-button')); ?>
 <div class="search-form">
-<?php  $this->renderPartial('_search', array(
+<?php 
+   $this->renderPartial('_search', array(
 	'model' => $model,
 )); 
+
 Yii::app()->getSession()->add('idsedeSesion', $model->CODIGO_DANE_SEDE);
 ?>
 </div><!-- search-form -->
@@ -45,7 +42,7 @@ Yii::app()->getSession()->add('idsedeSesion', $model->CODIGO_DANE_SEDE);
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id' => 'egresado-grid',
 	'dataProvider' => $model->search(),
-        
+       
 	'filter' => $model,
 	'columns' => array(
 		'ID',
@@ -78,7 +75,7 @@ Yii::app()->getSession()->add('idsedeSesion', $model->CODIGO_DANE_SEDE);
              array(
                 'class'=>'CLinkColumn',
                 'label'=>'Historico x Estud. Sup.',
-                //'urlExpression'=>'index.php?r=egresado/admin',
+                'urlExpression'=>'"index.php?r=historicoacademicosuperior/admin&idegresado=".$data->ID',
                 'header'=>'Historico x Estud. Sup.',
                    
                  'imageUrl'=>Yii::app()->request->baseUrl.'/images/acadsuperior.jpg',
