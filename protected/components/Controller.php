@@ -22,6 +22,7 @@ class Controller extends CController
 	public $breadcrumbs=array();
         
         public function scriptBasico($id = 1) {
+           
             $baseUrl = Yii::app()->baseUrl;
         $cs = Yii::app()->getClientScript();
 

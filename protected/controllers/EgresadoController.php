@@ -1,6 +1,22 @@
 <?php
 
 class EgresadoController extends GxController {
+         function filters() {
+	    /*return array(
+			'accessControl', 
+			);*/
+          }
+          
+          public function accessRules(){
+              return array(
+                  array(
+                      'allow',
+                      'actions'=>array('create','view','municipios'),
+                      'users'=>array('*')
+                  )
+                  
+              );
+          }
 
 
 	public function actionView($id) {
@@ -34,13 +50,13 @@ class EgresadoController extends GxController {
 	}
 
 	public function actionUpdate($id) {
-              
-		$model = $this->loadModel($id, 'Egresado');
+                 Controller::scriptBasico();
+		 $model = $this->loadModel($id, 'Egresado');
 
-
+                
 		if (isset($_POST['Egresado'])) {
 			$model->setAttributes($_POST['Egresado']);
-
+                         
 			if ($model->save()) {
 				$this->redirect(array('view', 'id' => $model->ID));
 			}
@@ -153,5 +169,14 @@ class EgresadoController extends GxController {
                         
 		));
         }
+        
+         public function actionMunicipios($id) { 
+            $data = Municipio::model()->findAll(array('order'=>'codigo','condition'=>'departamento_id='.$id));
+            $data = CHtml::listData($data,'idmunicipio','nombre');
+            if (!empty($data)) { echo '<option value="">Seleccione...</option>'; }
+            foreach($data as $value=>$name) {
+                echo CHtml::tag('option', array('value'=>$value),CHtml::encode($name),true);
+            }
+	}
 
 }

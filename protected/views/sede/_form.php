@@ -38,22 +38,22 @@
         <tr class="row0">
             
             <td>
-                 <?php echo $form->textFieldRow($model, 'secretaria', array('maxlength' => 10)); ?>
+                 <?php echo $form->textFieldRow($model, 'secretaria', array('maxlength' => 10, 'readOnly'=>true)); ?>
             </td>
 	    <td>
-		<?php echo $form->textFieldRow($model, 'coddepto', array('maxlength' => 16)); ?>
+		<?php echo $form->textFieldRow($model, 'coddepto', array('maxlength' => 16, 'readOnly'=>true)); ?>
 		<?php echo $form->error($model,'coddepto'); ?>
             </td>
 	    <td>
-		<?php echo $form->textFieldRow($model, 'depto', array('maxlength' => 6)); ?>
+		<?php echo $form->textFieldRow($model, 'depto', array('maxlength' => 6, 'readOnly'=>true)); ?>
 		<?php echo $form->error($model,'depto'); ?>
             </td>
 	    <td>
-		<?php echo $form->textFieldRow($model, 'codmunicipio', array('maxlength' => 12)); ?>
+		<?php echo $form->textFieldRow($model, 'codmunicipio', array('maxlength' => 12, 'readOnly'=>true)); ?>
 		<?php echo $form->error($model,'codmunicipio'); ?>
             </td>
 	    <td>
-		<?php echo $form->textFieldRow($model, 'nommunicipio', array('maxlength' => 12)); ?>
+		<?php echo $form->textFieldRow($model, 'nommunicipio', array('maxlength' => 12, 'readOnly'=>true)); ?>
 		<?php echo $form->error($model,'nommunicipio'); ?>
              </td>
 	</tr>
@@ -61,7 +61,7 @@
 	<tr>
             
 	    <td>
-		<?php echo $form->textFieldRow($model, 'codestablecimiento', array('maxlength' => 18)); ?>
+		<?php echo $form->textFieldRow($model, 'codestablecimiento', array('maxlength' => 18, 'readOnly'=>true)); ?>
 		<?php echo $form->error($model,'codestablecimiento'); ?>
             </td>
 	    <td>

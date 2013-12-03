@@ -98,5 +98,24 @@ class EstablecimientoController extends GxController {
                 echo CHtml::tag('option', array('value'=>$value),CHtml::encode($name),true);
             }
 	}
+        
+        public function actionAdminByUser($user, $rol){
+            
+            Controller::scriptBasico();
+            $model = new Establecimiento('search');
+            $model->unsetAttributes();
+            if($rol == 'rector'){
+              $model->nombre_rector = $user;  
+            }
+            if($rol == 'secretaria'){
+                $model->secretaria = $user;  
+            }
+            if (isset($_GET['Sede']))
+			$model->setAttributes($_GET['Sede']);
+
+		$this->render('admin', array(
+			'model' => $model,
+		));
+        }
 
 }

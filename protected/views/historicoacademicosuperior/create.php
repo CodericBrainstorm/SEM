@@ -11,7 +11,7 @@ $this->menu = array(
 );
 ?>
 
-<h1><?php echo Yii::t('app', 'Crear') . ' ' . GxHtml::encode($model->label()); ?></h1>
+<h1><?php echo Yii::t('app', 'Crear Histórico Académico Superior'); ?></h1>
 
 <?php
 $this->renderPartial('_form', array(

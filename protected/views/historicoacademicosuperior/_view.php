@@ -19,8 +19,8 @@
 	<?php echo GxHtml::encode($data->getAttributeLabel('estado')); ?>:
 	<?php echo GxHtml::encode($data->estado); ?>
 	<br />
-	<?php echo GxHtml::encode($data->getAttributeLabel('egresadoID')); ?>:
-		<?php echo GxHtml::encode(GxHtml::valueEx($data->egresado)); ?>
+	<?php //echo GxHtml::encode($data->getAttributeLabel('egresadoID')); ?>:
+		<?php //echo GxHtml::encode(GxHtml::valueEx($data->egresado)); ?>
 	<br />
 	<?php /*
 	<?php echo GxHtml::encode($data->getAttributeLabel('InstEduID')); ?>:

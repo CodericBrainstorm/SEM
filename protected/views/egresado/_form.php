@@ -90,17 +90,20 @@ if(isset($_GET['idsede']))
 		<?php echo $form->error($model,'NRO_OCUMENTO'); ?>
             </td>
 	    <td>
-		<?php echo $form->textFieldRow($model, 'EXPEDICION_DOC_DPTO', array('maxlength' => 20)); ?>
-		<?php echo $form->error($model,'EXPEDICION_DOC_DPTO'); ?>
-             </td>
+		<?php echo $form->dropDownListRow($model, 'EXPEDICION_DOC_DPTO_ID', GxHtml::listDataEx(Departamento::model()->findAll()),array('prompt'=>'Seleccione...')); ?>
+		<?php //echo $form->error($model,'DEPARTAMENTO_NACIMIENTO_ID'); ?>
+          </td>
 	</tr>
         
         <tr>
           
-	   <td>
-		<?php echo $form->textFieldRow($model, 'EXPEDICION_DOC_MUN', array('maxlength' => 20)); ?>
-		<?php echo $form->error($model,'EXPEDICION_DOC_MUN'); ?>
-           </td>
+	  <td>
+		<?php $tempciudadexp = $model->EXPEDICION_DOC_MUN_ID;
+                                            if (!is_numeric($tempciudadexp))
+                                                $tempciudadexp=0;
+                                            echo $form->dropDownListRow($model, 'EXPEDICION_DOC_MUN_ID', GxHtml::listDataEx(Municipio::model()->findAll(array('condition'=>'idmunicipio='.$tempciudadexp))), array('prompt'=>'Seleccione...')); 
+                                       ?>
+          </td>
 	  <td>
 		<?php echo $form->textFieldRow($model, 'APELLIDO1', array('maxlength' => 200)); ?>
 		<?php echo $form->error($model,'APELLIDO1'); ?>
@@ -138,12 +141,15 @@ if(isset($_GET['idsede']))
 		
           </td>
 	  <td>
-		<?php echo $form->textFieldRow($model, 'DEPARTAMENTO_NACIMIENTO', array('maxlength' => 20)); ?>
-		<?php echo $form->error($model,'DEPARTAMENTO_NACIMIENTO'); ?>
+		<?php echo $form->dropDownListRow($model, 'DEPARTAMENTO_NACIMIENTO_ID', GxHtml::listDataEx(Departamento::model()->findAll()),array('prompt'=>'Seleccione...')); ?>
+		<?php //echo $form->error($model,'DEPARTAMENTO_NACIMIENTO_ID'); ?>
           </td>
           <td>
-		<?php echo $form->textFieldRow($model, 'MUNICIPIO_NACIMIENTO', array('maxlength' => 20)); ?>
-		<?php echo $form->error($model,'MUNICIPIO_NACIMIENTO'); ?>
+		<?php $tempciudad = $model->MUNICIPIO_NACIMIENTO_ID;
+                                            if (!is_numeric($tempciudad))
+                                                $tempciudad=0;
+                                            echo $form->dropDownListRow($model, 'MUNICIPIO_NACIMIENTO_ID', GxHtml::listDataEx(Municipio::model()->findAll(array('condition'=>'idmunicipio='.$tempciudad))), array('prompt'=>'Seleccione...')); 
+                                       ?>
           </td>
 	  <td>
 	     <?php echo $form->textFieldRow($model, 'GENERO', array('maxlength' => 10)); ?>
@@ -165,13 +171,16 @@ if(isset($_GET['idsede']))
 		<?php echo $form->error($model,'TEL'); ?>
           </td>
 	  <td>
-		<?php echo $form->textFieldRow($model, 'RESIDENCIA_DEPARTAMENTO', array('maxlength' => 20)); ?>
-		<?php echo $form->error($model,'RESIDENCIA_DEPARTAMENTO'); ?>
-         </td>
-	 <td>
-		<?php echo $form->textFieldRow($model, 'RESIDENCIA_MUNICIPIO', array('maxlength' => 20)); ?>
-		<?php echo $form->error($model,'RESIDENCIA_MUNICIPIO'); ?>
-         </td>
+		<?php echo $form->dropDownListRow($model, 'RESIDENCIA_DEPARTAMENTO_ID', GxHtml::listDataEx(Departamento::model()->findAll()),array('prompt'=>'Seleccione...')); ?>
+		<?php //echo $form->error($model,'DEPARTAMENTO_NACIMIENTO_ID'); ?>
+          </td>
+          <td>
+		<?php $tempciudadres = $model->RESIDENCIA_MUNICIPIO_ID;
+                                            if (!is_numeric($tempciudadres))
+                                                $tempciudadres=0;
+                                            echo $form->dropDownListRow($model, 'RESIDENCIA_MUNICIPIO_ID', GxHtml::listDataEx(Municipio::model()->findAll(array('condition'=>'idmunicipio='.$tempciudadres))), array('prompt'=>'Seleccione...')); 
+                                       ?>
+          </td>
 	 <td>
 	     <?php echo $form->dropDownListRow($model, 'ESTRATO',array('prompt' => 'Seleccione...','uno'=>'uno',
                 'dos'=>'dos','tres'=>'tres','cuatro'=>'cuatro','cinco'=>'cinco','seis'=>'seis' )); ?>

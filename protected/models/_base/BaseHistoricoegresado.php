@@ -40,12 +40,14 @@ abstract class BaseHistoricoegresado extends GxActiveRecord {
 
 	public function rules() {
 		return array(
+                       array('grado+anio','application.extensions.uniqueMultiColumnValidator'), 
 			array('egresadoID, sedeID', 'numerical', 'integerOnly'=>true),
-			array('grado', 'length', 'max'=>15),
-			array('anio', 'safe'),
+			array('grado', 'length', 'max'=>2),
+			//array('anio', 'safe'),
 			array('egresadoID, sedeID, grado, anio', 'default', 'setOnEmpty' => true, 'value' => null),
-			array('id, egresadoID, sedeID, grado, anio', 'safe', 'on'=>'search'),
-		);
+			array('id, egresadoID, sedeID, grado, anio', 'safe', 'on'=>'search'), 
+                        array('anio+grado+egresadoID','application.extensions.uniqueMultiColumnValidator'), 
+		); 
 	}
 
 	public function relations() {

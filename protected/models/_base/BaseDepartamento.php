@@ -46,7 +46,9 @@ abstract class BaseDepartamento extends GxActiveRecord {
 
 	public function relations() {
 		return array(
-			'instEstablecimientos' => array(self::HAS_MANY, 'InstEstablecimiento', 'coddepto'),
+			//'instEstablecimientos' => array(self::HAS_MANY, 'InstEstablecimiento', 'coddepto'),
+                        //'egresados' => array(self::HAS_MANY, 'Egresado','coddepto'),
+                        //'codmunicipio0' => array(self::BELONGS_TO, 'Municipio', 'codmunicipio'),
 		);
 	}
 

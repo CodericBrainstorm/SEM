@@ -30,8 +30,9 @@ $('.search-form form').submit(function(){
 	'model' => $model,
 )); ?>
 </div><!-- search-form -->
-
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<div style="float: center;" >
+        <a href="index.php?r=historicoacademicosuperior/create&idegresado=<?php echo $_GET['idegresado']; ?>&iframe=true&width=100%&height=35%"  style ="margin-left:35px;" title="Crear Histórico Académico Superior" class="btn btn-primary pretty" >Crear Histórico Académico Superior</a>
+</div><?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id' => 'historicoacademicosuperior-grid',
 	'dataProvider' => $model->search(),
 	'filter' => $model,

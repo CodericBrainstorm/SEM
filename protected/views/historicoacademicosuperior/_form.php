@@ -1,70 +1,99 @@
+<style type="text/css">
+    .titulo-carac{
+        background-color: #bebec5;
+        color: black;
+        padding-left: 3px;
+        padding:0px 8px 0px 14px;
+        margin-bottom:18px;
+        text-shadow:0 1px 0 rgba(255,255,255,0.5);
+        border:1px solid dimgray;
+        -webkit-border-radius:4px;
+        -moz-border-radius:4px;
+        border-radius:4px;
+        font-size: 20px;
+    }
+    .table_inscripcion td {
+        vertical-align: text-top;
+    }
+    .formaciones-td {
+        float: left;  align: text-bottom;
+       
+    }
+    .checkbox.inline {  margin-left: 0;}
+    
+</style>
+
+
+
 <div class="form">
 
 
-<?php $form = $this->beginWidget('BActiveForm', array(
+<?php $form = $this->beginWidget('bootstrap.widgets.BootActiveForm', array(
 	'id' => 'historicoacademicosuperior-form',
 	'enableAjaxValidation' => false,
 ));
 ?>
-<?php $this->widget('BAlert',array(
-'content'=>'<p>Campos con <span class="required">*</span> son requiredos.</p> ',
-)); ?>
+<?php $this->widget('bootstrap.widgets.BootAlert');?>
 <?php echo $form->errorSummary($model); ?>
-
-		<div class="<?php echo $form->fieldClass($model, 'tipotitulo'); ?>">
-		<?php echo $form->labelEx($model,'tipotitulo'); ?>
-                <div class="controls">
-		<?php echo $form->textField($model, 'tipotitulo', array('maxlength' => 25)); ?>
-		<?php echo $form->error($model,'tipotitulo'); ?>
-                </div>
-		</div><!-- row -->
-		<div class="<?php echo $form->fieldClass($model, 'fechainicio'); ?>">
-		<?php echo $form->labelEx($model,'fechainicio'); ?>
-                <div class="controls">
-		<?php echo $form->textField($model, 'fechainicio'); ?>
-		<?php echo $form->error($model,'fechainicio'); ?>
-                </div>
-		</div><!-- row -->
-		<div class="<?php echo $form->fieldClass($model, 'fechafin'); ?>">
-		<?php echo $form->labelEx($model,'fechafin'); ?>
-                <div class="controls">
-		<?php echo $form->textField($model, 'fechafin'); ?>
-		<?php echo $form->error($model,'fechafin'); ?>
-                </div>
-		</div><!-- row -->
-		<div class="<?php echo $form->fieldClass($model, 'titulo'); ?>">
-		<?php echo $form->labelEx($model,'titulo'); ?>
-                <div class="controls">
-		<?php echo $form->textField($model, 'titulo', array('maxlength' => 40)); ?>
+     <table class="table_inscripcion">
+         <tr class="row">
+             <td>
+		<?php echo $form->dropDownListRow($model, 'tipotitulo',array('' => 'Seleccione...','Profesional'=>'Profesional',
+                'Técnico'=>'Técnico','Técnologico'=>'Técnologico' )); ?>
+                <?php echo $form->error($model,'tipotitulo'); ?>
+              </td>
+              <td>
+                <?php echo $form->textFieldRow($model, 'nombreinstituto', array("style"=>"width:310px")); ?>
+		<?php echo $form->error($model,'nombreinstituto'); ?>
+              </td>
+              <td>
+                <?php echo $form->textFieldRow($model, 'titulo', array("style"=>"width:310px")); ?>
 		<?php echo $form->error($model,'titulo'); ?>
-                </div>
-		</div><!-- row -->
-		<div class="<?php echo $form->fieldClass($model, 'estado'); ?>">
-		<?php echo $form->labelEx($model,'estado'); ?>
+              </td>
+        </tr>  
+        <tr class="row">
+             <td>
+	        <?php echo $form->labelEx($model,'fecha inicio'); ?>
                 <div class="controls">
-		<?php echo $form->textField($model, 'estado'); ?>
-		<?php echo $form->error($model,'estado'); ?>
-                </div>
-		</div><!-- row -->
-		<div class="<?php echo $form->fieldClass($model, 'egresadoID'); ?>">
-		<?php echo $form->labelEx($model,'egresadoID'); ?>
+		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
+			'model' => $model,
+			'attribute' => 'fechainicio',
+			'value' => $model->fechainicio,
+			'options' => array(
+				'showButtonPanel' => true,
+				'changeYear' => true,
+				'dateFormat' => 'yy-mm-dd',
+                                'yearRange' =>'1970:2013',
+				),
+			)); ?>
+		
+          </td>
+              <td>
+	        <?php echo $form->labelEx($model,'fecha fin'); ?>
                 <div class="controls">
-		<?php echo $form->dropDownList($model, 'egresadoID', GxHtml::listDataEx(InstEduSup::model()->findAllAttributes(null, true))); ?>
-		<?php echo $form->error($model,'egresadoID'); ?>
-                </div>
-		</div><!-- row -->
-		<div class="<?php echo $form->fieldClass($model, 'InstEduID'); ?>">
-		<?php echo $form->labelEx($model,'InstEduID'); ?>
-                <div class="controls">
-		<?php echo $form->textField($model, 'InstEduID'); ?>
-		<?php echo $form->error($model,'InstEduID'); ?>
-                </div>
-		</div><!-- row -->
-
-<div class="form-actions">
-<?php
-echo BHtml::submitButton(Yii::t('app', 'Guardar'));
-$this->endWidget();
-?>
-</div>
+		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
+			'model' => $model,
+			'attribute' => 'fechafin',
+			'value' => $model->fechafin,
+			'options' => array(
+				'showButtonPanel' => true,
+				'changeYear' => true,
+				'dateFormat' => 'yy-mm-dd',
+                                'yearRange' =>'1970:2013',
+				),
+			)); ?>
+		
+          </td>
+              <td>
+                <?php echo $form->dropDownListRow($model, 'estado',array('' => 'Seleccione...','1'=>'Incompleto',
+                '2'=>'Terminado')); ?>
+                <?php echo $form->error($model,'estado'); ?>
+              </td>
+        </tr>  
+    </table>
+  <div class="form-actions">
+    <?php $this->widget('bootstrap.widgets.BootButton', array('buttonType' => 'submit', 'type' => 'success', 'icon' => 'ok white', 'label' => 'Guardar', 'size' => 'large'));
+     $this->endWidget();
+    ?>
+  </div>
 </div><!-- form -->

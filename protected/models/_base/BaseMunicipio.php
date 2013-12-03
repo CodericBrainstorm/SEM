@@ -45,6 +45,7 @@ abstract class BaseMunicipio extends GxActiveRecord {
 
 	public function relations() {
 		return array(
+                    'egresados' => array(self::HAS_MANY, 'Egresado', 'MUNICIPIO_NACIMIENTO_ID'),
 		);
 	}
 

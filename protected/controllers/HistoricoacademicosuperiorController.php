@@ -4,18 +4,24 @@ class HistoricoacademicosuperiorController extends GxController {
 
 
 	public function actionView($id) {
+               Controller::scriptBasico();
 		$this->render('view', array(
 			'model' => $this->loadModel($id, 'Historicoacademicosuperior'),
 		));
 	}
 
-	public function actionCreate() {
+	public function actionCreate($idegresado) {
+            
+            Controller::scriptBasico();
 		$model = new Historicoacademicosuperior;
-
+                $model = new Historicoacademicosuperior('search');
+                $model->unsetAttributes();
+                $model->egresadoID = $idegresado;
 
 		if (isset($_POST['Historicoacademicosuperior'])) {
+                       
 			$model->setAttributes($_POST['Historicoacademicosuperior']);
-
+                        
 			if ($model->save()) {
 				if (Yii::app()->getRequest()->getIsAjaxRequest())
 					Yii::app()->end();
@@ -28,6 +34,7 @@ class HistoricoacademicosuperiorController extends GxController {
 	}
 
 	public function actionUpdate($id) {
+                 Controller::scriptBasico();
 		$model = $this->loadModel($id, 'Historicoacademicosuperior');
 
 
@@ -65,7 +72,7 @@ class HistoricoacademicosuperiorController extends GxController {
                 Controller::scriptBasico();
 		$model = new Historicoacademicosuperior('search');
 		$model->unsetAttributes();
-
+                 $model->egresadoID = $idegresado;
 		if (isset($_GET['Historicoacademicosuperior']))
 			$model->setAttributes($_GET['Historicoacademicosuperior']);
 

@@ -20,6 +20,8 @@ $this->breadcrumbs = array(
 	'data' => $model,
 	'attributes' => array(
 'id',
+            'egresadoID',
+            'sedeID',
 //array(
 //			'name' => 'egresado',
 //			'type' => 'raw',

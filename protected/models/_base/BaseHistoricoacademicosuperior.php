@@ -43,6 +43,7 @@ abstract class BaseHistoricoacademicosuperior extends GxActiveRecord {
 			array('estado, egresadoID, InstEduID', 'numerical', 'integerOnly'=>true),
 			array('tipotitulo', 'length', 'max'=>25),
 			array('titulo', 'length', 'max'=>40),
+                        array('nombreinstituto', 'length', 'max'=>50),
 			array('fechainicio, fechafin', 'safe'),
 			array('tipotitulo, fechainicio, fechafin, titulo, estado, egresadoID, InstEduID', 'default', 'setOnEmpty' => true, 'value' => null),
 			array('id, tipotitulo, fechainicio, fechafin, titulo, estado, egresadoID, InstEduID', 'safe', 'on'=>'search'),

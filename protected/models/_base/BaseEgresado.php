@@ -18,21 +18,21 @@
  
  * @property string $TIPO_DOCUMENTO
  * @property string $NRO_OCUMENTO
- * @property string $EXPEDICION_DOC_DPTO
- * @property string $EXPEDICION_DOC_MUN
+ * @property string $EXPEDICION_DOC_DPTO_ID
+ * @property string $EXPEDICION_DOC_MUN_ID
  * @property string $APELLIDO1
  * @property string $APELLIDO2
  * @property string $NOMBRE1
  * @property string $NOMBRE2
  * @property string $FechaNacDate
- * @property string $DEPARTAMENTO_NACIMIENTO
- * @property string $MUNICIPIO_NACIMIENTO
+ * @property string $DEPARTAMENTO_NACIMIENTO_ID
+ * @property string $MUNICIPIO_NACIMIENTO_ID
  * @property string $GENERO
  * @property string $ZONA_RESIDENCIA_ESTUDIANTE
  * @property string $DIRECCION_RESIDENCIA
  * @property string $TEL
- * @property string $RESIDENCIA_DEPARTAMENTO
- * @property string $RESIDENCIA_MUNICIPIO
+ * @property string $RESIDENCIA_DEPARTAMENTO_ID
+ * @property string $RESIDENCIA_MUNICIPIO_ID
  * @property string $ESTRATO
  * @property string $SISBEN
  * @property string $POB_VICT_CONF
@@ -96,15 +96,15 @@ abstract class BaseEgresado extends GxActiveRecord {
 	public function rules() {
 		return array(
                         array('FACEBOOK, TWITTER, LINKEDIN', 'email'),
-			array('Grupo_id, CELULAR', 'numerical', 'integerOnly'=>true),
+			array('Grupo_id, CELULAR, DEPARTAMENTO_NACIMIENTO_ID, MUNICIPIO_NACIMIENTO_ID, EXPEDICION_DOC_DPTO_ID, EXPEDICION_DOC_MUN_ID, RESIDENCIA_DEPARTAMENTO_ID, RESIDENCIA_MUNICIPIO_ID', 'numerical', 'integerOnly'=>true),
 			array('CODIGO_SED, PER_ID, CAR_ID,   COD_MUN1', 'length', 'max'=>10),
 			array('ID', 'length', 'max'=>16),
-			array('MUN_CODIGO, TIPO_DOCUMENTO, EXPEDICION_DOC_MUN, DEPARTAMENTO_NACIMIENTO, MUNICIPIO_NACIMIENTO, RESIDENCIA_DEPARTAMENTO, RESIDENCIA_MUNICIPIO, DPTO_EXP, MUN_EXP,  BUENO', 'length', 'max'=>20),
+			array('MUN_CODIGO, TIPO_DOCUMENTO,  DPTO_EXP, MUN_EXP,  BUENO', 'length', 'max'=>20),
 			array('CODIGO_DANE_ESTABLEDUCATIVO, CODIGO_DANE_SEDE', 'length', 'max'=>12),
 			array('CONS_SEDE', 'length', 'max'=>18),
 			array('NRO_OCUMENTO', 'length', 'max'=>20),
                         array('FACEBOOK, TWITTER,LINKEDIN','length', 'max'=>40),
-			array('EXPEDICION_DOC_DPTO', 'length', 'max'=>20),
+			//array('EXPEDICION_DOC_DPTO', 'length', 'max'=>20),
 			array('APELLIDO1, APELLIDO2, NOMBRE1, NOMBRE2, DIRECCION_RESIDENCIA, TEL', 'length', 'max'=>200),
 			array('GENERO', 'length', 'max'=>10),
 			array('ZONA_RESIDENCIA_ESTUDIANTE, ESTRATO, SISBEN, POB_VICT_CONF, PROVIENE_OTRO_MUN, TIPO_DISCAPACIDAD, CAPACIDADES_EXCEPCIONALES,  ESPECIALIDAD,  DISCAP1', 'length', 'max'=>150),
@@ -113,14 +113,24 @@ abstract class BaseEgresado extends GxActiveRecord {
 			array('ID_ALUMNO', 'length', 'max'=>30),
 			array('NOMBRE_ESTABLECIMIENTO, NOMBRE_SEDE', 'length', 'max'=>255),
 			array('FechaNacDate', 'safe'),
-			array('CODIGO_SED, ID, MUN_CODIGO, CODIGO_DANE_ESTABLEDUCATIVO, CODIGO_DANE_SEDE, CONS_SEDE, TIPO_DOCUMENTO, NRO_OCUMENTO, EXPEDICION_DOC_DPTO, EXPEDICION_DOC_MUN, APELLIDO1, APELLIDO2, NOMBRE1, NOMBRE2, FechaNacDate, DEPARTAMENTO_NACIMIENTO, MUNICIPIO_NACIMIENTO, GENERO, ZONA_RESIDENCIA_ESTUDIANTE, DIRECCION_RESIDENCIA, TEL, RESIDENCIA_DEPARTAMENTO, RESIDENCIA_MUNICIPIO, ESTRATO, SISBEN, POB_VICT_CONF, DPTO_EXP, MUN_EXP, PROVIENE_OTRO_MUN, TIPO_DISCAPACIDAD, CAPACIDADES_EXCEPCIONALES, ETNIA, INS_FAMILIAR, ESPECIALIDAD,  Grupo_id, SUBSIDIADO, REPITENTE, NUEVO, SIT_ACAD_ANO_ANT, CON_ALUM_ANO_ANT, ID_ALUMNO, NOMBRE1_FON, NOMBRE2_FON, APELLIDO1_FON, APELLIDO2_FON, PER_ID,   BUENO, CAR_ID, NOMBRE_ESTABLECIMIENTO,  NOMBRE_SEDE,  DISCAP1,  COD_MUN1', 'default', 'setOnEmpty' => true, 'value' => null),
-			array('CODIGO_SED, ID, MUN_CODIGO, CODIGO_DANE_ESTABLEDUCATIVO, CODIGO_DANE_SEDE, CONS_SEDE, TIPO_DOCUMENTO, NRO_OCUMENTO, EXPEDICION_DOC_DPTO, EXPEDICION_DOC_MUN, APELLIDO1, APELLIDO2, NOMBRE1, NOMBRE2, FechaNacDate, DEPARTAMENTO_NACIMIENTO, MUNICIPIO_NACIMIENTO, GENERO, ZONA_RESIDENCIA_ESTUDIANTE, DIRECCION_RESIDENCIA, TEL, RESIDENCIA_DEPARTAMENTO, RESIDENCIA_MUNICIPIO, ESTRATO, SISBEN, POB_VICT_CONF, DPTO_EXP, MUN_EXP, PROVIENE_OTRO_MUN, TIPO_DISCAPACIDAD, CAPACIDADES_EXCEPCIONALES, ETNIA, INS_FAMILIAR,  ESPECIALIDAD,   Grupo_id, SUBSIDIADO, REPITENTE, NUEVO, SIT_ACAD_ANO_ANT, CON_ALUM_ANO_ANT, ID_ALUMNO, NOMBRE1_FON, NOMBRE2_FON, APELLIDO1_FON, APELLIDO2_FON, PER_ID,  BUENO, CAR_ID, NOMBRE_ESTABLECIMIENTO,  NOMBRE_SEDE,  DISCAP1,  COD_MUN1', 'safe', 'on'=>'search'),
+			array('CODIGO_SED, ID, MUN_CODIGO, CODIGO_DANE_ESTABLEDUCATIVO, CODIGO_DANE_SEDE, CONS_SEDE, TIPO_DOCUMENTO, NRO_OCUMENTO,  APELLIDO1, APELLIDO2, NOMBRE1, NOMBRE2, FechaNacDate,   GENERO, ZONA_RESIDENCIA_ESTUDIANTE, DIRECCION_RESIDENCIA, TEL, ESTRATO, SISBEN, POB_VICT_CONF, DPTO_EXP, MUN_EXP, PROVIENE_OTRO_MUN, TIPO_DISCAPACIDAD, CAPACIDADES_EXCEPCIONALES, ETNIA, INS_FAMILIAR, ESPECIALIDAD,  Grupo_id, SUBSIDIADO, REPITENTE, NUEVO, SIT_ACAD_ANO_ANT, CON_ALUM_ANO_ANT, ID_ALUMNO, NOMBRE1_FON, NOMBRE2_FON, APELLIDO1_FON, APELLIDO2_FON, PER_ID,   BUENO, CAR_ID, NOMBRE_ESTABLECIMIENTO,  NOMBRE_SEDE,  DISCAP1,  COD_MUN1', 'default', 'setOnEmpty' => true, 'value' => null),
+			array('CODIGO_SED, ID, MUN_CODIGO, CODIGO_DANE_ESTABLEDUCATIVO, CODIGO_DANE_SEDE, CONS_SEDE, TIPO_DOCUMENTO, NRO_OCUMENTO, APELLIDO1, APELLIDO2, NOMBRE1, NOMBRE2, FechaNacDate, GENERO, ZONA_RESIDENCIA_ESTUDIANTE, DIRECCION_RESIDENCIA, TEL,  ESTRATO, SISBEN, POB_VICT_CONF, DPTO_EXP, MUN_EXP, PROVIENE_OTRO_MUN, TIPO_DISCAPACIDAD, CAPACIDADES_EXCEPCIONALES, ETNIA, INS_FAMILIAR,  ESPECIALIDAD,   Grupo_id, SUBSIDIADO, REPITENTE, NUEVO, SIT_ACAD_ANO_ANT, CON_ALUM_ANO_ANT, ID_ALUMNO, NOMBRE1_FON, NOMBRE2_FON, APELLIDO1_FON, APELLIDO2_FON, PER_ID,  BUENO, CAR_ID, NOMBRE_ESTABLECIMIENTO,  NOMBRE_SEDE,  DISCAP1,  COD_MUN1', 'safe', 'on'=>'search'),
+                        array('NRO_OCUMENTO','unique','message'=>'La cédula ya está en uso!'),
 		);
 	}
 
 	public function relations() {
 		return array(
                     'tIPODISCAPACIDAD' => array(self::BELONGS_TO, 'Tipodiscapacidad', 'TIPO_DISCAPACIDAD'),
+                    
+                    'munip_nacim' => array(self::BELONGS_TO, 'Municipio', 'MUNICIPIO_NACIMIENTO_ID'),
+                    'depto_nacim' => array(self::BELONGS_TO, 'Departamento', 'DEPARTAMENTO_NACIMIENTO_ID'),
+                    
+                    'munip_exp' => array(self::BELONGS_TO, 'Municipio', 'EXPEDICION_DOC_MUN_ID'),
+                    'depto_exp' => array(self::BELONGS_TO, 'Departamento', 'EXPEDICION_DOC_DPTO_ID'),
+                    
+                    'munip_resid' => array(self::BELONGS_TO, 'Municipio', 'RESIDENCIA_MUNICIPIO_ID'),
+                    'depto_resid' => array(self::BELONGS_TO, 'Departamento', 'RESIDENCIA_DEPARTAMENTO_ID'),
 		);
 	}
 
@@ -140,21 +150,21 @@ abstract class BaseEgresado extends GxActiveRecord {
 			
 			'TIPO_DOCUMENTO' => Yii::t('app', 'Tipo Documento'),
 			'NRO_OCUMENTO' => Yii::t('app', 'Nro documento'),
-			'EXPEDICION_DOC_DPTO' => Yii::t('app', 'Expedicion Doc. Dpto'),
-			'EXPEDICION_DOC_MUN' => Yii::t('app', 'Expedicion Doc Municipio'),
+			'EXPEDICION_DOC_DPTO_ID' => Yii::t('app', 'Expedicion Doc. Dpto'),
+			'EXPEDICION_DOC_MUN_ID' => Yii::t('app', 'Expedicion Doc Municipio'),
 			'APELLIDO1' => Yii::t('app', 'Apellido 1'),
 			'APELLIDO2' => Yii::t('app', 'Apellido 2'),
 			'NOMBRE1' => Yii::t('app', 'Nombre 1'),
 			'NOMBRE2' => Yii::t('app', 'Nombre 2'),
 			'FechaNacDate' => Yii::t('app', 'Fecha Nacimiento'),
-			'DEPARTAMENTO_NACIMIENTO' => Yii::t('app', 'Depto. Nacimiento'),
-			'MUNICIPIO_NACIMIENTO' => Yii::t('app', 'Municipio Nacimiento'),
+			'DEPARTAMENTO_NACIMIENTO_ID' => Yii::t('app', 'Depto. Nacimiento'),
+			'MUNICIPIO_NACIMIENTO_ID' => Yii::t('app', 'Municipio Nacimiento'),
 			'GENERO' => Yii::t('app', 'Genero'),
 			'ZONA_RESIDENCIA_ESTUDIANTE' => Yii::t('app', 'Zona Residencia Estudiante'),
 			'DIRECCION_RESIDENCIA' => Yii::t('app', 'Direccion Residencia'),
 			'TEL' => Yii::t('app', 'Tel'),
-			'RESIDENCIA_DEPARTAMENTO' => Yii::t('app', 'Residencia Departamento'),
-			'RESIDENCIA_MUNICIPIO' => Yii::t('app', 'Residencia Municipio'),
+			'RESIDENCIA_DEPARTAMENTO_ID' => Yii::t('app', 'Residencia Departamento'),
+			'RESIDENCIA_MUNICIPIO_ID' => Yii::t('app', 'Residencia Municipio'),
 			'ESTRATO' => Yii::t('app', 'Estrato'),
 			'SISBEN' => Yii::t('app', 'Sisben'),
 			'POB_VICT_CONF' => Yii::t('app', 'Pob Vict Conf'),
@@ -203,21 +213,21 @@ abstract class BaseEgresado extends GxActiveRecord {
 		
 		$criteria->compare('TIPO_DOCUMENTO', $this->TIPO_DOCUMENTO, true);
 		$criteria->compare('NRO_OCUMENTO', $this->NRO_OCUMENTO, true);
-		$criteria->compare('EXPEDICION_DOC_DPTO', $this->EXPEDICION_DOC_DPTO, true);
-		$criteria->compare('EXPEDICION_DOC_MUN', $this->EXPEDICION_DOC_MUN, true);
+		$criteria->compare('EXPEDICION_DOC_DPTO_ID', $this->EXPEDICION_DOC_DPTO_ID, true);
+		$criteria->compare('EXPEDICION_DOC_MUN_ID', $this->EXPEDICION_DOC_MUN_ID, true);
 		$criteria->compare('APELLIDO1', $this->APELLIDO1, true);
 		$criteria->compare('APELLIDO2', $this->APELLIDO2, true);
 		$criteria->compare('NOMBRE1', $this->NOMBRE1, true);
 		$criteria->compare('NOMBRE2', $this->NOMBRE2, true);
 		$criteria->compare('FechaNacDate', $this->FechaNacDate, true);
-		$criteria->compare('DEPARTAMENTO_NACIMIENTO', $this->DEPARTAMENTO_NACIMIENTO, true);
-		$criteria->compare('MUNICIPIO_NACIMIENTO', $this->MUNICIPIO_NACIMIENTO, true);
+		$criteria->compare('DEPARTAMENTO_NACIMIENTO_ID', $this->DEPARTAMENTO_NACIMIENTO_ID, true);
+		$criteria->compare('MUNICIPIO_NACIMIENTO_ID', $this->MUNICIPIO_NACIMIENTO_ID, true);
 		$criteria->compare('GENERO', $this->GENERO, true);
 		$criteria->compare('ZONA_RESIDENCIA_ESTUDIANTE', $this->ZONA_RESIDENCIA_ESTUDIANTE, true);
 		$criteria->compare('DIRECCION_RESIDENCIA', $this->DIRECCION_RESIDENCIA, true);
 		$criteria->compare('TEL', $this->TEL, true);
-		$criteria->compare('RESIDENCIA_DEPARTAMENTO', $this->RESIDENCIA_DEPARTAMENTO, true);
-		$criteria->compare('RESIDENCIA_MUNICIPIO', $this->RESIDENCIA_MUNICIPIO, true);
+		$criteria->compare('RESIDENCIA_DEPARTAMENTO_ID', $this->RESIDENCIA_DEPARTAMENTO_ID, true);
+		$criteria->compare('RESIDENCIA_MUNICIPIO_ID', $this->RESIDENCIA_MUNICIPIO_ID, true);
 		$criteria->compare('ESTRATO', $this->ESTRATO, true);
 		$criteria->compare('SISBEN', $this->SISBEN, true);
 		$criteria->compare('POB_VICT_CONF', $this->POB_VICT_CONF, true);

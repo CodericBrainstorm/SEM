@@ -34,8 +34,8 @@ class HistoricoegresadoController extends GxController {
 
 		if (isset($_POST['Historicoegresado'])) {
 			$model->setAttributes($_POST['Historicoegresado']);
-
-			if ($model->save()) {
+                        
+			if ($model->save()) { 
 				$this->redirect(array('view', 'id' => $model->id));
 			}
 		}

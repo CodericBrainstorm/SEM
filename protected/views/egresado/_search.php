@@ -46,13 +46,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model, 'EXPEDICION_DOC_DPTO'); ?>
-		<?php echo $form->textField($model, 'EXPEDICION_DOC_DPTO', array('maxlength' => 2)); ?>
+		<?php echo $form->label($model, 'EXPEDICION_DOC_DPTO_IDD'); ?>
+		<?php echo $form->textField($model, 'EXPEDICION_DOC_DPTO_ID', array('maxlength' => 2)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model, 'EXPEDICION_DOC_MUN'); ?>
-		<?php echo $form->textField($model, 'EXPEDICION_DOC_MUN', array('maxlength' => 6)); ?>
+		<?php echo $form->label($model, 'EXPEDICION_DOC_MUN_ID'); ?>
+		<?php echo $form->textField($model, 'EXPEDICION_DOC_MUN_ID', array('maxlength' => 6)); ?>
 	</div>
 
 	<div class="row">
@@ -91,13 +91,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model, 'DEPARTAMENTO_NACIMIENTO'); ?>
-		<?php echo $form->textField($model, 'DEPARTAMENTO_NACIMIENTO', array('maxlength' => 6)); ?>
+		<?php echo $form->label($model, 'DEPARTAMENTO_NACIMIENTO_ID'); ?>
+		<?php echo $form->textField($model, 'DEPARTAMENTO_NACIMIENTO_ID', array('maxlength' => 6)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model, 'MUNICIPIO_NACIMIENTO'); ?>
-		<?php echo $form->textField($model, 'MUNICIPIO_NACIMIENTO', array('maxlength' => 6)); ?>
+		<?php echo $form->label($model, 'MUNICIPIO_NACIMIENTO_ID'); ?>
+		<?php echo $form->textField($model, 'MUNICIPIO_NACIMIENTO_ID', array('maxlength' => 6)); ?>
 	</div>
 
 	<div class="row">

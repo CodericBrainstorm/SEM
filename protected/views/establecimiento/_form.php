@@ -39,9 +39,9 @@
                 <hr class="linea-sep" />
                 <td>
                    <?php if(isset($model->coddepto))
-                       echo $form->textFieldRow($model, 'nom_depto', array('maxlength' => 255));
+                       echo $form->textFieldRow($model, 'nom_depto', array('maxlength' => 255, 'readOnly'=>true));
                     else
-                       echo $form->dropDownListRow($model, 'coddepto', GxHtml::listDataEx(Departamento::model()->findAll(array('condition' => 'habiles = 1',"order"=>"nombre"))), array('prompt' => 'Seleccione...')); ?>
+                       //echo $form->dropDownListRow($model, 'coddepto', GxHtml::listDataEx(Departamento::model()->findAll(array('condition' => 'habiles = 1',"order"=>"nombre"))), array('prompt' => 'Seleccione...')); ?>
                 </td>
                 <td> 
                    <?php  if(!isset($model->coddepto)){
@@ -58,11 +58,11 @@
                         ?>
                 </td>
                 <?php if(isset($model->coddepto)) { ?>
-                  <td> <?php echo $form->textFieldRow($model, 'nom_municipio', array('maxlength' => 255)); ?></td>
-                  <td> <?php echo $form->textFieldRow($model, 'secretaria', array('maxlength' => 255)); ?></td>
+                  <td> <?php echo $form->textFieldRow($model, 'nom_municipio', array('maxlength' => 255, 'readOnly'=>true)); ?></td>
+                  <td> <?php echo $form->textFieldRow($model, 'secretaria', array('maxlength' => 255, 'readOnly'=>true)); ?></td>
                 <?php } ?>
                 <td>
-                    <?php echo $form->textFieldRow($model, 'codigo', array('maxlength' => 255)); ?>
+                    <?php echo $form->textFieldRow($model, 'codigo', array('maxlength' => 255, 'readOnly'=>true)); ?>
                 </td>
                
             </tr>
