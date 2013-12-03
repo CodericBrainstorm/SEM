@@ -13,7 +13,8 @@ $usuario = User::model()->findByPk(Yii::app()->user->id);
     $this->beginWidget('bootstrap.widgets.BootHero');
     ?>
        <div style="text-align: center;">
-           <?php if($usuario->rol == 'admin') {  ?>
+           <?php if (isset($usuario)){
+           if($usuario->rol == 'admin') {  ?>
             <a class="btn btn-primary btn-large" href="index.php?r=establecimiento/admin">Instituciones
             <img src="images/institution_icon.jpg"  WIDTH=40 HEIGHT=40></a>
            <a class="btn btn-primary btn-large" href="index.php?r=egresado/admin">Alumnos
@@ -26,7 +27,7 @@ $usuario = User::model()->findByPk(Yii::app()->user->id);
             <img src="images/institution_icon.jpg"  WIDTH=40 HEIGHT=40></a>
            
            
-         <?php } ?>  
+           <?php } }  ?>  
       </div>
     
     <?php $this->endWidget(); ?>
