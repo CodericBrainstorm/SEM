@@ -24,7 +24,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1><?php echo Yii::t('app', 'Administrar') . ' ' . GxHtml::encode($model->label(2)); ?></h1>
+<h1><?php echo Yii::t('app', 'Administrar Area del Conocimiento'); ?></h1>
 
 
 

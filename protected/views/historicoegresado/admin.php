@@ -24,7 +24,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1><?php echo Yii::t('app', 'Administrar') . ' ' . GxHtml::encode($model->label(2)); ?></h1>
+<h1><?php echo Yii::t('app', 'Administrar Histórico de Egresados'); ?></h1>
 
 <p>
 Si lo desea, puede ingresar un operador de comparación (&lt;, &lt;=, &gt;, &gt;=, &lt;&gt; or =) al principio de cada uno de los valores de la búsqueda para especificar la forma en la comparación que debe hacer.
