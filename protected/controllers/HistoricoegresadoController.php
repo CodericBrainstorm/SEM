@@ -9,9 +9,11 @@ class HistoricoegresadoController extends GxController {
 		));
 	}
 
-	public function actionCreate() {
+	public function actionCreate($idsede, $idegresado) {
+                Controller::scriptBasico();
 		$model = new Historicoegresado;
-
+                $model->sedeID = $idsede;
+                $model->egresadoID = $idegresado;
 
 		if (isset($_POST['Historicoegresado'])) {
 			$model->setAttributes($_POST['Historicoegresado']);

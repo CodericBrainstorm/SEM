@@ -33,36 +33,24 @@
 	'enableAjaxValidation' => false,
 ));
 ?>
-<?php $this->widget('BAlert',array(
-'content'=>'<p>Campos con <span class="required">*</span> son requiredos.</p> ',
-)); ?>
+<?php $this->widget('bootstrap.widgets.BootAlert'); ?>
 <?php echo $form->errorSummary($model); ?>
-
-		<div class="<?php echo $form->fieldClass($model, 'area_conocimiento'); ?>">
-		<?php echo $form->labelEx($model,'area_conocimiento'); ?>
-                <div class="controls">
-		<?php echo $form->textField($model, 'area_conocimiento', array('maxlength' => 50)); ?>
+    <table class="table_inscripcion">
+         <tr class="row">
+             <td>
+		 <?php echo $form->textFieldRow($model, 'area_conocimiento', array("style"=>"width:310px")); ?>
 		<?php echo $form->error($model,'area_conocimiento'); ?>
-                </div>
-		</div><!-- row -->
-		<div class="<?php echo $form->fieldClass($model, 'nota'); ?>">
-		<?php echo $form->labelEx($model,'nota'); ?>
-                <div class="controls">
-		<?php echo $form->textField($model, 'nota'); ?>
+             </td>
+	     <td>
+		 <?php echo $form->textFieldRow($model, 'nota', array("style"=>"width:310px")); ?>
 		<?php echo $form->error($model,'nota'); ?>
-                </div>
-		</div><!-- row -->
-		<div class="<?php echo $form->fieldClass($model, 'historicoegresadoID'); ?>">
-		<?php echo $form->labelEx($model,'historicoegresadoID'); ?>
-                <div class="controls">
-		<?php echo $form->dropDownList($model, 'historicoegresadoID', GxHtml::listDataEx(Historicoegresado::model()->findAllAttributes(null, true))); ?>
-		<?php echo $form->error($model,'historicoegresadoID'); ?>
-                </div>
-		</div><!-- row -->
-
+              </td>
+	 </tr><!-- row -->
+     </table>
 <div class="form-actions">
 <?php
-echo BHtml::submitButton(Yii::t('app', 'Guardar'));
+     $this->widget('bootstrap.widgets.BootButton', array('buttonType' => 'submit', 'type' => 'success', 'icon' => 'ok white', 'label' => 'Guardar', 'size' => 'large'));
+     
 $this->endWidget();
 ?>
 </div>

@@ -40,7 +40,7 @@ abstract class BaseHistoricoegresado extends GxActiveRecord {
 
 	public function rules() {
 		return array(
-                       array('grado+anio','application.extensions.uniqueMultiColumnValidator'), 
+                       
 			array('egresadoID, sedeID', 'numerical', 'integerOnly'=>true),
 			array('grado', 'length', 'max'=>2),
 			//array('anio', 'safe'),

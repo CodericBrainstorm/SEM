@@ -1,8 +1,8 @@
 <?php
 
 $this->breadcrumbs = array(
-	$model->label(2) => array('index'),
-	Yii::t('app', 'Administrar'),
+	//$model->label(2) => array('index'),
+	//Yii::t('app', 'Administrar'),
 );
 
 //$this->menu = array(
@@ -26,9 +26,7 @@ $('.search-form form').submit(function(){
 
 <h1><?php echo Yii::t('app', 'Administrar Histórico de Egresados'); ?></h1>
 
-<p>
-Si lo desea, puede ingresar un operador de comparación (&lt;, &lt;=, &gt;, &gt;=, &lt;&gt; or =) al principio de cada uno de los valores de la búsqueda para especificar la forma en la comparación que debe hacer.
-</p>
+
 
 <?php echo GxHtml::link(Yii::t('app', 'Búsqueda Avanzada'), '#', array('class' => 'search-button')); ?>
 <div class="search-form">
@@ -36,6 +34,10 @@ Si lo desea, puede ingresar un operador de comparación (&lt;, &lt;=, &gt;, &gt;
 	'model' => $model,
 )); ?>
 </div><!-- search-form -->
+
+<div style="float: center;" >
+        <a href="index.php?r=historicoegresado/create&idsede=<?php echo $_GET['idsede']; ?>&idegresado=<?php echo $_GET['idegresado']; ?>&iframe=true&width=100%&height=35%"  style ="margin-left:35px;" title="Crear histórico egresado" class="btn btn-primary pretty" >CREAR HISTÓRICO EGRESADO</a>
+</div>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id' => 'historicoegresado-grid',
@@ -59,7 +61,7 @@ Si lo desea, puede ingresar un operador de comparación (&lt;, &lt;=, &gt;, &gt;
 		array(
                 'class'=>'CLinkColumn',
                 'label'=>'Area del conocimiento',
-                'urlExpression'=>'"index.php?r=areaconocimiento/admin&idegresado=".$data->id',
+                'urlExpression'=>'"index.php?r=areaconocimiento/admin&idhistoricoegresado=".$data->id',
                 
                 'header'=>'Area del conocimiento',
                    

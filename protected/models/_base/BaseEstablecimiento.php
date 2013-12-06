@@ -30,7 +30,7 @@
  * @property integer $estadoID
  * @property string $calendario
  * @property string $correoelectronico
- *
+ * @property string $coord_yx
  * @property InstCapacidadexcepcionalEstablecimiento[] $instCapacidadexcepcionalEstablecimientos
  * @property InstDiscapacidadEstablecimiento[] $instDiscapacidadEstablecimientos
  * @property Municipio $codmunicipio0
@@ -72,6 +72,7 @@ abstract class BaseEstablecimiento extends GxActiveRecord {
 			array('secretariaID, coddepto, codmunicipio, tipoID, sectorID, zonaID, jornadasestablecimientoID, nivelesestablecimientoID, estadoID', 'numerical', 'integerOnly'=>true),
 			array('codigo', 'length', 'max'=>20),
 			array('nombre, correoelectronico', 'length', 'max'=>100),
+                        array('coord_xy', 'length', 'max'=>200),
 			array('direccion', 'length', 'max'=>150),
 			array('telefono', 'length', 'max'=>42),
 			array('grados', 'length', 'max'=>80),
@@ -152,6 +153,7 @@ abstract class BaseEstablecimiento extends GxActiveRecord {
 			'instNivelEstablecimientos' => null,
 			'sedSedes' => null,
                         'nombre_rector' => Yii::t('app', 'Rector'),
+                        'coord_xy' => Yii::t('app', 'Coordenadas'),
 		);
 	}
 
@@ -186,6 +188,7 @@ abstract class BaseEstablecimiento extends GxActiveRecord {
 		$criteria->compare('calendario', $this->calendario, true);
 		$criteria->compare('correoelectronico', $this->correoelectronico, true);
                 $criteria->compare('nombre_rector', $this->nombre_rector, true);
+                $criteria->compare('coord_xy', $this->coord_xy, true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria' => $criteria,

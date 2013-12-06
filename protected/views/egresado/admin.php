@@ -1,8 +1,8 @@
 <?php
 
 $this->breadcrumbs = array(
-	'Egresados' => array('index'),
-	Yii::t('app', 'Administrar'),
+	//'Egresados' => array('index'),
+	//Yii::t('app', 'Administrar'),
 );
 
 Yii::app()->clientScript->registerScript('search', "

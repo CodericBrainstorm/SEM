@@ -1,8 +1,8 @@
 <?php
 
 $this->breadcrumbs = array(
-	$model->label(2) => array('index'),
-	Yii::t('app', 'Administrar'),
+	//$model->label(2) => array('index'),
+	//Yii::t('app', 'Administrar'),
 );
 //
 //$this->menu = array(
@@ -35,7 +35,7 @@ $('.search-form form').submit(function(){
 ));?>
 </div><!-- search-form -->
 <div style="float: center;" >
-        <a href="index.php?r=areaconocimiento/create&idhistegres=<?php echo $_GET['idegresado']; ?>&iframe=true&width=100%&height=35%"  style ="margin-left:35px;" title="CREAR EGRESADO" class="btn btn-primary pretty" >CREAR AREA CONOCIMIENTO</a>
+        <a href="index.php?r=areaconocimiento/create&idhistegres=<?php echo $_GET['idhistoricoegresado']; ?>&iframe=true&width=100%&height=35%"  style ="margin-left:35px;" title="CREAR AREA CONOCIMIENTO" class="btn btn-primary pretty" >CREAR AREA CONOCIMIENTO</a>
 </div>
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id' => 'areaconocimiento-grid',

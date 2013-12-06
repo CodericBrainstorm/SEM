@@ -48,7 +48,7 @@ if (isset($_GET['codigoestablecimiento']))
 $dataproviderm='';
 
     $dataproviderm = new CSqlDataProvider("SELECT anio, COUNT(*) as num_estudiantes FROM historicoegresado he JOIN sed_sede s ON(s.codsede=he.sedeID) 
-            WHERE he.grado>10 AND s.codestablecimiento='125290000839' GROUP BY he.anio", array(
+            WHERE he.grado>10 AND s.codestablecimiento=$codigoestablecimiento GROUP BY he.anio", array(
                 'totalItemCount' => 4,
                 'keyField'=> 'ID',
                 'sort' => array(

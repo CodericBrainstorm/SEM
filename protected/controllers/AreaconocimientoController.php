@@ -11,8 +11,9 @@ class AreaconocimientoController extends GxController {
 
 	public function actionCreate($idhistegres) {
                
+               Controller::scriptBasico();
 		$model = new Areaconocimiento;
-
+                $model->historicoegresadoID = $idhistegres;
 
 		if (isset($_POST['Areaconocimiento'])) {
 			$model->setAttributes($_POST['Areaconocimiento']);
@@ -29,6 +30,7 @@ class AreaconocimientoController extends GxController {
 	}
 
 	public function actionUpdate($id) {
+               Controller::scriptBasico();
 		$model = $this->loadModel($id, 'Areaconocimiento');
 
 
@@ -62,11 +64,11 @@ class AreaconocimientoController extends GxController {
 		));
 	}
 
-	public function actionAdmin() {
+	public function actionAdmin($idhistoricoegresado) {
                 Controller::scriptBasico();
 		$model = new Areaconocimiento('search');
 		$model->unsetAttributes();
-
+                $model->historicoegresadoID = $idhistoricoegresado;
 		if (isset($_GET['Areaconocimiento']))
 			$model->setAttributes($_GET['Areaconocimiento']);
 

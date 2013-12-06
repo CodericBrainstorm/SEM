@@ -46,7 +46,9 @@
                 
             </td>
             <td>
-               <?php echo $form->textFieldRow($model, 'grado', array('maxlength' => 255)); ?>
+               <?php echo $form->dropDownListRow($model, 'grado', array('prompt' => 'Seleccione...', '1'=>'1°',
+                   '2'=>'2°', '3'=>'3°', '4'=>'4°', '5'=>'5°', '6'=>'6°', '7'=>'7°',
+                   '8'=>'8°', '9'=>'9°', '10'=>'10°','11'=>'11°')); ?>
             </td>
         </tr>
     </table>

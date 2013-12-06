@@ -1,8 +1,8 @@
 <?php
 
 $this->breadcrumbs = array(
-	$model->label(2) => array('index'),
-	Yii::t('app', 'Administrar'),
+	//$model->label(2) => array('index'),
+	//Yii::t('app', 'Administrar'),
 );
 
 /*$this->menu = array(
@@ -65,6 +65,18 @@ $('.search-form form').submit(function(){
 		
 		array(
 			'class' => 'CButtonColumn',
+                       'template'=>'{update}{view}{delete}',
+                        'buttons'=>array(
+                                        'update'=>array(
+                                                        'visible'=>'true',
+                                                ),
+                                        'view'=>array(
+                                                        'visible'=>'true',
+                                                ),
+                                        'delete'=>array(
+                                                        'visible'=>'false',
+                                                ),
+                        ),
 		),
                array(
                 'class'=>'CLinkColumn',

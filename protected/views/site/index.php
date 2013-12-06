@@ -27,12 +27,12 @@ $usuario = User::model()->findByPk(Yii::app()->user->id);
             <img src="images/institution_icon.jpg"  WIDTH=40 HEIGHT=40></a>
            
            
-           <?php } } 
+           <?php } } else  
            echo '<b>Applicativo para el Seguimiento de Egresados<br> de los Establecimientos Educativos de Colombia
-                 <br>para identificarlos, Hacer Estadisticas <br>y Reportes<b><br><br><BR>NOS ENCONTRAMOS EN FACE DE CONSTRUCCIÓN'?>  
+                 <br>para identificarlos, Hacer Estadisticas <br>y Reportes<b><br><br>NOS ENCONTRAMOS EN FACE DE CONSTRUCCIÓN'; ?>  
       </div>
     
-    <?php $this->endWidget(); ?>
+           <?php  $this->endWidget(); ?>
     
     </div>
 
