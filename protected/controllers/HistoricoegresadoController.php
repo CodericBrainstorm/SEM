@@ -81,7 +81,8 @@ class HistoricoegresadoController extends GxController {
                 Controller::scriptBasico();
 		$model = new Historicoegresado('search');
 		$model->unsetAttributes();
-                $model->egresadoID=$idegresado;
+                //echo 'idegresado:  '.$idegresado;
+                //$model->egresadoID=$idegresado;
 		if (isset($_GET['Historicoegresado']))
 			$model->setAttributes($_GET['Historicoegresado']);
 
