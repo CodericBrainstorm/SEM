@@ -50,7 +50,7 @@ $dataproviderm='';
     $dataproviderm = new CSqlDataProvider("SELECT anio, COUNT(*) as num_estudiantes FROM historicoegresado he JOIN sed_sede s ON(s.codsede=he.sedeID) 
             WHERE he.grado>10 AND s.codestablecimiento=$codigoestablecimiento GROUP BY he.anio", array(
                 'totalItemCount' => 4,
-                'keyField'=> 's.ID',
+                //'keyField'=> 's.ID',
                 'sort' => array(
                     'attributes' => array(
                         'num_estudiantes', 'anio'
