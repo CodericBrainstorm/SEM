@@ -25,33 +25,55 @@
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 
 <script type="text/javascript" src="js/gmaps.js"></script>
+<script type="text/javascript" src="js/folksonomy.js"></script>
+<script type="text/javascript" src="js/gmaps_coord.js"></script>
+<script type="text/javascript" src="https://raw.github.com/HPNeo/gmaps/master/gmaps.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 <script type="text/javascript">
-    var map;
-    $(document).ready(function() {
-        map = new GMaps({
-            div: '#mapa',
-            lat: 6.3437142,
-            lng: -75.5068392,
-            zoom: 10,
-            zoomControl: true,
-            zoomControlOpt: {
-                style: 'SMALL',
-                position: 'TOP_RIGHT'
-            },
-            panControl: true,
-            streetViewControl: true,
-            mapTypeControl: false
-        });
-        map.addMarker({
-            lat: 38.88993579999999,
-            lng: 1.478022000000055,
-            title: 'Ibiza',
-            infoWindow: {
-                content: '<strong>!Agua!</strong>Pero estás a un paso de IBIZA'
-            }
-        });
-    });
+        var punto;
+        var marcador;
+        var map;
 
+        function mapClick(marcadorC, puntoC) { 
+          marcador = marcadorC;
+          punto = puntoC;
+          
+
+          map.clearOverlays();
+          marcador = new GMarker(punto);
+          
+          map.addOverlay(marcador);
+
+          logCoordenadas();
+        }
+
+        function logCoordenadas() {
+           var coordenada = punto.lat()+','+punto.lng();
+           document.getElementById("Establecimiento_coord_xy").value = coordenada;
+          
+        }
+
+        $(document).ready(function() { 
+          var coord = $("#Establecimiento_coord_xy").val();
+          
+          var array_xy=coord.split(",");
+         
+         if (GBrowserIsCompatible()) { 
+            map = new GMap2(document.getElementById("mapa"));
+            map.setCenter(new GLatLng(parseFloat(array_xy[0]), parseFloat(array_xy[1])), 15);
+            
+            map.addControl(new GSmallMapControl());
+
+            GEvent.addListener(map, 'click', mapClick); 
+         }
+        });
+//$(document).ready(function(){  alert("$(document).ready(function()");
+//  map = new GMaps({
+//    div: '#mapa',
+//    lat: -12.043333,
+//    lng: -77.028333
+//  });
+//});
 </script>
 
 <div class="form">
@@ -169,7 +191,8 @@
                 <?php echo $form->textFieldRow($model, 'num_sedes', array('maxlength' => 5)); ?>
             </td>
             <td>
-                <?php echo $form->textFieldRow($model, 'calendario', array('maxlength' => 1)); ?>
+                <b>Calendario</b><br>
+                <?php echo $form->dropDownList($model, 'calendario', array('A' =>'A', 'B'=>'B')); ?>
             </td>
 
         </tr>

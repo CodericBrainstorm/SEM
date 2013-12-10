@@ -22,7 +22,7 @@
  * @property integer $zonaID
  * @property integer $jornadasestablecimientoID
  * @property integer $nivelesestablecimientoID
- * @property string $gradosestablecimiento
+ 
  * @property string $modeloseducativos
  * @property string $capacidadesexcepcionales
  * @property string $discapacidades
@@ -68,7 +68,7 @@ abstract class BaseEstablecimiento extends GxActiveRecord {
 
 	public function rules() {
 		return array(
-			array('zonaID', 'required'),
+			
 			array('secretariaID, coddepto, codmunicipio, tipoID, sectorID, zonaID, jornadasestablecimientoID, nivelesestablecimientoID, estadoID', 'numerical', 'integerOnly'=>true),
 			array('codigo', 'length', 'max'=>20),
 			array('nombre, correoelectronico', 'length', 'max'=>100),
@@ -78,8 +78,8 @@ abstract class BaseEstablecimiento extends GxActiveRecord {
 			array('grados', 'length', 'max'=>80),
 			array('calendario', 'length', 'max'=>1),
 			array('modeloseducativos, capacidadesexcepcionales, discapacidades, idiomas', 'safe'),
-			array('secretariaID, coddepto, codmunicipio, codigo, nombre, direccion, telefono, tipoID, sectorID, jornadasestablecimientoID, nivelesestablecimientoID, gradosestablecimiento, modeloseducativos, capacidadesexcepcionales, discapacidades, idiomas, estadoID, calendario, correoelectronico', 'default', 'setOnEmpty' => true, 'value' => null),
-			array('id, secretariaID, coddepto, codmunicipio, codigo, nombre, direccion, telefono, tipoID, sectorID, zonaID, jornadasestablecimientoID, nivelesestablecimientoID, gradosestablecimiento, modeloseducativos, capacidadesexcepcionales, discapacidades, idiomas, estadoID, calendario, correoelectronico', 'safe', 'on'=>'search'),
+			array('secretariaID, coddepto, codmunicipio, codigo, nombre, direccion, telefono, tipoID, sectorID, jornadasestablecimientoID, nivelesestablecimientoID, modeloseducativos, capacidadesexcepcionales, discapacidades, idiomas, estadoID, calendario, correoelectronico, coord_xy', 'default', 'setOnEmpty' => true, 'value' => null),
+			array('id, secretariaID, coddepto, codmunicipio, codigo, nombre, direccion, telefono, tipoID, sectorID, zonaID, jornadasestablecimientoID, nivelesestablecimientoID,  modeloseducativos, capacidadesexcepcionales, discapacidades, idiomas, estadoID, calendario, correoelectronico, coord_xy', 'safe', 'on'=>'search'),
 		);
 	}
 

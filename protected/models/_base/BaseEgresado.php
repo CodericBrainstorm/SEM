@@ -150,7 +150,7 @@ abstract class BaseEgresado extends GxActiveRecord {
 			
 			'TIPO_DOCUMENTO' => Yii::t('app', 'Tipo Documento'),
 			'NRO_OCUMENTO' => Yii::t('app', 'Nro documento'),
-			'EXPEDICION_DOC_DPTO_ID' => Yii::t('app', 'Expedicion Doc. Dpto'),
+			'EXPEDICION_DOC_DPTO_ID' => Yii::t('app', 'Exp. Doc. Dpto'),
 			'EXPEDICION_DOC_MUN_ID' => Yii::t('app', 'Expedicion Doc Municipio'),
 			'APELLIDO1' => Yii::t('app', 'Apellido 1'),
 			'APELLIDO2' => Yii::t('app', 'Apellido 2'),
