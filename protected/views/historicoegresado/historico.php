@@ -50,7 +50,7 @@ $dataproviderm='';
     $dataproviderm = new CSqlDataProvider("SELECT anio, COUNT(*) as num_estudiantes FROM historicoegresado he JOIN sed_sede s ON(s.codsede=he.sedeID) 
             WHERE he.grado>10 AND s.codestablecimiento=$codigoestablecimiento GROUP BY he.anio", array(
                 'totalItemCount' => 4,
-                //'keyField'=> 's.ID',
+                'keyField'=> 'ID',
                 'sort' => array(
                     'attributes' => array(
                         'num_estudiantes', 'anio'
@@ -68,7 +68,7 @@ $dataproviderm='';
 //echo '<strong style="color:#52BDF5">'.$dpto->nombre.' >> '.$municip->nombre.' >> '.$sede->RADICADO.'-'.$sede->NOMBRESEDE.' >> tipo: '.$tiposede->DESCRIPCION.'</strong>';
 $this->widget('zii.widgets.grid.CGridView', array(
        
-	'id' => 'modulo-grid',
+	'id' => 'historicoegresado-grid',
 	'dataProvider' => $dataproviderm,
        
         //'filter' => $model,
