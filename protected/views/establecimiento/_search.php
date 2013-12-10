@@ -60,15 +60,6 @@
 		<?php echo $form->dropDownList($model, 'zonaID', GxHtml::listDataEx(Zona::model()->findAllAttributes(null, true)), array('prompt' => Yii::t('app', 'All'))); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model, 'jornadasestablecimientoID'); ?>
-		<?php echo $form->textField($model, 'jornadasestablecimientoID'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model, 'nivelesestablecimientoID'); ?>
-		<?php echo $form->textField($model, 'nivelesestablecimientoID'); ?>
-	</div>
 
 <!--	<div class="row">
 		<?php //echo $form->label($model, 'grados'); ?>
@@ -100,15 +91,7 @@
 		<?php //echo $form->dropDownList($model, 'estado', GxHtml::listDataEx(Estado::model()->findAllAttributes(null, true)), array('prompt' => Yii::t('app', 'All'))); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model, 'calendario'); ?>
-		<?php echo $form->textField($model, 'calendario', array('maxlength' => 1)); ?>
-	</div>
-
-<!--	<div class="row">
-		<?php //echo $form->label($model, 'correoelectronico'); ?>
-		<?php //echo $form->textField($model, 'correoelectronico', array('maxlength' => 100)); ?>
-	</div>-->
+	
 
 	<div class="row buttons">
 		<?php echo GxHtml::submitButton(Yii::t('app', 'Search')); ?>

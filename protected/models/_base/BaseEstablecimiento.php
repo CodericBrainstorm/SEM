@@ -79,7 +79,7 @@ abstract class BaseEstablecimiento extends GxActiveRecord {
 			array('calendario', 'length', 'max'=>1),
 			array('modeloseducativos, capacidadesexcepcionales, discapacidades, idiomas', 'safe'),
 			array('secretariaID, coddepto, codmunicipio, codigo, nombre, direccion, telefono, tipoID, sectorID, jornadasestablecimientoID, nivelesestablecimientoID, modeloseducativos, capacidadesexcepcionales, discapacidades, idiomas, estadoID, calendario, correoelectronico, coord_xy', 'default', 'setOnEmpty' => true, 'value' => null),
-			array('id, secretariaID, coddepto, codmunicipio, codigo, nombre, direccion, telefono, tipoID, sectorID, zonaID, jornadasestablecimientoID, nivelesestablecimientoID,  modeloseducativos, capacidadesexcepcionales, discapacidades, idiomas, estadoID, calendario, correoelectronico, coord_xy', 'safe', 'on'=>'search'),
+			array('nom_depto,secretaria, nom_municipio,id, secretariaID, coddepto, codmunicipio, codigo, nombre, direccion, telefono, tipoID, sectorID, zonaID, jornadasestablecimientoID, nivelesestablecimientoID,  modeloseducativos, capacidadesexcepcionales, discapacidades, idiomas, estadoID, calendario, correoelectronico, coord_xy', 'safe', 'on'=>'search'),
 		);
 	}
 
