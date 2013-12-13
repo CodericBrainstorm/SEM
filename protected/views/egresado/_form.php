@@ -38,23 +38,15 @@ if(isset($_GET['idsede']))
 ?>
 <?php $this->widget('bootstrap.widgets.BootAlert'); ?>
 <?php echo $form->errorSummary($model); ?>
+    <BR>
     <table class="table_inscripcion">
+        
         <tr class="row0">
             
             <td>
-                 <?php echo $form->textFieldRow($model, 'CODIGO_SED', array('maxlength' => 10)); ?>
-            </td>
-	    <td>
-		<?php echo $form->textFieldRow($model, 'ID_old', array('maxlength' => 16)); ?>
-		<?php echo $form->error($model,'ID_old'); ?>
-            </td>
-	    <td>
-		<?php echo $form->textFieldRow($model, 'MUN_CODIGO', array('maxlength' => 6)); ?>
-		<?php echo $form->error($model,'MUN_CODIGO'); ?>
-            </td>
-	    <td>
-		<?php echo $form->textFieldRow($model, 'CODIGO_DANE_ESTABLEDUCATIVO', array('maxlength' => 12)); ?>
+                <?php echo $form->textFieldRow($model, 'CODIGO_DANE_ESTABLEDUCATIVO', array('maxlength' => 12, 'readOnly'=>true)); ?>
 		<?php echo $form->error($model,'CODIGO_DANE_ESTABLEDUCATIVO'); ?>
+                 
             </td>
 	    <td>
 		<?php if(isset($model->CODIGO_DANE_SEDE))
@@ -69,19 +61,8 @@ if(isset($_GET['idsede']))
 		       <?php echo $form->error($model,'CODIGO_DANE_SEDE'); 
                    
                 } ?>
-             </td>
-	</tr>
-        
-	<tr>
-            
-	    <td>
-		<?php echo $form->textFieldRow($model, 'CONS_SEDE', array('maxlength' => 18)); ?>
-		<?php echo $form->error($model,'CONS_SEDE'); ?>
             </td>
 	    <td>
-		
-            </td>
-            <td>
 		<?php echo $form->textFieldRow($model, 'TIPO_DOCUMENTO', array('maxlength' => 6)); ?>
 		<?php echo $form->error($model,'TIPO_DOCUMENTO'); ?>
             </td>
@@ -92,8 +73,9 @@ if(isset($_GET['idsede']))
 	    <td>
 		<?php echo $form->dropDownListRow($model, 'EXPEDICION_DOC_DPTO_ID', GxHtml::listDataEx(Departamento::model()->findAll()),array('prompt'=>'Seleccione...')); ?>
 		<?php //echo $form->error($model,'DEPARTAMENTO_NACIMIENTO_ID'); ?>
-          </td>
+            </td>
 	</tr>
+        
         
         <tr>
           
@@ -142,7 +124,7 @@ if(isset($_GET['idsede']))
           </td>
 	  <td>
 		<?php echo $form->dropDownListRow($model, 'DEPARTAMENTO_NACIMIENTO_ID', GxHtml::listDataEx(Departamento::model()->findAll()),array('prompt'=>'Seleccione...')); ?>
-		<?php //echo $form->error($model,'DEPARTAMENTO_NACIMIENTO_ID'); ?>
+		<?php echo $form->error($model,'DEPARTAMENTO_NACIMIENTO_ID'); ?>
           </td>
           <td>
 		<?php $tempciudad = $model->MUNICIPIO_NACIMIENTO_ID;
@@ -152,11 +134,13 @@ if(isset($_GET['idsede']))
                                        ?>
           </td>
 	  <td>
-	     <?php echo $form->textFieldRow($model, 'GENERO', array('maxlength' => 10)); ?>
+              <b>Género</b><BR>
+	     <?php echo $form->dropDownList($model, 'GENERO', array('prompt' => 'Seleccione...', 1 => 'Femenino', 2 => 'Masculino')); ?>
 	     <?php echo $form->error($model,'GENERO'); ?>
           </td>
 	  <td>
-		<?php echo $form->textFieldRow($model, 'ZONA_RESIDENCIA_ESTUDIANTE', array('maxlength' => 20)); ?>
+                 <b>Zona residencia</b><br>
+		<?php echo $form->dropDownList($model, 'ZONA_RESIDENCIA_ESTUDIANTE', array('Rural' => 'Rural','Urbana'=>'Urbana','Rural y Urbana'=>'Rural y Urbana')); ?>
 		<?php echo $form->error($model,'ZONA_RESIDENCIA_ESTUDIANTE'); ?>
           </td>
       </tr>
@@ -195,7 +179,7 @@ if(isset($_GET['idsede']))
           </td>
           <td>
                  
-		 <?php echo $form->dropDownListRow($model, 'TIPO_DISCAPACIDAD', GxHtml::listDataEx(Tipodiscapacidad::model()->findAll())); ?>
+		 <?php echo $form->dropDownListRow($model, 'TIPO_DISCAPACIDAD', GxHtml::listDataEx(Tipodiscapacidad::model()->findAll(array())),array('prompt'=>'Seleccione...')); ?>
               
           </td>
 	  <td>

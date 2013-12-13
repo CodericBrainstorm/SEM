@@ -1,9 +1,9 @@
 <?php
+$codsede = Yii::app()->db->createCommand("select CODIGO_DANE_SEDE from egresado where id =".$model->egresadoID)->setFetchMode(PDO::FETCH_OBJ)->queryScalar();;
 
 $this->breadcrumbs = array(
-	//$model->label(2) => array('index'),
-	//Yii::t('app', 'Administrar'),
-);
+      'Volver a Egresados' => array('egresado/AdminXSede&codsede='.$codsede)
+  );
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){

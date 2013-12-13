@@ -40,7 +40,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo GxHtml::submitButton(Yii::t('app', 'Search')); ?>
+		<?php echo GxHtml::submitButton(Yii::t('app', 'Buscar Histórico Académico Superior')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -39,6 +39,12 @@ Yii::app()->getSession()->add('idsedeSesion', $model->CODIGO_DANE_SEDE);
  <div style="float: center;" >
         <a href="index.php?r=egresado/busqueda&idsede=<?php echo $model->CODIGO_DANE_SEDE; ?>&iframe=true&width=100%&height=35%"  style ="margin-left:35px;" title="CREAR EGRESADO" class="btn btn-primary pretty" >CREAR EGRESADO</a>
 </div>
+<DIV>
+<?php
+     //echo $model->NOMBRE_ESTABLECIMIENTO;
+   // echo '<strong style="color:#000000"> NOMBRE EE: ' . $model->NOMBRE_ESTABLECIMIENTO . ' >> ' . $model->NOMBRE_SEDE. '</strong>' ; 
+ ?>
+ </DIV>
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id' => 'egresado-grid',
 	'dataProvider' => $model->search(),
@@ -57,11 +63,9 @@ Yii::app()->getSession()->add('idsedeSesion', $model->CODIGO_DANE_SEDE);
 		'NOMBRE1',
 		'NOMBRE2',
 		'FechaNacDate',
-		'DEPARTAMENTO_NACIMIENTO_ID',
-		'MUNICIPIO_NACIMIENTO_ID',
-		'GENERO',
 		
 		'NOMBRE_ESTABLECIMIENTO',
+                'NOMBRE_SEDE',
 		
               array(
                 'class'=>'CLinkColumn',

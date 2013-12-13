@@ -26,6 +26,7 @@ class EgresadoController extends GxController {
 	}
 
 	public function actionCreate($idsede='') {
+                Controller::scriptBasico();
 		$model = new Egresado;
 
 

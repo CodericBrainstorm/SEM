@@ -19,6 +19,14 @@ $(function(){
     });
     $("#Establecimiento_codmunicipio").trigger('change');
     
+    //SEGUN DEPARTAMENTO SE VISUALIZA LOS MUNICIPIOS QUE PERTENECEN A ESTE DEPTO
+    $("#Egresado_DEPARTAMENTO_NACIMIENTO_ID").change(function(){ 
+        carga_municipios('#Egresado_MUNICIPIO_NACIMIENTO_ID',$(this).val());
+    });
+    $("#Egresado_EXPEDICION_DOC_DPTO_ID").change(function(){ 
+        carga_municipios('#Egresado_EXPEDICION_DOC_MUN_ID',$(this).val());
+    });
+    
 });
 
 function carga_municipios(idmuni, filtro) { 

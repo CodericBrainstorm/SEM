@@ -77,7 +77,7 @@ if (isset($_GET['yt0'])){
                         'headerHtmlOptions'=>array('style'=>'width: 50px;text-align:center'),
                         'htmlOptions'=>array('style'=>'text-align:center'),
                         'template'=>'{caracterizacion}',
-                        'header'=>'Caracterización inicial',
+                        'header'=>'Editar egresado',
                         'buttons'=>array
                         (
                             'caracterizacion' => array

@@ -38,6 +38,13 @@ $('.search-form form').submit(function(){
 <div style="float: center;" >
         <a href="index.php?r=historicoegresado/create&idsede=<?php echo $_GET['idsede']; ?>&idegresado=<?php echo $_GET['idegresado']; ?>&iframe=true&width=100%&height=35%"  style ="margin-left:35px;" title="Crear histórico egresado" class="btn btn-primary pretty" >CREAR HISTÓRICO EGRESADO</a>
 </div>
+<div>
+    <?php 
+       $result = Yii::app()->db->createCommand("select NOMBRE_SEDE, NOMBRE1, NOMBRE2, APELLIDO1, APELLIDO2 from egresado where id =".$model->egresadoID)->queryRow();
+        
+        echo '<BR><strong style="color:#05C"> Sede: ' . $result['NOMBRE_SEDE'] . ' >>  Egresado: ' . $result['NOMBRE1'].' '. $result['NOMBRE2'].' '. $result['APELLIDO1'].' </strong>' ;
+    ?>
+</div>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id' => 'historicoegresado-grid',
