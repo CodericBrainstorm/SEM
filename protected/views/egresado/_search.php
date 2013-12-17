@@ -86,7 +86,7 @@
            <td>
                <?php echo $form->label($model, 'ETNIA'); ?>
                <?php echo $form->textField($model, 'ETNIA', array('maxlength' => 3)); ?>
-           </td>>
+           </td>
            <td>
 
                <?php echo $form->label($model, 'NOMBRE_ESTABLECIMIENTO'); ?>

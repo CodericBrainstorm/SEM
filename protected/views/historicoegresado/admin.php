@@ -1,8 +1,7 @@
 <?php
 
 $this->breadcrumbs = array(
-	//$model->label(2) => array('index'),
-	//Yii::t('app', 'Administrar'),
+	'Volver a Egresado' => array('egresado/adminXSede&codsede='. $_GET['idsede'])
 );
 
 //$this->menu = array(
@@ -40,9 +39,10 @@ $('.search-form form').submit(function(){
 </div>
 <div>
     <?php 
-       $result = Yii::app()->db->createCommand("select NOMBRE_SEDE, NOMBRE1, NOMBRE2, APELLIDO1, APELLIDO2 from egresado where id =".$model->egresadoID)->queryRow();
-        
-        echo '<BR><strong style="color:#05C"> Sede: ' . $result['NOMBRE_SEDE'] . ' >>  Egresado: ' . $result['NOMBRE1'].' '. $result['NOMBRE2'].' '. $result['APELLIDO1'].' </strong>' ;
+       $result = Yii::app()->db->createCommand("select NOMBRE1, NOMBRE2, APELLIDO1, APELLIDO2 from egresado where id =".$model->egresadoID)->queryRow();
+       $resultSede = Yii::app()->db->createCommand("select nombresede from sed_sede where codsede =".$_GET['idsede'])->queryScalar();
+       
+        echo '<BR><strong style="color:#05C"> Sede: ' . $resultSede . ' >>  Egresado: ' . $result['NOMBRE1'].' '. $result['NOMBRE2'].' '. $result['APELLIDO1'].' </strong>' ;
     ?>
 </div>
 

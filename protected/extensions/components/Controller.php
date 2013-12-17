@@ -21,12 +21,13 @@ class Controller extends CController
 	 */
 	public $breadcrumbs=array();
         
-        public function scriptBasico($id=1) {
+        public function scriptBasico($id=1) { //echo 'id: '.$id;
             $baseUrl = Yii::app()->baseUrl;
             $cs = Yii::app()->getClientScript();
             $cs->registerCssFile($baseUrl . '/js/chosen/chosen.css');
             $cs->registerScriptFile($baseUrl . '/js/chosen/chosen.jquery.min.js');
             $cs->registerScriptFile($baseUrl . "/js/form$id.js");
+            $cs->registerScriptFile($baseUrl . "/js/eventosCombos.js");
             Yii::app()->getClientScript()->registerCoreScript( 'jquery.ui' );
             Yii::app()->clientScript->registerCssFile(
             Yii::app()->clientScript->getCoreScriptUrl().

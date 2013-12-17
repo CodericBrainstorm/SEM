@@ -26,6 +26,9 @@ $(function(){
     $("#Egresado_EXPEDICION_DOC_DPTO_ID").change(function(){ 
         carga_municipios('#Egresado_EXPEDICION_DOC_MUN_ID',$(this).val());
     });
+    $("#Egresado_RESIDENCIA_DEPARTAMENTO_ID").change(function(){ 
+        carga_municipios('#Egresado_RESIDENCIA_MUNICIPIO_ID',$(this).val());
+    });
     
 });
 

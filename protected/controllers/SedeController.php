@@ -65,7 +65,7 @@ class SedeController extends GxController {
                  Controller::scriptBasico();
 		$model = new Sede('search');
 		$model->unsetAttributes();
-                $model->codestablecimiento=$codigoestablecimiento;
+                $model->codestablecimiento = $codigoestablecimiento;
 		if (isset($_GET['Sede']))
 			$model->setAttributes($_GET['Sede']);
 

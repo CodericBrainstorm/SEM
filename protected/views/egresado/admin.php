@@ -1,9 +1,13 @@
 <?php
 
-$this->breadcrumbs = array(
-	//'Egresados' => array('index'),
-	//Yii::t('app', 'Administrar'),
-);
+//si va a mostrar los egresados por sede
+if(isset($model->CODIGO_DANE_SEDE)){
+    $idEE = Yii::app()->db->createCommand("select codestablecimiento FROM sed_sede WHERE codsede=".$model->CODIGO_DANE_SEDE)->queryScalar();
+   
+    $this->breadcrumbs = array(
+	'Volver a Sedes' => array('sede/admin&codigoestablecimiento='.$idEE)
+    );
+}
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -22,9 +26,7 @@ $('.search-form form').submit(function(){
 
 <h1><?php echo Yii::t('app', 'Administrar') . ' ' . 'Egresados' ?></h1>
 
-<p>
-Si lo desea, puede ingresar un operador de comparación (&lt;, &lt;=, &gt;, &gt;=, &lt;&gt; or =) al principio de cada uno de los valores de la búsqueda para especificar la forma en la comparación que debe hacer.
-</p>
+
 
 <?php echo GxHtml::link(Yii::t('app', 'Búsqueda Avanzada'), '#', array('class' => 'search-button')); ?>
 <div class="search-form">
@@ -34,10 +36,11 @@ Si lo desea, puede ingresar un operador de comparación (&lt;, &lt;=, &gt;, &gt;
 )); 
 
 Yii::app()->getSession()->add('idsedeSesion', $model->CODIGO_DANE_SEDE);
+//print_r ($_SESSION);
 ?>
 </div><!-- search-form -->
  <div style="float: center;" >
-        <a href="index.php?r=egresado/busqueda&idsede=<?php echo $model->CODIGO_DANE_SEDE; ?>&iframe=true&width=100%&height=35%"  style ="margin-left:35px;" title="CREAR EGRESADO" class="btn btn-primary pretty" >CREAR EGRESADO</a>
+          <a href="index.php?r=egresado/busqueda&idsede=<?php echo $model->CODIGO_DANE_SEDE; ?>&iframe=true&width=100%&height=35%"  style ="margin-left:35px;" title="CREAR EGRESADO" class="btn btn-primary pretty" >CREAR EGRESADO</a>
 </div>
 <DIV>
 <?php
@@ -88,7 +91,7 @@ Yii::app()->getSession()->add('idsedeSesion', $model->CODIGO_DANE_SEDE);
              array(
                 'class'=>'CLinkColumn',
                 'label'=>'Historico trabajo',
-                //'urlExpression'=>'index.php?r=egresado/admin',
+                'urlExpression'=>'"index.php?r=historicolaboral/admin&idegresado=".$data->ID',
                 'header'=>'Historico trabajo',
                    
                  'imageUrl'=>Yii::app()->request->baseUrl.'/images/trabajo.jpg',

@@ -42,12 +42,7 @@ if(isset($_GET['idsede']))
     <table class="table_inscripcion">
         
         <tr class="row0">
-            
-            <td>
-                <?php echo $form->textFieldRow($model, 'CODIGO_DANE_ESTABLEDUCATIVO', array('maxlength' => 12, 'readOnly'=>true)); ?>
-		<?php echo $form->error($model,'CODIGO_DANE_ESTABLEDUCATIVO'); ?>
-                 
-            </td>
+           
 	    <td>
 		<?php if(isset($model->CODIGO_DANE_SEDE))
                 {
@@ -62,30 +57,34 @@ if(isset($_GET['idsede']))
                    
                 } ?>
             </td>
-	    <td>
-		<?php echo $form->textFieldRow($model, 'TIPO_DOCUMENTO', array('maxlength' => 6)); ?>
-		<?php echo $form->error($model,'TIPO_DOCUMENTO'); ?>
+	    <td>      <b>Tipo de documento<b><br>
+		<?php echo $form->dropDownList($model, 'TIPO_DOCUMENTO', array('T.I.'=>'T.I.','C.C.'=>'C.C.' , 'C.E.'=>'C.E.',
+                          'NUIP'=>'NUIP', 'NIP'=>'NIP', 'Registro civil'=>'Registro civil de nacimiento',
+                          'num_SE'=>'Número de identificación establecido por Secretaría de Educación',
+                           'Certificado cabildo'=>'Certificado cabildo', 'Otro'=>'Otro')); ?>
+		<?php //echo $form->error($model,'TIPO_DOCUMENTO'); ?>
             </td>
 	    <td>
-		<?php echo $form->textFieldRow($model, 'NRO_OCUMENTO', array('maxlength' => 20)); ?>
+		<?php echo $form->textFieldRow($model, 'NRO_OCUMENTO', array('maxlength' => 15)); ?>
 		<?php echo $form->error($model,'NRO_OCUMENTO'); ?>
             </td>
 	    <td>
 		<?php echo $form->dropDownListRow($model, 'EXPEDICION_DOC_DPTO_ID', GxHtml::listDataEx(Departamento::model()->findAll()),array('prompt'=>'Seleccione...')); ?>
 		<?php //echo $form->error($model,'DEPARTAMENTO_NACIMIENTO_ID'); ?>
             </td>
-	</tr>
-        
-        
-        <tr>
-          
-	  <td>
+             <td>
 		<?php $tempciudadexp = $model->EXPEDICION_DOC_MUN_ID;
                                             if (!is_numeric($tempciudadexp))
                                                 $tempciudadexp=0;
                                             echo $form->dropDownListRow($model, 'EXPEDICION_DOC_MUN_ID', GxHtml::listDataEx(Municipio::model()->findAll(array('condition'=>'idmunicipio='.$tempciudadexp))), array('prompt'=>'Seleccione...')); 
                                        ?>
           </td>
+	</tr>
+        
+        
+        <tr>
+          
+	 
 	  <td>
 		<?php echo $form->textFieldRow($model, 'APELLIDO1', array('maxlength' => 200)); ?>
 		<?php echo $form->error($model,'APELLIDO1'); ?>
@@ -102,11 +101,7 @@ if(isset($_GET['idsede']))
 		<?php echo $form->textFieldRow($model, 'NOMBRE2', array('maxlength' => 200)); ?>
 		<?php echo $form->error($model,'NOMBRE2'); ?>
          </td>
-    </tr>
-    
-    <tr>
-        
-	<td>
+         <td>
 	    <?php echo $form->labelEx($model,'FechaNacDate'); ?>
                 <div class="controls">
 		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
@@ -122,6 +117,11 @@ if(isset($_GET['idsede']))
 			)); ?>
 		
           </td>
+    </tr>
+    
+    <tr>
+        
+	
 	  <td>
 		<?php echo $form->dropDownListRow($model, 'DEPARTAMENTO_NACIMIENTO_ID', GxHtml::listDataEx(Departamento::model()->findAll()),array('prompt'=>'Seleccione...')); ?>
 		<?php echo $form->error($model,'DEPARTAMENTO_NACIMIENTO_ID'); ?>
@@ -143,13 +143,14 @@ if(isset($_GET['idsede']))
 		<?php echo $form->dropDownList($model, 'ZONA_RESIDENCIA_ESTUDIANTE', array('Rural' => 'Rural','Urbana'=>'Urbana','Rural y Urbana'=>'Rural y Urbana')); ?>
 		<?php echo $form->error($model,'ZONA_RESIDENCIA_ESTUDIANTE'); ?>
           </td>
-      </tr>
-      <tr>
-          
-          <td>
+           <td>
 		<?php echo $form->textFieldRow($model, 'DIRECCION_RESIDENCIA', array('maxlength' => 200)); ?>
 		<?php echo $form->error($model,'DIRECCION_RESIDENCIA'); ?>
           </td>
+      </tr>
+      <tr>
+          
+         
           <td>
 		<?php echo $form->textFieldRow($model, 'TEL', array('maxlength' => 200)); ?>
 		<?php echo $form->error($model,'TEL'); ?>
@@ -160,8 +161,8 @@ if(isset($_GET['idsede']))
           </td>
           <td>
 		<?php $tempciudadres = $model->RESIDENCIA_MUNICIPIO_ID;
-                                            if (!is_numeric($tempciudadres))
-                                                $tempciudadres=0;
+                                           if (!is_numeric($tempciudadres))
+                                                 $tempciudadres=0;
                                             echo $form->dropDownListRow($model, 'RESIDENCIA_MUNICIPIO_ID', GxHtml::listDataEx(Municipio::model()->findAll(array('condition'=>'idmunicipio='.$tempciudadres))), array('prompt'=>'Seleccione...')); 
                                        ?>
           </td>
@@ -170,18 +171,16 @@ if(isset($_GET['idsede']))
                 'dos'=>'dos','tres'=>'tres','cuatro'=>'cuatro','cinco'=>'cinco','seis'=>'seis' )); ?>
 	     <?php echo $form->error($model,'ESTRATO'); ?>
          </td>
-      </tr>
-      <tr>
           
 	  <td>
 		<?php echo $form->textFieldRow($model, 'SISBEN', array('maxlength' =>20)); ?>
 		<?php echo $form->error($model,'SISBEN'); ?>
           </td>
-          <td>
-                 
-		 <?php echo $form->dropDownListRow($model, 'TIPO_DISCAPACIDAD', GxHtml::listDataEx(Tipodiscapacidad::model()->findAll(array())),array('prompt'=>'Seleccione...')); ?>
-              
-          </td>
+      </tr>
+      <tr>
+         <td>
+                <?php echo $form->dropDownListRow($model, 'TIPO_DISCAPACIDAD', GxHtml::listDataEx(Tipodiscapacidad::model()->findAll(array())),array('prompt'=>'Seleccione...')); ?>
+         </td>
 	  <td>
               <b> Capacidades excepcionales </b>
 		<?php echo $form->textArea($model, 'CAPACIDADES_EXCEPCIONALES', array("style"=>"width:200px;height:28px")); ?>
@@ -195,23 +194,14 @@ if(isset($_GET['idsede']))
 		<?php echo $form->dropDownListRow($model, 'SUBSIDIADO', array('NO'=>'NO','SI'=>'SI')); ?>
 		<?php echo $form->error($model,'SUBSIDIADO'); ?>
           </td>
-        </tr>
-        <tr>
-          
-	  
-	  
-	  <td>
-		<?php echo $form->textFieldRow($model, 'NOMBRE_ESTABLECIMIENTO', array('maxlength' => 60)); ?>
-		<?php echo $form->error($model,'NOMBRE_ESTABLECIMIENTO'); ?>
-          </td>
-	  <td>
-		<?php echo $form->textFieldRow($model, 'NOMBRE_SEDE', array('maxlength' => 60)); ?>
-		<?php echo $form->error($model,'NOMBRE_SEDE'); ?>
-          </td>
           <td>
 		<?php echo $form->textFieldRow($model, 'CELULAR', array('maxlength' => 14)); ?>
 		<?php echo $form->error($model,'CELULAR'); ?>
           </td>
+          
+        </tr>
+        <tr>
+         
 	  <td>
 		<?php echo $form->textFieldRow($model, 'FACEBOOK', array('maxlength' => 50)); ?>
 		<?php echo $form->error($model,'FACEBOOK'); ?>
@@ -220,13 +210,12 @@ if(isset($_GET['idsede']))
 		<?php echo $form->textFieldRow($model, 'TWITTER', array('maxlength' => 50)); ?>
 		<?php echo $form->error($model,'FACEBOOK'); ?>
           </td>
-         </tr>
-         <TR>
-             <td>
+          <td>
 		<?php echo $form->textFieldRow($model, 'LINKEDIN', array('maxlength' => 50)); ?>
 		<?php echo $form->error($model,'LINKEDIN'); ?>
           </td>
-         </TR>
+         </tr>
+         
 </table>
 		
 		

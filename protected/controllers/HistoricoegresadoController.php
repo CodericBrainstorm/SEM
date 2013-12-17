@@ -4,6 +4,7 @@ class HistoricoegresadoController extends GxController {
 
 
 	public function actionView($id) {
+              Controller::scriptBasico();
 		$this->render('view', array(
 			'model' => $this->loadModel($id, 'Historicoegresado'),
 		));

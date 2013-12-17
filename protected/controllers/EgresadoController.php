@@ -107,8 +107,7 @@ class EgresadoController extends GxController {
                 Controller::scriptBasico();
                 $model = new Egresado;
                 $model->unsetAttributes();
-//                 $dataReader= Yii::app()->db->createCommand("SELECT eg.* FROM egresado eg JOIN historicoegresado he ON(eg.ID=he.egresadoID) WHERE sedeID='$codsede'")
-//                        ->setFetchMode(PDO::FETCH_OBJ)->queryAll();     
+    
                $model->CODIGO_DANE_SEDE = $codsede;
 		if (isset($_GET['Egresado']))
 			$model->setAttributes($_GET['Egresado']);
@@ -119,14 +118,14 @@ class EgresadoController extends GxController {
 		));
                
 	}
-        public function actionAdmin() {
+        public function actionAdmin() {  
                 Controller::scriptBasico();
 		$model = new Egresado('search');
 		$model->unsetAttributes();
                 
 		if (isset($_GET['Egresado']))
 			$model->setAttributes($_GET['Egresado']);
-
+                 
 		$this->render('admin', array(
 			'model' => $model,
 		));

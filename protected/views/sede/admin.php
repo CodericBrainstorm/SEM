@@ -1,8 +1,7 @@
 <?php
 
 $this->breadcrumbs = array(
-	//$model->label(2) => array('index'),
-	//Yii::t('app', 'Administrar'),
+	'Volver a Establecimientos Educativos' => array('establecimiento/admin')
 );
 
 /*$this->menu = array(
