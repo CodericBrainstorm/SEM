@@ -94,7 +94,7 @@
 	
 
 	<div class="row buttons">
-		<?php echo GxHtml::submitButton(Yii::t('app', 'Search')); ?>
+		<?php echo GxHtml::submitButton(Yii::t('app', 'Búsqueda')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

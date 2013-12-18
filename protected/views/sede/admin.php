@@ -1,13 +1,17 @@
 <?php
-
-$this->breadcrumbs = array(
+$usuario = User::model()->findByPk(Yii::app()->user->id);
+if($usuario->rol != 'admin')
+{
+    $this->breadcrumbs = array(
+	'Volver a Establecimientos Educativos' => array('establecimiento/adminByUser&user='.$usuario->name.'&rol='.$usuario->rol)
+   );
+}
+else {
+   $this->breadcrumbs = array(
 	'Volver a Establecimientos Educativos' => array('establecimiento/admin')
-);
+   );
+}
 
-/*$this->menu = array(
-		array('label'=>Yii::t('app', 'Listar') . ' ' . $model->label(2), 'url'=>array('index')),
-		array('label'=>Yii::t('app', 'Crear') . ' ' . $model->label(), 'url'=>array('create')),
-	);*/
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
